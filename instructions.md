@@ -42,7 +42,7 @@ Si no se pueden usar múltiples agentes por limitaciones del entorno o de la tar
 ## Archivos principales
 
 - `tema_arte_civilizacion_estudio.html`: archivo principal de estudio.
-- `presentacion.html`: vista secundaria visual, con bloques, imagenes grandes, palabras clave y link de vuelta a la guia.
+- `presentacion.html`: vista secundaria visual, con bloques, imagenes grandes, palabras clave y link de vuelta a la guia. Debe tener una ruta oral clara para la consigna principal, diapositivas separadas para contexto, instituciones, Schiaffino, obras, crisis, repaso de consignas alternativas y cierre critico.
 - `instructions.md`: estas instrucciones para continuar el trabajo.
 - `assets/`: imágenes locales usadas por el HTML.
 - `resumenes/`: resúmenes operativos de los textos y presentación de apoyo.
@@ -195,27 +195,35 @@ Las consignas 1, 2, 3 y 5 ya estan agregadas como secciones breves. Mantener est
 ```html
 <section id="tema-x">
   <h2>Tema X - Título de la consigna</h2>
-  <h3>Imagenes / artistas / autores para ubicar primero</h3>
-  <!-- fichas visuales -->
-  <div class="callout">
-    <p><b>Tesis rápida:</b> ...</p>
+  <h3>Imagenes / obras para ubicar primero</h3>
+  <!-- una unica galeria visual por consigna, sin repetir imagenes mas abajo -->
+  <div class="grid two">
+    <div class="card flash">
+      <h3>Tesis rapida</h3>
+      <p>...</p>
+    </div>
+    <div class="card">
+      <h3>Conceptos clave</h3>
+      <div class="keyword-row">...</div>
+    </div>
   </div>
-  <h3>Conceptos clave</h3>
-  <ul>
-    <li>...</li>
-  </ul>
-  <h3>Obras o imágenes posibles</h3>
-  <ul>
-    <li><b>Obra:</b> cómo usarla.</li>
-  </ul>
+  <div class="course-notes">
+    <h3>Notas de curso para enriquecer</h3>
+    <ul>
+      <li>...</li>
+    </ul>
+  </div>
   <h3>Respuesta oral en 2 minutos</h3>
   <p>...</p>
+  <h3>Cierre critico</h3>
 </section>
 ```
 
 Criterio de contenido:
 
 - Arrancar siempre por imagenes, artistas y autores.
+- Mantener una sola seccion visual por consigna secundaria: no duplicar "imagenes para ubicar" y "obras para analizar".
+- Las notas del notebook de curso van en un bloque propio `course-notes`, antes de la respuesta oral.
 - Responder la consigna y nada mas: no hacer desarrollo enciclopedico.
 - Usar los PDFs de `textos/` como bibliografia base y los textos extraibles o paginas renderizadas como apoyo de verificacion.
 - Para PDFs escaneados, renderizar paginas relevantes y revisar visualmente si hay dudas.
