@@ -109,6 +109,9 @@ Idea clave:
 - La crisis económica y política atenúa el optimismo del progreso material.
 - La Revolución del Parque y obras como *Sin pan y sin trabajo* muestran el reverso del proyecto modernizador.
 - La crisis no elimina el discurso arte/civilización; lo vuelve más urgente y defensivo.
+- En ese clima aparecen cuestionamientos al otorgamiento de becas o pensiones para artistas en Europa: se vuelve más fuerte la objeción utilitaria contra financiar formación artística.
+- Augusto Belín Sarmiento defiende en *La Prensa* el lugar de las artes plásticas después del Salón del Ateneo de 1894: no las presenta como lujo, sino como parte del progreso civilizatorio y también material, porque el dibujo está en la base del diseño industrial.
+- Idea oral: para Belín Sarmiento, abandonar la formación artística no era una decisión moderna o práctica, sino aceptar un destino limitado de país agropecuario y “bárbaro”.
 
 ### Arte nacional
 

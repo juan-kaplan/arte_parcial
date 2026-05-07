@@ -1,6 +1,7 @@
 # Local/generated verification artifacts
 output/
 .cache/
+tmp/
 
 # Local bibliography and private study PDFs.
 # Keep these locally; do not publish them in a public GitHub Pages repo.
