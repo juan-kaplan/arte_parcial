@@ -101,11 +101,30 @@
 
     nav {
       display: grid;
+      gap: .9rem;
+    }
+
+    .nav-group {
+      display: grid;
+      gap: .35rem;
+    }
+
+    .nav-group-title {
+      color: var(--accent);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: .35rem;
     }
 
-    nav a {
+    .nav-links a {
       min-height: 2.75rem;
       display: flex;
       align-items: center;
@@ -118,9 +137,40 @@
       font-size: .92rem;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       background: var(--surface-2);
       text-decoration: none;
+    }
+
+    .nav-links a.nav-link-featured {
+      border-color: rgba(127, 183, 199, .55);
+      color: var(--accent-2);
+    }
+
+    .jump-index {
+      position: fixed;
+      z-index: 20;
+      right: .75rem;
+      bottom: .75rem;
+      min-height: 2.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(127, 183, 199, .7);
+      border-radius: 999px;
+      padding: .35rem .85rem;
+      background: rgba(19, 21, 22, .92);
+      box-shadow: 0 .75rem 2rem rgba(0, 0, 0, .38);
+      color: var(--accent-2);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .9rem;
+      font-weight: 800;
+      backdrop-filter: blur(10px);
+    }
+
+    .jump-index:hover {
+      text-decoration: none;
+      background: var(--surface-2);
     }
 
     main {
@@ -486,7 +536,7 @@
         padding: 1.25rem 1.5rem;
       }
 
-      nav {
+      .nav-links {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
@@ -520,7 +570,7 @@
         border-bottom: 0;
       }
 
-      nav {
+      .nav-links {
         grid-template-columns: 1fr;
       }
 
@@ -535,6 +585,10 @@
       .work-gallery {
         grid-template-columns: repeat(3, minmax(0, 1fr));
       }
+
+      .jump-index {
+        display: none;
+      }
     }
 
     @media print {
@@ -543,7 +597,8 @@
         color: #000;
       }
 
-      aside { display: none; }
+      aside,
+      .jump-index { display: none; }
 
       .layout { display: block; }
 
@@ -570,26 +625,41 @@
 </head>
 <body>
   <div class="layout">
-    <aside>
+    <aside id="indice">
       <h1>Arte y civilizacion</h1>
       <p>Guia compartida para estudiar la consigna elegida y repasar rapido las consignas alternativas.</p>
-      <nav aria-label="Navegacion principal">
-        <a href="#tesis-rapida">Tesis rapida</a>
-        <a href="#mapa-oral">Mapa oral</a>
-        <a href="#contexto-devoto">Contexto Devoto</a>
-        <a href="#malosetti">Malosetti</a>
-        <a href="#instituciones">Instituciones</a>
-        <a href="#europa-schiaffino">Europa y Schiaffino</a>
-        <a href="#arte-nacional">Arte nacional</a>
-        <a href="#obras">Obras para analizar</a>
-        <a href="#guion">Guion entre dos</a>
-        <a href="#consigna-1">Consigna 1</a>
-        <a href="#consigna-2">Consigna 2</a>
-        <a href="#consigna-3">Consigna 3</a>
-        <a href="#consigna-5">Consigna 5</a>
-        <a href="presentacion.html">Vista presentacion</a>
-        <a href="#preguntas">Preguntas posibles</a>
-        <a href="#pendientes">Pendientes</a>
+      <nav class="site-nav" aria-label="Indice principal">
+        <div class="nav-group">
+          <div class="nav-group-title">Consigna elegida</div>
+          <div class="nav-links">
+            <a href="#tesis-rapida">Tesis</a>
+            <a href="#mapa-oral">Mapa oral</a>
+            <a href="#contexto-devoto">Devoto</a>
+            <a href="#malosetti">Malosetti</a>
+            <a href="#instituciones">Instituciones</a>
+            <a href="#europa-schiaffino">Europa</a>
+            <a href="#arte-nacional">Arte nacional</a>
+            <a href="#obras">Obras clave</a>
+            <a href="#guion">Guion entre dos</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">Repaso rapido</div>
+          <div class="nav-links">
+            <a href="#consigna-1">C1 Viajeros</a>
+            <a href="#consigna-2">C2 Retrato</a>
+            <a href="#consigna-3">C3 Rosismo</a>
+            <a href="#consigna-5">C5 Paisaje</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">Practica</div>
+          <div class="nav-links">
+            <a class="nav-link-featured" href="presentacion.html">Presentacion</a>
+            <a href="#preguntas">Preguntas</a>
+            <a href="#pendientes">Pendientes</a>
+          </div>
+        </div>
       </nav>
     </aside>
 
@@ -1068,11 +1138,58 @@
         <p>Asi, el costumbrismo no fue solo una descripcion amable de lo cotidiano. Fue una forma de ordenar visualmente la sociedad: mostrar como era Buenos Aires, quienes la habitaban, que practicas la definian y que imagen podia circular de ella.</p>
 
         <h3>Obras para analizar</h3>
-        <div class="grid two">
-          <div class="card"><p><b>Vidal, vistas de Buenos Aires:</b> usar para hablar de la mirada viajera que convierte la ciudad en escena reconocible.</p></div>
-          <div class="card"><p><b>Bacle, <i>Trages y costumbres</i>:</b> usar para explicar costumbrismo, tipos sociales y reproduccion litografica.</p></div>
-          <div class="card"><p><b><i>El Museo Americano</i> / <i>El Recopilador</i>:</b> usar para mostrar prensa ilustrada y circulacion de imagenes globales seleccionadas localmente.</p></div>
-          <div class="card"><p><b>Macaire / Onslow:</b> recordar que el taller no era solo Bacle: habia colaboradores, tecnicas y trabajo colectivo.</p></div>
+        <div class="work-gallery">
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/vidal-cabildo-recova.jpg" alt="Emeric Essex Vidal, Vista del Cabildo desde la Recova, 1817" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Vidal, vistas de Buenos Aires</h3>
+              <div class="work-meta">Emeric Essex Vidal, 1817.</div>
+              <p><span class="work-label">Como usarla:</span> la mirada viajera convierte la ciudad en escena reconocible: plaza, edificios, movimiento y tipos sociales.</p>
+              <p><span class="work-label">Frase oral:</span> "Buenos Aires empieza a verse como imagen nacional antes de tener una iconografia nacional estable".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Emeric_Essex_Vidal_-_Vista_del_Cabildo_desde_la_Recova_-_1817.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/bacle-trages-sra-portena.jpg" alt="Cesar Hipolito Bacle, Senora portena con traje de Iglesia, serie Trages y costumbres" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Trages y costumbres</h3>
+              <div class="work-meta">Cesar H. Bacle, decada de 1830. Litografia.</div>
+              <p><span class="work-label">Como usarla:</span> sirve para explicar costumbrismo: la sociedad se ordena en tipos, vestimentas y practicas reconocibles.</p>
+              <p><span class="work-label">Frase oral:</span> "La litografia vuelve repetible una imagen de las costumbres portenas".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:BacleTyC8331-SraPorte%C3%B1a.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/el-museo-americano-cover.jpg" alt="Portada de El Museo Americano, libro de todo el mundo" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>El Museo Americano / El Recopilador</h3>
+              <div class="work-meta">Publicaciones ilustradas vinculadas al taller de Bacle.</div>
+              <p><span class="work-label">Como usarla:</span> muestra que la imagen no circulaba solo como obra unica: tambien lo hacia en periodicos, laminas y repertorios impresos.</p>
+              <p><span class="work-label">Frase oral:</span> "El periodico ilustrado convierte la imagen en habito de lectura y consumo".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:El_museo_americano_-_libro_de_todo_el_mundo_(IA_gri_33125014037101).pdf">Wikimedia Commons / Internet Archive</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/bacle-peinetones-casa.jpg" alt="Peinetones en casa, litografia de Bacle, siglo XIX" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Taller de Bacle y colaboradores</h3>
+              <div class="work-meta">Bacle, Macaire, Onslow y otros actores del taller litografico.</div>
+              <p><span class="work-label">Como usarla:</span> recordar que estas imagenes salen de una empresa visual colectiva, no de un artista aislado.</p>
+              <p><span class="work-label">Frase oral:</span> "El costumbrismo impreso es tambien trabajo tecnico, comercial y colaborativo".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Peinetones_en_casa.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
         </div>
 
         <h3>Cierre critico</h3>
@@ -1154,11 +1271,58 @@
         <p>Myers ayuda a ubicar el contexto: la elite portena construia sociabilidad en casas, tertulias, teatros, asociaciones y redes politicas. En ese mundo, tener y circular retratos era una forma de decir quien era uno y a que mundo pertenecia.</p>
 
         <h3>Obras para analizar</h3>
-        <div class="grid two">
-          <div class="card"><p><b>Pellegrini, retratos de elite:</b> usar para hablar de distincion social y consumo privado.</p></div>
-          <div class="card"><p><b>Descalzi o Garcia del Molino, Rosas:</b> usar para explicar retrato de aparato y autoridad politica.</p></div>
-          <div class="card"><p><b>Jean Philippe Goulu / miniaturas:</b> recordar la escala intima y portable del retrato afectivo.</p></div>
-          <div class="card"><p><b>Daguerrotipo de San Martin:</b> usar para comparar fotografia temprana, singularidad y promesa documental.</p></div>
+        <div class="work-gallery">
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/pellegrini-guerrico-retrato.jpg" alt="Carlos Enrique Pellegrini, Retrato de Manuel J. de Guerrico" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Pellegrini, retratos de elite</h3>
+              <div class="work-meta">Carlos Enrique Pellegrini, siglo XIX. MNBA.</div>
+              <p><span class="work-label">Como usarla:</span> hablar de distincion social, encargo privado, memoria familiar y consumo de elite.</p>
+              <p><span class="work-label">Frase oral:</span> "El retrato burgues hace visible una identidad social respetable".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Retrato_de_Manuel_J._de_Guerrico_-_Charles_Henri_Pellegrini.jpg">Wikimedia Commons / MNBA</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/descalzi-rosas.jpg" alt="Cayetano Descalzi, Juan Manuel de Rosas" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Descalzi / Garcia del Molino, Rosas</h3>
+              <div class="work-meta">Cayetano Descalzi, ca. 1840.</div>
+              <p><span class="work-label">Como usarla:</span> explicar retrato de aparato: pose, uniforme, autoridad y signos politicos.</p>
+              <p><span class="work-label">Frase oral:</span> "Aca el retrato fabrica presencia publica, no solo parecido".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Juan_Manuel_de_Rosas_by_Descalzi.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/goulu-cirila-crespo-miniatura.jpg" alt="Jean-Philippe Goulu, Retrato de Cirila Crespo de Sivori" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Goulu / miniaturas</h3>
+              <div class="work-meta">Jean-Philippe Goulu, siglo XIX. MNBA.</div>
+              <p><span class="work-label">Como usarla:</span> recordar la escala intima y portable del retrato afectivo, ligado a memoria, familia y sociabilidad privada.</p>
+              <p><span class="work-label">Frase oral:</span> "La miniatura acerca el retrato al cuerpo y al vinculo afectivo".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Cirila_Crespo_de_S%C3%ADvori_-_Jean-Philippe_Goulu.jpg">Wikimedia Commons / MNBA</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/san-martin-daguerrotipo.jpg" alt="Daguerrotipo de Jose de San Martin, Paris, 1848" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Daguerrotipo de San Martin</h3>
+              <div class="work-meta">Autor desconocido, Paris, 1848.</div>
+              <p><span class="work-label">Como usarla:</span> comparar fotografia temprana, singularidad del objeto y promesa documental.</p>
+              <p><span class="work-label">Frase oral:</span> "La imagen parece mas verdadera, pero sigue dependiendo de pose y convencion".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Jose_de_San_Martin.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
         </div>
 
         <h3>Cierre critico</h3>
@@ -1240,11 +1404,71 @@
         <p>Por eso Garcia del Molino, Morel y la litografia muestran tres niveles de la propaganda: retratar al lider, representar su base social y multiplicar los signos de pertenencia.</p>
 
         <h3>Obras para analizar</h3>
-        <div class="grid two">
-          <div class="card"><p><b>Garcia del Molino, Rosas:</b> retrato como presencia de poder, no solo como parecido.</p></div>
-          <div class="card"><p><b>Morel, <i>La familia del gaucho</i>:</b> imagen de paz rural, familia, jerarquia y consenso federal.</p></div>
-          <div class="card"><p><b>Morel, <i>Payada en la pulperia</i> / <i>La partida</i>:</b> sociabilidad popular atravesada por identidad politica.</p></div>
-          <div class="card"><p><b>Bacle, retratos y divisas:</b> la reproduccion impresa convierte simbolos politicos en presencia cotidiana.</p></div>
+        <div class="work-gallery">
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/garcia-del-molino-rosas.jpg" alt="Fernando Garcia del Molino, Retrato del Restaurador de las Leyes Don Juan Manuel de Rosas" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Garcia del Molino, Rosas</h3>
+              <div class="work-meta">Fernando Garcia del Molino, siglo XIX.</div>
+              <p><span class="work-label">Como usarla:</span> retrato como presencia de poder: rostro, pose, uniforme, punzo y autoridad.</p>
+              <p><span class="work-label">Frase oral:</span> "El retrato hace que el poder federal tenga cara y cuerpo".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Fernando_Garc%C3%ADa_del_Molino.Retrato_del_Restaurador_de_las_Leyes_Don_Juan_Manuel_de_Rosas.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/morel-familia-gaucho.jpg" alt="Carlos Morel, La familia del gaucho, 1841" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>La familia del gaucho</h3>
+              <div class="work-meta">Carlos Morel, 1841. Litografia. MNBA.</div>
+              <p><span class="work-label">Como usarla:</span> imagen de paz rural, familia, jerarquia y consenso federal.</p>
+              <p><span class="work-label">Frase oral:</span> "Morel convierte el campo en una comunidad politica ordenada".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:La_familia_del_gaucho_-_Carlos_Morel.jpg">Wikimedia Commons / MNBA</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/morel-payada-pulperia.jpg" alt="Carlos Morel, Payada en una pulperia" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Payada en una pulperia</h3>
+              <div class="work-meta">Carlos Morel, siglo XIX.</div>
+              <p><span class="work-label">Como usarla:</span> sociabilidad popular atravesada por canto, reunion, vida rural e identidad politica.</p>
+              <p><span class="work-label">Frase oral:</span> "La escena costumbrista no es inocente: organiza una imagen del mundo federal".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Payada_en_una_pulper%C3%ADa_-_Carlos_Morel.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/morel-gaucho-traje-pueblo.jpg" alt="Carlos Morel, Gaucho, traje de pueblo" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Gaucho, traje de pueblo</h3>
+              <div class="work-meta">Carlos Morel, siglo XIX.</div>
+              <p><span class="work-label">Como usarla:</span> el cuerpo, la ropa y el color pueden funcionar como signos visibles de pertenencia politica.</p>
+              <p><span class="work-label">Frase oral:</span> "El federalismo tambien se lleva puesto: color, divisa, prenda y gesto".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Gaucho,_traje_de_pueblo_-_Carlos_Morel.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/rosas-luto-ezcurra-divisa.png" alt="Impreso del Estado sobre el luto oficial de Encarnacion Ezcurra, 1840" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Impresos federales y divisa</h3>
+              <div class="work-meta">Imprenta del Estado, 1840. Museo Historico Nacional.</div>
+              <p><span class="work-label">Como usarla:</span> muestra que la politica rosista circulaba tambien en impresos, objetos, colores y ordenes de visibilidad.</p>
+              <p><span class="work-label">Frase oral:</span> "La propaganda no esta solo en el cuadro: tambien esta en el papel y en el uso obligatorio de signos".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Luto_oficial_de_Encarnaci%C3%B3n_Ezcurra.png">Wikimedia Commons / Museo Historico Nacional</a>.</p>
+            </div>
+          </article>
         </div>
 
         <h3>Cierre critico</h3>
@@ -1327,12 +1551,71 @@
         <p>Blanes, con la <i>Ocupacion militar del Rio Negro</i>, muestra el otro lado: la violencia estatal representada como orden y civilizacion. Y con Sivori, la pampa se vuelve tambien problema moderno de paisaje: horizonte bajo, cielo enorme, inmensidad y observacion directa. De Pueyrredon a Sivori cambia el lenguaje, pero la pampa sigue siendo una pregunta sobre identidad nacional.</p>
 
         <h3>Obras para analizar</h3>
-        <div class="grid two">
-          <div class="card"><p><b>Pueyrredon, <i>El rodeo</i>:</b> pampa como trabajo, propiedad y orden rural.</p></div>
-          <div class="card"><p><b>Pueyrredon, <i>Un alto en el campo</i>:</b> identidad criolla, ocio rural y paisaje ordenado.</p></div>
-          <div class="card"><p><b>Della Valle, <i>La vuelta del malon</i>:</b> pampa como amenaza y civilizacion/barbarie.</p></div>
-          <div class="card"><p><b>Blanes, <i>Ocupacion militar del Rio Negro</i>:</b> conquista estatal narrada como gesta civilizadora.</p></div>
-          <div class="card"><p><b>Sivori, <i>Pampa o Chacra La Portena</i>:</b> horizonte pampeano como paisaje moderno y problema formal.</p></div>
+        <div class="work-gallery">
+          <article class="work-card wide">
+            <figure>
+              <img src="assets/pueyrredon-rodeo.jpg" alt="Prilidiano Pueyrredon, El rodeo" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>El rodeo</h3>
+              <div class="work-meta">Prilidiano Pueyrredon, ca. 1861. MNBA.</div>
+              <p><span class="work-label">Como usarla:</span> pampa como trabajo, propiedad, estancia y orden rural.</p>
+              <p><span class="work-label">Frase oral:</span> "La llanura aparece productiva y organizada, no como vacio natural".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:El_rodeo_-_Prilidiano_Pueyrred%C3%B3n.jpg">Wikimedia Commons / MNBA</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card wide">
+            <figure>
+              <img src="assets/pueyrredon-alto-campo.jpg" alt="Prilidiano Pueyrredon, Un alto en el campo, 1861" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Un alto en el campo</h3>
+              <div class="work-meta">Prilidiano Pueyrredon, 1861. MNBA.</div>
+              <p><span class="work-label">Como usarla:</span> identidad criolla, ocio rural, carreta, ombu y paisaje socialmente ordenado.</p>
+              <p><span class="work-label">Frase oral:</span> "La pampa aparece habitable porque hay figuras, costumbres y jerarquias".</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/3187/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Un_alto_en_el_campo_-_Prilidiano_Pueyrred%C3%B3n.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/della-valle-vuelta-del-malon.jpg" alt="Angel Della Valle, La vuelta del malon, 1892" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>La vuelta del malon</h3>
+              <div class="work-meta">Angel Della Valle, 1892. MNBA.</div>
+              <p><span class="work-label">Como usarla:</span> pampa como amenaza: malon, cautiva, frontera y civilizacion/barbarie.</p>
+              <p><span class="work-label">Frase oral:</span> "La obra vuelve nacional un conflicto de frontera, pero desde una mirada ideologica".</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/6297/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:%C3%81ngel_DELLA_Valle_-_La_vuelta_del_mal%C3%B3n_-_Google_Art_Project_(cropped).jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/blanes-conquista-desierto.jpg" alt="Juan Manuel Blanes, Ocupacion militar del Rio Negro" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Ocupacion militar del Rio Negro</h3>
+              <div class="work-meta">Juan Manuel Blanes, ca. 1880s-1890s.</div>
+              <p><span class="work-label">Como usarla:</span> conquista estatal narrada como gesta civilizadora y ordenamiento del territorio.</p>
+              <p><span class="work-label">Frase oral:</span> "El Estado convierte violencia de frontera en imagen de civilizacion".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Ocupaci%C3%B3n_militar_del_R%C3%ADo_Negro_en_la_expedici%C3%B3n_al_mando_del_General_Julio_A._Roca.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card wide">
+            <figure>
+              <img src="assets/sivori-pampa-chacra-portena.jpg" alt="Eduardo Sivori, Pampa o Chacra La Portena, Moreno, 1899" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Pampa o Chacra La Portena</h3>
+              <div class="work-meta">Eduardo Sivori, 1899. MNBA.</div>
+              <p><span class="work-label">Como usarla:</span> horizonte pampeano como paisaje moderno y problema formal.</p>
+              <p><span class="work-label">Frase oral:</span> "Con Sivori la pampa empieza a ser protagonista plastica, no solo escenario narrativo".</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/5326/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Pampa_o_Chacra_La_Porte%C3%B1a,_Moreno_-_Eduardo_S%C3%ADvori.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
         </div>
 
         <h3>Cierre critico</h3>
@@ -1385,5 +1668,6 @@
       </section>
     </main>
   </div>
+  <a class="jump-index" href="#indice">Indice</a>
 </body>
 </html>

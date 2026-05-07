@@ -169,6 +169,13 @@ Las imágenes están en `assets/` con nombres simples:
    - Juan Manuel Blanes, *Ocupación militar del Río Negro / La conquista del desierto*.
    - Uso: representación de la violencia estatal como gesta de orden y civilización.
 
+Tambien hay assets para las consignas alternativas:
+
+- Consigna 1: `vidal-cabildo-recova.jpg`, `bacle-recova-1835.jpg`, `bacle-peinetones-casa.jpg`, `bacle-trages-sra-portena.jpg`, `el-museo-americano-cover.jpg`.
+- Consigna 2: `pellegrini-guerrico-retrato.jpg`, `descalzi-rosas.jpg`, `goulu-cirila-crespo-miniatura.jpg`, `san-martin-daguerrotipo.jpg`.
+- Consigna 3: `garcia-del-molino-rosas.jpg`, `morel-familia-gaucho.jpg`, `morel-la-partida.jpg`, `morel-payada-pulperia.jpg`, `morel-gaucho-traje-pueblo.jpg`, `rosas-luto-ezcurra-divisa.png`.
+- Consigna 5: `pueyrredon-rodeo.jpg`, `pueyrredon-alto-campo.jpg`, `sivori-pampa-chacra-portena.jpg`, mas las obras de Della Valle y Blanes ya listadas.
+
 ## Estilo de escritura
 
 - Usar español claro, directo y oral.
