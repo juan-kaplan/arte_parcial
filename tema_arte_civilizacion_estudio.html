@@ -156,8 +156,8 @@
     .jump-index {
       position: fixed;
       z-index: 20;
-      right: .75rem;
-      bottom: .75rem;
+      left: .75rem;
+      bottom: calc(.75rem + env(safe-area-inset-bottom));
       min-height: 2.75rem;
       display: inline-flex;
       align-items: center;
@@ -386,6 +386,27 @@
       gap: 1rem;
     }
 
+    .work-picks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin-top: .75rem;
+    }
+
+    .work-picks a {
+      min-height: 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(127, 183, 199, .55);
+      border-radius: 999px;
+      padding: .25rem .65rem;
+      background: rgba(127, 183, 199, .08);
+      color: var(--accent-2);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .86rem;
+      font-weight: 800;
+    }
+
     .pill {
       display: inline-flex;
       align-items: center;
@@ -561,6 +582,29 @@
       }
     }
 
+    @media (max-width: 767px) {
+      .site-nav {
+        display: flex;
+        gap: .75rem;
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        padding-bottom: .25rem;
+      }
+
+      .nav-group {
+        min-width: min(28rem, 92vw);
+        scroll-snap-align: start;
+      }
+
+      main {
+        padding-bottom: calc(6rem + env(safe-area-inset-bottom));
+      }
+
+      .jump-index {
+        display: none;
+      }
+    }
+
     @media (min-width: 1024px) {
       .layout {
         display: grid;
@@ -639,6 +683,7 @@
           <div class="nav-group-title">Consigna elegida</div>
           <div class="nav-links">
             <a href="#tesis-rapida">Tesis</a>
+            <a href="#respuesta-corta">Respuesta corta</a>
             <a href="#mapa-oral">Mapa oral</a>
             <a href="#contexto-devoto">Devoto</a>
             <a href="#malosetti">Malosetti</a>
@@ -697,7 +742,7 @@
       <section id="tesis-rapida">
         <h2>Tesis rapida</h2>
         <div class="quote">
-          Desde la Generacion del 80 hacia el Centenario, el arte fue pensado como prueba de civilizacion y tambien como herramienta para producirla. El arte nacional nacio de una paradoja: representar temas locales con lenguajes y criterios de legitimacion europeos.
+          Desde la Generacion del 80 hacia el Centenario, el arte fue pensado como prueba de civilizacion y tambien como herramienta para producirla. Por eso se crean instituciones, se financian viajes a Europa y se buscan espacios de legitimacion internacional. El arte nacional nacio de una paradoja: representar temas locales con lenguajes y criterios de legitimacion europeos.
         </div>
         <p class="lede">Esta es la idea que tiene que ordenar todo. No conviene convertir la respuesta en una lista de artistas: cada dato tiene que volver a la consigna.</p>
         <div class="grid three">
@@ -712,6 +757,33 @@
           <div class="card">
             <h3>Problema</h3>
             <p>La civilizacion no era una categoria neutral: ordenaba jerarquias entre Europa y America, ciudad y campo, elite y sectores populares, civilizado y barbaro.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="respuesta-corta">
+        <h2>Respuesta en 5 lineas / 3 obras</h2>
+        <p class="lede">Modo memoria: si necesitan ordenar la exposicion en treinta segundos, esta es la secuencia minima.</p>
+        <div class="grid two">
+          <div class="card flash">
+            <h3>Respuesta corta</h3>
+            <ol>
+              <li>El arte funciono como prueba e instrumento de civilizacion nacional.</li>
+              <li>SEBA, Ateneo, salones, becas, critica y MNBA formaron el campo artistico.</li>
+              <li>Europa dio lenguaje academico, tecnica y legitimacion internacional.</li>
+              <li>El arte nacional adapto esos lenguajes a pampa, frontera, trabajo, historia e identidad local.</li>
+              <li>La tension critica es que lo nacional se construyo desde una mirada urbana, elitista y civilizatoria.</li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>Obras que salvan la respuesta</h3>
+            <p>Con tres imagenes pueden cubrir la paradoja completa: aprendizaje europeo, legitimacion institucional y tema local.</p>
+            <div class="work-picks">
+              <a href="#obra-sivori">Sivori</a>
+              <a href="#obra-schiaffino">Schiaffino</a>
+              <a href="#obra-della-valle">Della Valle</a>
+              <a href="#obra-pabellon">Pabellon</a>
+            </div>
           </div>
         </div>
       </section>
@@ -762,6 +834,9 @@
             <p class="muted small"><b>Uso oral:</b> complejizar la celebracion del Centenario: civilizar tambien era ordenar, integrar y jerarquizar.</p>
           </div>
         </div>
+        <div class="warning callout">
+          <p><b>Dato para no idealizar 1910:</b> el Centenario fue vidriera de progreso, pero en mayo de 1910 el Estado declaro el estado de sitio. La nacion que se mostraba civilizada tambien suspendia garantias para controlar el conflicto social.</p>
+        </div>
         <div class="timeline">
           <div class="item"><b>1870s-1880s:</b> consolidacion estatal, expansion economica y confianza liberal/positivista en el progreso.</div>
           <div class="item"><b>1876-1878:</b> Sociedad Estimulo de Bellas Artes y revista <i>El Arte en el Plata</i>: primeras formulaciones fuertes del programa arte/civilizacion.</div>
@@ -781,7 +856,7 @@
           </div>
           <div class="card">
             <h3>Taine</h3>
-            <p>El positivismo de Taine relacionaba arte con raza, medio y momento. Eso permitia pensar que cada pueblo podia producir un arte propio, pero tambien instalaba jerarquias racializadas.</p>
+            <p>El positivismo de Taine relacionaba arte con raza, medio y momento. Eso permitia pensar que cada pueblo podia producir un arte propio, pero tambien instalaba jerarquias racializadas. Si las civilizaciones tienen ascenso, apogeo y decadencia, entonces el centro artistico no es eterno: Paris domina el presente, pero America podia imaginarse como futuro.</p>
           </div>
           <div class="card">
             <h3>Raza latina</h3>
@@ -789,7 +864,7 @@
           </div>
         </div>
         <div class="warning callout">
-          <p><b>Punto critico:</b> "civilizacion" funcionaba como palabra de prestigio, pero tambien como categoria de exclusion. Definia quienes representaban el futuro y quienes quedaban asociados a atraso, barbarie o amenaza.</p>
+          <p><b>Punto critico:</b> "civilizacion" funcionaba como palabra de prestigio, pero tambien como categoria de exclusion. Definia quienes representaban el futuro y quienes quedaban asociados a atraso, barbarie o amenaza. Civilizar tambien significaba regular gustos, habitos y sensibilidades.</p>
         </div>
         <h3>Frase para decir</h3>
         <p>Malosetti sirve para mostrar que el arte no era un adorno del proyecto del 80, sino una parte simbolica de la construccion nacional. Pero esa construccion estaba atravesada por elitismo, positivismo y por la oposicion civilizacion/barbarie.</p>
@@ -817,7 +892,7 @@
           </div>
         </div>
         <div class="success callout">
-          <p><b>Frase util:</b> institucionalizar el arte era institucionalizar una imagen de la nacion: formar artistas, formar publico y mostrar al pais como moderno ante el mundo.</p>
+          <p><b>Secuencia util:</b> la SEBA ensena y arma programa; el Ateneo y los salones exhiben; la critica legitima; las becas llevan a Europa; el MNBA patrimonializa; las exposiciones internacionales consagran. Institucionalizar el arte era institucionalizar una imagen de la nacion.</p>
         </div>
       </section>
 
@@ -846,11 +921,11 @@
         <div class="grid two">
           <div class="card">
             <h3>Chicago 1893 como limite</h3>
-            <p><i>La vuelta del malon</i> viaja a una exposicion donde las bellas artes eran una prueba internacional de civilizacion, pero la produccion argentina queda lejos de esa centralidad. Sirve para mostrar que no alcanzaba con tener obras: habia que lograr ubicacion, gestion y reconocimiento.</p>
+            <p><i>La vuelta del malon</i> viaja a una exposicion donde las bellas artes eran prueba internacional de civilizacion, pero Argentina no tiene pabellon propio y sus obras quedan en Manufacturas, lejos de la centralidad de Bellas Artes. No alcanzaba con tener obras: habia que lograr ubicacion, gestion y reconocimiento.</p>
           </div>
           <div class="card">
             <h3>Saint Louis 1904 y gestion</h3>
-            <p>En Saint Louis, Schiaffino aparece como gestor: pelea por una presencia argentina mas visible y por ubicar el arte nacional dentro de circuitos legitimados. El problema no es solo pintar, sino hacer existir institucionalmente ese arte ante otros paises.</p>
+            <p>En Saint Louis, Schiaffino aparece como gestor: organiza un envio argentino de Bellas Artes y busca ubicarlo junto a potencias artisticas. El problema no es solo pintar, sino hacer existir institucionalmente ese arte ante otros paises.</p>
           </div>
         </div>
         <p class="source">Referencia de clase: notebook <i>Arte y Cultura Visual en Argentina</i>, exposiciones internacionales y gestion de Schiaffino.</p>
@@ -887,6 +962,17 @@
         <div class="warning callout">
           <p><b>Tension central:</b> lo local puede aparecer como identidad nacional, pero tambien como barbarie, atraso o amenaza. Por eso una obra "nacional" no siempre incluye democraticamente a todos: muchas veces ordena quien pertenece y quien queda afuera.</p>
         </div>
+        <h3>Matriz de adaptacion</h3>
+        <div class="grid two">
+          <div class="card">
+            <h3>Sivori y Schiaffino</h3>
+            <p><b>Sivori:</b> naturalismo aprendido en Paris + cuerpo de una trabajadora + polemica local sobre gusto, clase y modernidad. <b>Schiaffino:</b> desnudo de salon + premio parisino + capital simbolico para organizar instituciones en Buenos Aires.</p>
+          </div>
+          <div class="card">
+            <h3>Della Valle y De la Carcova</h3>
+            <p><b>Della Valle:</b> pintura historica academica + malon, cautiva y pampa + circuito internacional. <b>De la Carcova:</b> realismo social europeo + conflicto urbano argentino despues de 1890.</p>
+          </div>
+        </div>
       </section>
 
       <section id="obras">
@@ -894,7 +980,7 @@
         <p class="lede">Cada imagen tiene una funcion. No hay que describirla entera: hay que usarla para responder la consigna.</p>
 
         <div class="work-gallery">
-          <article class="work-card">
+          <article class="work-card" id="obra-della-valle">
             <figure>
               <img src="assets/della-valle-vuelta-del-malon.jpg" alt="Angel Della Valle, La vuelta del malon, 1892" loading="lazy" />
             </figure>
@@ -902,14 +988,14 @@
               <h3>La vuelta del malon</h3>
               <div class="work-meta">Angel Della Valle, 1892. Oleo. MNBA.</div>
               <p><span class="work-label">Que muestra:</span> pampa, malon, cautiva, frontera e indigena como amenaza.</p>
-              <p><span class="work-label">Como usarla:</span> es el ejemplo mas fuerte de arte nacional: tema local con ambicion de pintura historica academica.</p>
+              <p><span class="work-label">Como usarla:</span> es el ejemplo mas fuerte de arte nacional: tema local, formato academico y circulacion internacional en Chicago 1893.</p>
               <p><span class="work-label">Frase oral:</span> "La obra vuelve nacional un tema local, pero lo hace desde la matriz civilizacion/barbarie".</p>
-              <p><span class="work-label">Cuidado critico:</span> no tomar la imagen como documento neutral de la frontera; es una construccion ideologica.</p>
+              <p><span class="work-label">Cuidado critico:</span> no tomar la imagen como documento neutral: pinta una frontera ya derrotada como amenaza y legitima afectivamente la Campana del Desierto.</p>
               <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/6297/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:%C3%81ngel_DELLA_Valle_-_La_vuelta_del_mal%C3%B3n_-_Google_Art_Project_(cropped).jpg">Wikimedia Commons</a>.</p>
             </div>
           </article>
 
-          <article class="work-card portrait">
+          <article class="work-card portrait" id="obra-sivori">
             <figure>
               <img src="assets/sivori-despertar-criada.jpg" alt="Eduardo Sivori, Le lever de la bonne o El despertar de la criada, 1887" loading="lazy" />
             </figure>
@@ -917,14 +1003,14 @@
               <h3>El despertar de la criada</h3>
               <div class="work-meta">Eduardo Sivori, 1887. Oleo. MNBA.</div>
               <p><span class="work-label">Que muestra:</span> un desnudo naturalista de una trabajadora, lejos del desnudo idealizado.</p>
-              <p><span class="work-label">Como usarla:</span> condensa la formacion francesa y el regreso conflictivo de ese lenguaje a Buenos Aires.</p>
+              <p><span class="work-label">Como usarla:</span> condensa la formacion francesa y el regreso conflictivo de ese lenguaje a Buenos Aires; el problema no es solo el desnudo, sino el cuerpo social de una trabajadora.</p>
               <p><span class="work-label">Frase oral:</span> "Sivori aprende en Paris y produce una obra que en Buenos Aires se vuelve batalla por el arte moderno".</p>
               <p><span class="work-label">Cuidado critico:</span> no es simple copia europea; al volver, el lenguaje se reubica en un medio local con otras tensiones.</p>
               <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/1894/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Le_lever_de_la_bonne_-_Eduardo_S%C3%ADvori.jpg">Wikimedia Commons</a>.</p>
             </div>
           </article>
 
-          <article class="work-card">
+          <article class="work-card" id="obra-schiaffino">
             <figure>
               <img src="assets/schiaffino-reposo.jpg" alt="Eduardo Schiaffino, Reposo, 1889" loading="lazy" />
             </figure>
@@ -939,7 +1025,7 @@
             </div>
           </article>
 
-          <article class="work-card">
+          <article class="work-card" id="obra-pabellon">
             <figure>
               <img src="assets/seba-1893.jpg" alt="Fotografia de integrantes de la Sociedad Estimulo de Bellas Artes, 1893" loading="lazy" />
             </figure>
@@ -962,7 +1048,7 @@
               <h3>Pabellon Argentino en Paris</h3>
               <div class="work-meta">Exposicion Universal de Paris, 1889.</div>
               <p><span class="work-label">Que muestra:</span> la Argentina exhibiendose en el centro europeo como pais moderno y prospero.</p>
-              <p><span class="work-label">Como usarla:</span> conecta arte, Estado e imagen internacional de nacion civilizada.</p>
+              <p><span class="work-label">Como usarla:</span> conecta arte, Estado e imagen internacional de nacion civilizada; el edificio despues se vuelve sede del MNBA, es decir, vidriera externa y patrimonio interno.</p>
               <p><span class="work-label">Frase oral:</span> "La civilizacion tambien se actuaba hacia afuera: habia que mostrarse ante Europa".</p>
               <p><span class="work-label">Cuidado critico:</span> no representa a toda la sociedad, sino una imagen oficial de progreso.</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Pabellon_argentino_en_exposicion_universal.jpg">Wikimedia Commons</a>.</p>
@@ -1020,11 +1106,11 @@
             </figure>
             <div class="work-body">
               <h3>Ocupacion militar del Rio Negro</h3>
-              <div class="work-meta">Juan Manuel Blanes, ca. 1880s-1890s. Museo Historico Nacional.</div>
+              <div class="work-meta">Juan Manuel Blanes, 1889. Representa la expedicion de 1879.</div>
               <p><span class="work-label">Que muestra:</span> la campaña estatal en la frontera representada como escena de orden y autoridad.</p>
               <p><span class="work-label">Como usarla:</span> permite discutir como la violencia estatal puede presentarse como gesta civilizadora.</p>
               <p><span class="work-label">Frase oral:</span> "La palabra civilizacion tambien legitima politicamente ciertas violencias".</p>
-              <p><span class="work-label">Cuidado critico:</span> mencionar la datacion con cautela; importa mas su funcion en el argumento que el detalle cronologico.</p>
+              <p><span class="work-label">Cuidado critico:</span> no leerla como documento neutral: ordena la violencia estatal bajo la forma de gesta civilizadora.</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Ocupaci%C3%B3n_militar_del_R%C3%ADo_Negro_en_la_expedici%C3%B3n_al_mando_del_General_Julio_A._Roca.jpg">Wikimedia Commons</a>. Referencia de ficha: <a href="https://archive.nyu.edu/handle/2451/59820">NYU Faculty Digital Archive</a>.</p>
             </div>
           </article>
@@ -1105,7 +1191,7 @@
             </figure>
             <div class="work-body">
               <h3>Vista del Cabildo desde la Recova</h3>
-              <div class="work-meta">Emeric Essex Vidal, 1817. Acuarela/litografia posterior.</div>
+              <div class="work-meta">Emeric Essex Vidal, 1817. Acuarela; difundida en 1820 como aguatinta/grabado coloreado.</div>
               <p><span class="work-label">Para que sirve:</span> muestra Buenos Aires como ciudad observable: plaza, arquitectura, tipos sociales y vida cotidiana.</p>
               <p><span class="work-label">Frase oral:</span> "El viajero convierte la ciudad en imagen legible para un publico local y extranjero".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Emeric_Essex_Vidal_-_Vista_del_Cabildo_desde_la_Recova_-_1817.jpg">Wikimedia Commons</a>.</p>
@@ -1131,7 +1217,7 @@
             </figure>
             <div class="work-body">
               <h3>Catedral de Buenos Aires</h3>
-              <div class="work-meta">Carlos Enrique Pellegrini, siglo XIX. Vista urbana.</div>
+              <div class="work-meta">Carlos Enrique Pellegrini, 1829. Vista urbana.</div>
               <p><span class="work-label">Para que sirve:</span> Pellegrini combina mirada tecnica y artistica: ordena la ciudad desde plaza, arquitectura y punto de vista.</p>
               <p><span class="work-label">Frase oral:</span> "Pellegrini vuelve Buenos Aires una ciudad legible, casi medida por el dibujo".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Pellegrini_Buenos_Aires_Catedral.jpg">Wikimedia Commons</a>.</p>
@@ -1176,6 +1262,7 @@
               <span class="tag">vistas urbanas</span>
               <span class="tag">tipos y costumbres</span>
               <span class="tag">expediciones</span>
+              <span class="tag">Brambila/Malaspina</span>
               <span class="tag">grabado</span>
               <span class="tag">litografia</span>
               <span class="tag">periodicos ilustrados</span>
@@ -1188,7 +1275,7 @@
 
         <h3>Respuesta oral en 2 minutos</h3>
         <div class="speaker">Para responder, conviene partir de que Buenos Aires no tenia todavia una iconografia nacional consolidada. Los artistas viajeros y las expediciones cientificas ayudaron a producirla porque registraron la ciudad, la pampa cercana, los oficios, las modas y los tipos sociales. Sus imagenes mezclan mirada documental, curiosidad cientifica y pintoresquismo: no son fotografias neutrales, sino selecciones de lo que parecia representativo o exotico.</div>
-        <p>Muchos de esos artistas trabajaron generos como la vista urbana, el paisaje, el retrato, las escenas de tipos y costumbres, la documentacion topografica y la ilustracion cientifica. Vidal, Pellegrini, Bacle, Macaire u Onslow sirven para ubicar esa zona donde arte, documento y mercado visual se cruzan.</p>
+        <p>Muchos de esos artistas trabajaron generos como la vista urbana, el paisaje, el retrato, las escenas de tipos y costumbres, la documentacion topografica y la ilustracion cientifica. Conviene separar dos zonas: miradas viajeras o tecnicas, como Brambila, Vidal y Pellegrini; y talleres de reproduccion, como Bacle, Macaire u Onslow.</p>
         <p>Antes de la litografia, el grabado ya permitia traducir una acuarela o dibujo a una plancha metalica y sacar muchas impresiones. Pero esa traduccion no era neutra: dependia de la mano del grabador, por eso una misma vista podia circular con variaciones.</p>
         <p>La litografia fue decisiva porque volvio mas economica y flexible la reproduccion. El taller de Bacle y publicaciones como <i>El Museo Americano</i> y <i>El Recopilador</i> difundieron retratos, vistas, albumes de trajes y costumbres, laminas sueltas e imagenes tomadas de repertorios europeos adaptadas al publico local.</p>
         <p>Asi, el costumbrismo no fue solo una descripcion amable de lo cotidiano. Fue una forma de ordenar visualmente la sociedad: mostrar como era Buenos Aires, quienes la habitaban, que practicas la definian y que imagen podia circular de ella.</p>
@@ -1207,7 +1294,7 @@
           </div>
         </div>
         <div class="callout">
-          <p><b>Dato del notebook:</b> el caso de Brambila y las primeras vistas de Buenos Aires sirve para explicar que algunas imagenes nacen como pintura o acuarela, pero llegan al publico como grabado. Si hay dos versiones, no es un error menor: muestra que la imagen nacional se construye en una cadena de traducciones tecnicas.</p>
+          <p><b>Dato del notebook:</b> el caso de Malaspina/Brambila y las primeras vistas de Buenos Aires sirve para explicar que algunas imagenes nacen como expedicion, dibujo o acuarela, pero llegan al publico europeo como grabado. Si hay dos versiones, no es un error menor: muestra que la imagen nacional se construye en una cadena de traducciones tecnicas.</p>
         </div>
 
         <h3 id="c1-obras">Obras para analizar</h3>
@@ -1218,7 +1305,7 @@
             </figure>
             <div class="work-body">
               <h3>Vidal, vistas de Buenos Aires</h3>
-              <div class="work-meta">Emeric Essex Vidal, 1817.</div>
+              <div class="work-meta">Emeric Essex Vidal, 1817; publicacion londinense de 1820.</div>
               <p><span class="work-label">Como usarla:</span> la mirada viajera convierte la ciudad en escena reconocible: plaza, edificios, movimiento y tipos sociales.</p>
               <p><span class="work-label">Frase oral:</span> "Buenos Aires empieza a verse como imagen nacional antes de tener una iconografia nacional estable".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Emeric_Essex_Vidal_-_Vista_del_Cabildo_desde_la_Recova_-_1817.jpg">Wikimedia Commons</a>.</p>
@@ -1231,7 +1318,7 @@
             </figure>
             <div class="work-body">
               <h3>Pellegrini, Catedral</h3>
-              <div class="work-meta">Carlos Enrique Pellegrini, siglo XIX.</div>
+              <div class="work-meta">Carlos Enrique Pellegrini, 1829.</div>
               <p><span class="work-label">Como usarla:</span> vista urbana como documento: arquitectura, espacio publico y ciudad moderna vista por un dibujante tecnico.</p>
               <p><span class="work-label">Frase oral:</span> "Pellegrini hace de Buenos Aires un objeto visual ordenado y reconocible".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Pellegrini_Buenos_Aires_Catedral.jpg">Wikimedia Commons</a>.</p>
@@ -1341,6 +1428,19 @@
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Jose_de_San_Martin.jpg">Wikimedia Commons</a>.</p>
             </div>
           </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/goulu-cirila-crespo-miniatura.jpg" alt="Jean-Philippe Goulu, Retrato de Cirila Crespo de Sivori" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Miniatura de Cirila Crespo</h3>
+              <div class="work-meta">Jean-Philippe Goulu, 1832. Acuarela sobre marfil. MNBA.</div>
+              <p><span class="work-label">Para que sirve:</span> miniatura como retrato intimo, portable y afectivo: otro modo de producir memoria y estatus.</p>
+              <p><span class="work-label">Frase oral:</span> "La miniatura lleva el retrato al cuerpo y al vinculo privado".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Cirila_Crespo_de_S%C3%ADvori_-_Jean-Philippe_Goulu.jpg">Wikimedia Commons / MNBA</a>.</p>
+            </div>
+          </article>
         </div>
 
         <div class="grid two">
@@ -1364,7 +1464,7 @@
 
         <h3>Respuesta oral en 2 minutos</h3>
         <div class="speaker">La idea central es que el retrato en la primera mitad del siglo XIX no era solamente parecido fisico. Era una practica social: servia para afirmar estatus, conservar memoria, circular afectos y construir presencia publica.</div>
-        <p>El retrato burgues o de elite funcionaba en el ambito familiar y social: mostraba respetabilidad, gusto, educacion y pertenencia. Se consumia como objeto de casa, de gabinete o de red familiar. En cambio, el retrato de aparato intensificaba los signos de poder: uniforme, banda, postura, cortinados, atributos politicos o militares. No busca solo intimidad, sino autoridad.</p>
+        <p>El retrato de elite o burgues funcionaba en el ambito familiar y social: mostraba respetabilidad, gusto, educacion y pertenencia. Se producia por encargo, circulaba en casas y redes familiares, y se consumia como signo de memoria y distincion. En cambio, el retrato de aparato intensificaba los signos de poder: uniforme, banda, postura, cortinados, atributos politicos o militares. No busca solo intimidad, sino autoridad.</p>
         <p>La miniatura era otra logica: pequena, portatil, asociada al afecto y a la memoria privada. Circulaba cerca del cuerpo o dentro de redes intimas. La litografia, en cambio, permitia reproducir retratos y llevarlos a un publico mas amplio: hombres publicos, lideres, artistas o personajes politicos podian circular en papel.</p>
         <p>Con el daguerrotipo aparece una tecnologia nueva. Segun Burke, la fotografia parece un documento transparente, pero tambien hay que leer pose, convenciones y usos sociales. El daguerrotipo era unico, caro y moderno: prometia fidelidad mecanica, pero seguia organizando estatus y memoria.</p>
         <p>Myers ayuda a ubicar el contexto: la elite portena construia sociabilidad en casas, tertulias, teatros, asociaciones y redes politicas. En ese mundo, tener y circular retratos era una forma de decir quien era uno y a que mundo pertenecia.</p>
@@ -1389,7 +1489,7 @@
               <img src="assets/descalzi-rosas.jpg" alt="Cayetano Descalzi, Juan Manuel de Rosas" loading="lazy" />
             </figure>
             <div class="work-body">
-              <h3>Descalzi / Garcia del Molino, Rosas</h3>
+              <h3>Descalzi, Rosas</h3>
               <div class="work-meta">Cayetano Descalzi, ca. 1840.</div>
               <p><span class="work-label">Como usarla:</span> explicar retrato de aparato: pose, uniforme, autoridad y signos politicos.</p>
               <p><span class="work-label">Frase oral:</span> "Aca el retrato fabrica presencia publica, no solo parecido".</p>
@@ -1455,10 +1555,23 @@
             </figure>
             <div class="work-body">
               <h3>La familia del gaucho</h3>
-              <div class="work-meta">Carlos Morel, 1841. Litografia. MNBA.</div>
-              <p><span class="work-label">Para que sirve:</span> costumbrismo federal: familia rural, orden, paz y consenso.</p>
+              <div class="work-meta">Carlos Morel, 1841. Serie Grande de Ibarra. Litografia. MNBA.</div>
+              <p><span class="work-label">Para que sirve:</span> costumbrismo federal: familia rural, orden jerarquico, pertenencia politica y construccion de consenso.</p>
               <p><span class="work-label">Frase oral:</span> "El campo aparece como base moral del orden rosista".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:La_familia_del_gaucho_-_Carlos_Morel.jpg">Wikimedia Commons / MNBA</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/morel-indios-pampas-serie-ibarra.jpg" alt="Carlos Morel, Indios pampas, Serie Ibarra" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Indios pampas</h3>
+              <div class="work-meta">Carlos Morel, Serie Ibarra, siglo XIX. Litografia sobre papel. MNBA, inv. 8073.</div>
+              <p><span class="work-label">Para que sirve:</span> permite discutir la imagen de los indios amigos o pacificados dentro del orden de frontera rosista.</p>
+              <p><span class="work-label">Frase oral:</span> "Morel convierte la frontera en una imagen de orden: la paz federal tambien es tutela y control".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Indios_pampas_(Serie_Ibarra)_-_Carlos_Morel.jpg">Wikimedia Commons / MNBA</a>.</p>
             </div>
           </article>
 
@@ -1468,7 +1581,7 @@
             </figure>
             <div class="work-body">
               <h3>La partida</h3>
-              <div class="work-meta">Carlos Morel, siglo XIX. Litografia.</div>
+              <div class="work-meta">Carlos Morel, <i>Usos y costumbres del Rio de la Plata</i>, 1844-1845. Litografia.</div>
               <p><span class="work-label">Para que sirve:</span> sociabilidad rural, movimiento, tropa y vida popular como imaginario politico.</p>
               <p><span class="work-label">Frase oral:</span> "Lo costumbrista tambien puede construir pertenencia federal".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:La_partida_-_Carlos_Morel.jpg">Wikimedia Commons</a>.</p>
@@ -1488,6 +1601,8 @@
               <span class="tag">divisa</span>
               <span class="tag">retrato politico</span>
               <span class="tag">costumbrismo federal</span>
+              <span class="tag">Serie Ibarra</span>
+              <span class="tag">indios amigos</span>
               <span class="tag">litografia</span>
               <span class="tag">consenso/coercion</span>
             </div>
@@ -1498,7 +1613,7 @@
         <h3>Respuesta oral en 2 minutos</h3>
         <div class="speaker">Para responder, partiria de una idea: durante el rosismo la imagen no fue solo arte ni documento, sino una herramienta para fabricar identidad politica federal.</div>
         <p>Garcia del Molino permite pensar el retrato como imagen de poder. En los retratos de Rosas, el parecido importa, pero importan mas los signos: pose, autoridad, vestimenta, rojo punzo y presencia del Restaurador. Ver el rostro de Rosas era ver una forma de orden politico.</p>
-        <p>Con Carlos Morel aparece otra capa. Roberto Amigo habla de costumbrismo federal: sus gauchos, pulperias, soldados y familias rurales no son escenas inocentes. En <i>La familia del gaucho</i>, el mundo rural aparece pacificado, jerarquizado y vinculado a la comunidad federal. El gaucho no aparece como amenaza, sino como paisano, soldado o padre dentro del orden rosista.</p>
+        <p>Con Carlos Morel aparece otra capa. Roberto Amigo habla de costumbrismo federal: sus gauchos, pulperias, soldados, indios amigos y familias rurales no son escenas inocentes. En <i>La familia del gaucho</i>, el mundo rural aparece pacificado, jerarquizado y vinculado a la comunidad federal. El gaucho no aparece como amenaza, sino como paisano, soldado o padre dentro del orden rosista.</p>
         <p>La litografia agrega la dimension de circulacion. A partir de Bacle y otros talleres, retratos, divisas, lemas y simbolos federales podian reproducirse en papel y objetos. La politica entraba en la vida diaria: ropa, impresos, fiestas, retratos, colores y cuerpos.</p>
         <p>Por eso Garcia del Molino, Morel y la litografia muestran tres niveles de la propaganda: retratar al lider, representar su base social y multiplicar los signos de pertenencia.</p>
 
@@ -1523,10 +1638,24 @@
             </figure>
             <div class="work-body">
               <h3>La familia del gaucho</h3>
-              <div class="work-meta">Carlos Morel, 1841. Litografia. MNBA.</div>
+              <div class="work-meta">Carlos Morel, 1841. Serie Grande de Ibarra. Litografia. MNBA.</div>
               <p><span class="work-label">Como usarla:</span> imagen de paz rural, familia, jerarquia y consenso federal.</p>
               <p><span class="work-label">Frase oral:</span> "Morel convierte el campo en una comunidad politica ordenada".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:La_familia_del_gaucho_-_Carlos_Morel.jpg">Wikimedia Commons / MNBA</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/morel-indios-pampas-serie-ibarra.jpg" alt="Carlos Morel, Indios pampas, Serie Ibarra" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Indios pampas</h3>
+              <div class="work-meta">Carlos Morel, Serie Ibarra, siglo XIX. Litografia sobre papel. MNBA, inv. 8073.</div>
+              <p><span class="work-label">Como usarla:</span> contrapone el imaginario del malon violento con una imagen de frontera pacificada o negociada por el rosismo.</p>
+              <p><span class="work-label">Frase oral:</span> "La imagen federal no solo retrata a Rosas: tambien organiza quienes pueden aparecer dentro de su pampa".</p>
+              <p><span class="work-label">Cuidado critico:</span> no leer la paz como inclusion plena: la imagen tambien traduce tutela, control y subordinacion politica.</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Indios_pampas_(Serie_Ibarra)_-_Carlos_Morel.jpg">Wikimedia Commons / MNBA</a>.</p>
             </div>
           </article>
 
@@ -1536,7 +1665,7 @@
             </figure>
             <div class="work-body">
               <h3>Payada en una pulperia</h3>
-              <div class="work-meta">Carlos Morel, siglo XIX.</div>
+              <div class="work-meta">Carlos Morel, <i>Usos y costumbres del Rio de la Plata</i>, 1844-1845.</div>
               <p><span class="work-label">Como usarla:</span> sociabilidad popular atravesada por canto, reunion, vida rural e identidad politica.</p>
               <p><span class="work-label">Frase oral:</span> "La escena costumbrista no es inocente: organiza una imagen del mundo federal".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Payada_en_una_pulper%C3%ADa_-_Carlos_Morel.jpg">Wikimedia Commons</a>.</p>
@@ -1549,7 +1678,7 @@
             </figure>
             <div class="work-body">
               <h3>Gaucho, traje de pueblo</h3>
-              <div class="work-meta">Carlos Morel, siglo XIX.</div>
+              <div class="work-meta">Carlos Morel, <i>Usos y costumbres del Rio de la Plata</i>, 1844-1845.</div>
               <p><span class="work-label">Como usarla:</span> el cuerpo, la ropa y el color pueden funcionar como signos visibles de pertenencia politica.</p>
               <p><span class="work-label">Frase oral:</span> "El federalismo tambien se lleva puesto: color, divisa, prenda y gesto".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Gaucho,_traje_de_pueblo_-_Carlos_Morel.jpg">Wikimedia Commons</a>.</p>
@@ -1588,10 +1717,10 @@
             </figure>
             <div class="work-body">
               <h3>El rodeo</h3>
-              <div class="work-meta">Prilidiano Pueyrredon, ca. 1861. MNBA.</div>
-              <p><span class="work-label">Para que sirve:</span> pampa productiva: trabajo rural, estancia, ganado y orden social.</p>
+              <div class="work-meta">Prilidiano Pueyrredon, 1861. MNBA.</div>
+              <p><span class="work-label">Para que sirve:</span> pampa productiva: propietario, capataz, peon, estancia, ganado y orden social.</p>
               <p><span class="work-label">Frase oral:</span> "La pampa puede aparecer como riqueza organizada, no solo como desierto".</p>
-              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:El_rodeo_-_Prilidiano_Pueyrred%C3%B3n.jpg">Wikimedia Commons / MNBA</a>.</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/3189/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:El_rodeo_-_Prilidiano_Pueyrred%C3%B3n.jpg">Wikimedia Commons</a>.</p>
             </div>
           </article>
 
@@ -1602,7 +1731,7 @@
             <div class="work-body">
               <h3>Un alto en el campo</h3>
               <div class="work-meta">Prilidiano Pueyrredon, 1861. MNBA.</div>
-              <p><span class="work-label">Para que sirve:</span> paisaje con sociabilidad rural: ombu, carreta, figuras, descanso y mundo criollo.</p>
+              <p><span class="work-label">Para que sirve:</span> paisaje con sociabilidad rural: ombu, carreta, figuras, descanso y mundo criollo vuelven habitable la llanura.</p>
               <p><span class="work-label">Frase oral:</span> "La pampa aparece como identidad criolla, pero ordenada por una mirada civilizadora".</p>
               <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/3187/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Un_alto_en_el_campo_-_Prilidiano_Pueyrred%C3%B3n.jpg">Wikimedia Commons</a>.</p>
             </div>
@@ -1615,7 +1744,7 @@
             <div class="work-body">
               <h3>Pampa o Chacra La Portena, Moreno</h3>
               <div class="work-meta">Eduardo Sivori, 1899. Acuarela. MNBA.</div>
-              <p><span class="work-label">Para que sirve:</span> horizonte pampeano moderno: planicie, cielo, vacio y observacion naturalista.</p>
+              <p><span class="work-label">Para que sirve:</span> horizonte pampeano moderno: tierra, cielo, topografia y observacion naturalista, ya sin escena narrativa dominante.</p>
               <p><span class="work-label">Frase oral:</span> "Sivori vuelve la pampa un problema formal moderno".</p>
               <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/5326/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Pampa_o_Chacra_La_Porte%C3%B1a,_Moreno_-_Eduardo_S%C3%ADvori.jpg">Wikimedia Commons</a>.</p>
             </div>
@@ -1635,6 +1764,7 @@
               <span class="tag">frontera</span>
               <span class="tag">cautiva</span>
               <span class="tag">malon</span>
+              <span class="tag">Rugendas</span>
               <span class="tag">Estado</span>
               <span class="tag">horizonte</span>
             </div>
@@ -1650,11 +1780,11 @@
           </div>
           <div class="card">
             <h3>Pampa de conflicto</h3>
-            <p>La frontera se narra con cautivas, malones, fortines e indigenas. Ahi la pampa se vuelve el escenario dramatico de civilizacion/barbarie.</p>
+            <p>La frontera se narra con cautivas, malones, fortines e indigenas. Rugendas y Della Valle permiten ver como la pampa se vuelve escenario dramatico de civilizacion/barbarie.</p>
           </div>
           <div class="card">
             <h3>Pampa autonoma</h3>
-            <p>Despues de la Campana del Desierto, el paisaje puede mirarse como pampa "pacificada": horizonte, cielo, topografia y extension como problema plastico.</p>
+            <p>Despues de la Campana del Desierto, el paisaje puede mirarse como pampa "pacificada": horizonte, cielo, topografia y extension como problema plastico. Esa calma tambien depende de una violencia previa.</p>
           </div>
         </div>
 
@@ -1662,8 +1792,8 @@
         <div class="speaker">La idea central es que el paisaje pampeano del siglo XIX no representa simplemente naturaleza. Representa un conflicto: que hacer con la pampa y como incorporarla a la nacion.</div>
         <p>En Pueyrredon, la pampa puede aparecer vinculada a la estancia, el ganado, el ombu, la carreta, el descanso y el trabajo rural. Obras como <i>El rodeo</i> o <i>Un alto en el campo</i> muestran un campo socialmente organizado. Ahi la pampa no es puro vacio: es territorio productivo, jerarquico y habitable.</p>
         <p>Pero en la cultura del siglo XIX tambien aparece la pampa como desierto y frontera. Esa palabra "desierto" no significa que no hubiera habitantes, sino que desde la mirada estatal y urbana se la piensa como espacio a conquistar, ordenar o civilizar. Ahi entran las imagenes de malones, cautivas e indigenas como figuras de barbarie.</p>
-        <p>Malosetti muestra que la cautiva blanca condensa una fantasia politica y erotica: el cuerpo femenino aparece como frontera amenazada por la barbarie. <i>La vuelta del malon</i> de Della Valle es clave porque vuelve nacional ese conflicto, pero lo hace desde una mirada ideologica que presenta al indigena como amenaza.</p>
-        <p>Blanes, con la <i>Ocupacion militar del Rio Negro</i>, muestra el otro lado: la violencia estatal representada como orden y civilizacion. Y con Sivori, la pampa se vuelve tambien problema moderno de paisaje: horizonte bajo, cielo enorme, inmensidad y observacion directa. De Pueyrredon a Sivori cambia el lenguaje, pero la pampa sigue siendo una pregunta sobre identidad nacional.</p>
+        <p>Malosetti muestra que la cautiva blanca condensa una fantasia politica y erotica: el cuerpo femenino aparece como frontera amenazada por la barbarie. Desde Rugendas hasta Della Valle, esa figura no solo narra un episodio: convierte el territorio en drama ideologico. <i>La vuelta del malon</i> es clave porque vuelve nacional ese conflicto, pero lo hace retrospectivamente, cuando la amenaza indigena ya estaba derrotada como fuerza militar central.</p>
+        <p>Blanes, con la <i>Ocupacion militar del Rio Negro</i>, muestra el otro lado: la violencia estatal representada como orden y civilizacion. Y con Sivori, la pampa se vuelve tambien problema moderno de paisaje: horizonte bajo, cielo enorme, topografia y observacion directa. De Pueyrredon a Sivori cambia el lenguaje, pero la pampa sigue siendo una pregunta sobre identidad nacional.</p>
 
         <h3 id="c5-obras">Obras para analizar</h3>
         <div class="work-gallery">
@@ -1673,10 +1803,10 @@
             </figure>
             <div class="work-body">
               <h3>El rodeo</h3>
-              <div class="work-meta">Prilidiano Pueyrredon, ca. 1861. MNBA.</div>
-              <p><span class="work-label">Como usarla:</span> pampa como trabajo, propiedad, estancia y orden rural.</p>
+              <div class="work-meta">Prilidiano Pueyrredon, 1861. MNBA.</div>
+              <p><span class="work-label">Como usarla:</span> pampa como trabajo, propiedad, estancia y orden rural; propietario, capataz y peon aparecen armonizados.</p>
               <p><span class="work-label">Frase oral:</span> "La llanura aparece productiva y organizada, no como vacio natural".</p>
-              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:El_rodeo_-_Prilidiano_Pueyrred%C3%B3n.jpg">Wikimedia Commons / MNBA</a>.</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/3189/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:El_rodeo_-_Prilidiano_Pueyrred%C3%B3n.jpg">Wikimedia Commons</a>.</p>
             </div>
           </article>
 
@@ -1700,8 +1830,9 @@
             <div class="work-body">
               <h3>La vuelta del malon</h3>
               <div class="work-meta">Angel Della Valle, 1892. MNBA.</div>
-              <p><span class="work-label">Como usarla:</span> pampa como amenaza: malon, cautiva, frontera y civilizacion/barbarie.</p>
-              <p><span class="work-label">Frase oral:</span> "La obra vuelve nacional un conflicto de frontera, pero desde una mirada ideologica".</p>
+              <p><span class="work-label">Como usarla:</span> pampa como recuerdo ideologico de amenaza: malon, cautiva, frontera y civilizacion/barbarie.</p>
+              <p><span class="work-label">Frase oral:</span> "La obra vuelve nacional un conflicto de frontera, pero lo muestra como amenaza cuando ya funciona como justificacion retrospectiva".</p>
+              <p><span class="work-label">Cuidado critico:</span> no tomarla como amenaza presente: la imagen trabaja sobre una memoria politica del malon despues de la Campana del Desierto.</p>
               <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/6297/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:%C3%81ngel_DELLA_Valle_-_La_vuelta_del_mal%C3%B3n_-_Google_Art_Project_(cropped).jpg">Wikimedia Commons</a>.</p>
             </div>
           </article>
@@ -1712,8 +1843,8 @@
             </figure>
             <div class="work-body">
               <h3>Ocupacion militar del Rio Negro</h3>
-              <div class="work-meta">Juan Manuel Blanes, ca. 1880s-1890s.</div>
-              <p><span class="work-label">Como usarla:</span> conquista estatal narrada como gesta civilizadora y ordenamiento del territorio.</p>
+              <div class="work-meta">Juan Manuel Blanes, 1889. Representa la expedicion de 1879.</div>
+              <p><span class="work-label">Como usarla:</span> conquista estatal narrada como gesta civilizadora y ordenamiento militar del territorio.</p>
               <p><span class="work-label">Frase oral:</span> "El Estado convierte violencia de frontera en imagen de civilizacion".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Ocupaci%C3%B3n_militar_del_R%C3%ADo_Negro_en_la_expedici%C3%B3n_al_mando_del_General_Julio_A._Roca.jpg">Wikimedia Commons</a>.</p>
             </div>
@@ -1726,7 +1857,7 @@
             <div class="work-body">
               <h3>Pampa o Chacra La Portena</h3>
               <div class="work-meta">Eduardo Sivori, 1899. MNBA.</div>
-              <p><span class="work-label">Como usarla:</span> horizonte pampeano como paisaje moderno y problema formal.</p>
+              <p><span class="work-label">Como usarla:</span> horizonte pampeano como paisaje moderno: la pampa ya no necesita gauchos, ombues o malones para ser tema.</p>
               <p><span class="work-label">Frase oral:</span> "Con Sivori la pampa empieza a ser protagonista plastica, no solo escenario narrativo".</p>
               <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/5326/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Pampa_o_Chacra_La_Porte%C3%B1a,_Moreno_-_Eduardo_S%C3%ADvori.jpg">Wikimedia Commons</a>.</p>
             </div>
@@ -1768,6 +1899,14 @@
         <details>
           <summary>Por que es problematica la idea de civilizacion?</summary>
           <p>Porque no describe simplemente una mejora universal: ordena jerarquias. Puede ubicar a Europa, la ciudad y la elite del lado del futuro, y al campo, lo indigena o lo popular del lado de la barbarie.</p>
+        </details>
+        <details>
+          <summary>Como evitar que Della Valle quede como "documento" del malon?</summary>
+          <p>Aclarar que <i>La vuelta del malon</i> se pinta en 1892, despues de la Campana del Desierto. La obra no muestra una amenaza actual en sentido directo: organiza una memoria dramatica de la frontera que ayuda a justificar la violencia estatal previa.</p>
+        </details>
+        <details>
+          <summary>Que aporta Serie Ibarra a la consigna sobre Rosas?</summary>
+          <p>Permite mostrar que la propaganda federal no solo se apoya en el retrato de Rosas. Morel tambien construye una imagen positiva y ordenada del mundo rural, incluyendo indios pacificados o negociados dentro de la frontera rosista.</p>
         </details>
       </section>
 

@@ -175,7 +175,7 @@ Tambien hay assets para las consignas alternativas:
 
 - Consigna 1: `vidal-cabildo-recova.jpg`, `bacle-recova-1835.jpg`, `pellegrini-catedral-buenos-aires.jpg`, `bacle-peinetones-casa.jpg`, `bacle-tippou-saib.jpg`, `bacle-trages-sra-portena.jpg`, `el-museo-americano-cover.jpg`.
 - Consigna 2: `pellegrini-guerrico-retrato.jpg`, `descalzi-rosas.jpg`, `goulu-cirila-crespo-miniatura.jpg`, `san-martin-daguerrotipo.jpg`.
-- Consigna 3: `garcia-del-molino-rosas.jpg`, `morel-familia-gaucho.jpg`, `morel-la-partida.jpg`, `morel-payada-pulperia.jpg`, `morel-gaucho-traje-pueblo.jpg`, `rosas-luto-ezcurra-divisa.png`.
+- Consigna 3: `garcia-del-molino-rosas.jpg`, `morel-familia-gaucho.jpg`, `morel-indios-pampas-serie-ibarra.jpg`, `morel-la-partida.jpg`, `morel-payada-pulperia.jpg`, `morel-gaucho-traje-pueblo.jpg`, `rosas-luto-ezcurra-divisa.png`.
 - Consigna 5: `pueyrredon-rodeo.jpg`, `pueyrredon-alto-campo.jpg`, `sivori-pampa-chacra-portena.jpg`, mas las obras de Della Valle y Blanes ya listadas.
 
 ## Estilo de escritura
@@ -233,7 +233,9 @@ Notas agregadas desde el notebook de clases:
 - Consigna 1: diferenciar **grabado en metal / huecograbado** y **litografia**. El grabado traduce una acuarela o dibujo a una plancha metalica; como depende de la interpretacion del grabador, una misma imagen puede circular en versiones. La litografia sobre piedra abarata y acelera la circulacion, y por eso es clave para Bacle, Macaire, periodicos ilustrados y costumbrismo.
 - Consigna 1: `Tippou-Saib` sirve para explicar imagenes globales seleccionadas localmente: una imagen tomada de repertorios europeos, copiada/invertida/adaptada y publicada en Buenos Aires.
 - Consigna 1: Pellegrini debe aparecer como ingeniero/dibujante tecnico devenido artista; sus vistas urbanas, como la Catedral, ordenan Buenos Aires como documento visual.
+- Consigna 3: la Serie Ibarra de Morel permite mostrar una frontera pacificada o negociada por el rosismo. Usar `Indios pampas` como contraparte del malon violento: no como inclusion plena, sino como imagen de tutela, control y subordinacion politica.
 - Consigna 5: usar la matriz rapida de tres pampas: pampa a poblar, pampa de conflicto y pampa autonoma/pacificada. Esta ayuda a pasar de Pueyrredon a Della Valle/Blanes y luego a Sivori sin perder la tension civilizacion/barbarie.
+- Consigna 5: recordar el antecedente de Rugendas para malon/cautiva. En Della Valle, no presentar el malon como amenaza actual: la obra trabaja retrospectivamente sobre una amenaza ya derrotada y ayuda a justificar la Campana del Desierto.
 
 ## Reparto oral para el tema elegido
 

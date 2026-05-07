@@ -106,11 +106,11 @@
     }
 
     .slide {
-      min-height: 100vh;
+      min-height: auto;
       border-bottom: 1px solid var(--line);
-      padding: 3.25rem 1rem;
+      padding: 2.75rem 1rem;
       display: grid;
-      align-items: center;
+      align-items: start;
       scroll-margin-top: 6.5rem;
     }
 
@@ -172,7 +172,7 @@
     li { margin: .38rem 0; }
 
     .hero {
-      min-height: calc(100vh - 4rem);
+      min-height: calc(100svh - 4rem);
       background:
         linear-gradient(90deg, rgba(15, 17, 19, .94) 0%, rgba(15, 17, 19, .72) 48%, rgba(15, 17, 19, .2) 100%),
         url("assets/della-valle-vuelta-del-malon.jpg") center / cover;
@@ -313,6 +313,12 @@
       margin-top: 1rem;
     }
 
+    .credit-note {
+      color: var(--soft);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .82rem;
+    }
+
     .button {
       min-height: 2.75rem;
       display: inline-flex;
@@ -342,7 +348,9 @@
       nav { justify-content: end; }
 
       .slide {
+        min-height: 100vh;
         padding: 4rem 1.5rem;
+        align-items: center;
       }
 
       .two-col {
@@ -381,10 +389,12 @@
         <a href="#tesis">Tesis</a>
         <a href="#consigna-principal">Principal</a>
         <a href="#obras-clave">Obras</a>
+        <a href="#crisis">Crisis</a>
         <a href="#c1">C1</a>
         <a href="#c2">C2</a>
         <a href="#c3">C3</a>
         <a href="#c5">C5</a>
+        <a href="#cierre">Cierre</a>
         <a class="primary" href="tema_arte_civilizacion_estudio.html">Guia completa</a>
       </nav>
     </div>
@@ -420,8 +430,8 @@
             <p>El arte nacional busca temas locales, pero aprende lenguajes y criterios de legitimacion en Europa.</p>
           </div>
           <div class="panel">
-            <h3>Cuidado critico</h3>
-            <p>Civilizacion no es neutral: jerarquiza Europa/America, ciudad/campo, elite/popular, civilizado/barbaro.</p>
+            <h3>Taine y critica</h3>
+            <p>Raza, medio y momento ayudan a imaginar arte propio, pero civilizacion no es neutral: jerarquiza Europa/America, ciudad/campo, elite/popular.</p>
           </div>
         </div>
         <div class="speaker">Frase de arranque: "No alcanzaba con ferrocarriles y riqueza agroexportadora; tambien habia que mostrar que Argentina podia producir cultura alta, instituciones y una imagen nacional".</div>
@@ -448,7 +458,7 @@
           </div>
         </div>
         <figure class="image-panel wide">
-          <img src="assets/pabellon-argentino-1889.jpg" alt="Pabellon Argentino en la Exposicion Universal de Paris de 1889" />
+          <img src="assets/pabellon-argentino-1889.jpg" alt="Pabellon Argentino en la Exposicion Universal de Paris de 1889" loading="lazy" decoding="async" />
           <figcaption class="caption">Pabellon Argentino, Paris, 1889. Imagen internacional de nacion moderna.</figcaption>
         </figure>
       </div>
@@ -462,15 +472,15 @@
         </div>
         <div class="work-strip three">
           <article class="mini-work">
-            <img src="assets/sivori-despertar-criada.jpg" alt="Eduardo Sivori, El despertar de la criada" />
+            <img src="assets/sivori-despertar-criada.jpg" alt="Eduardo Sivori, El despertar de la criada" loading="lazy" decoding="async" />
             <div class="caption"><b>Sivori:</b> Paris vuelve a Buenos Aires como lenguaje moderno y polemico.</div>
           </article>
           <article class="mini-work">
-            <img src="assets/schiaffino-reposo.jpg" alt="Eduardo Schiaffino, Reposo" />
+            <img src="assets/schiaffino-reposo.jpg" alt="Eduardo Schiaffino, Reposo" loading="lazy" decoding="async" />
             <div class="caption"><b>Schiaffino:</b> legitimacion europea y programa institucional.</div>
           </article>
           <article class="mini-work">
-            <img src="assets/della-valle-vuelta-del-malon.jpg" alt="Angel Della Valle, La vuelta del malon" />
+            <img src="assets/della-valle-vuelta-del-malon.jpg" alt="Angel Della Valle, La vuelta del malon" loading="lazy" decoding="async" />
             <div class="caption"><b>Della Valle:</b> tema local con lenguaje academico y matriz civilizacion/barbarie.</div>
           </article>
         </div>
@@ -481,7 +491,7 @@
     <section id="crisis" class="slide">
       <div class="slide-inner two-col">
         <figure class="image-panel">
-          <img src="assets/carcova-sin-pan-sin-trabajo.jpg" alt="Ernesto de la Carcova, Sin pan y sin trabajo" />
+          <img src="assets/carcova-sin-pan-sin-trabajo.jpg" alt="Ernesto de la Carcova, Sin pan y sin trabajo" loading="lazy" decoding="async" />
           <figcaption class="caption">De la Carcova, 1894. Reverso social del progreso modernizador.</figcaption>
         </figure>
         <div>
@@ -504,6 +514,7 @@
           <h2>Viajeros, litografia y costumbrismo</h2>
           <ul>
             <li>Viajeros y expediciones producen vistas urbanas, paisajes, retratos, tipos y costumbres.</li>
+            <li>Malaspina/Brambila: imagen expedicionaria que puede llegar al publico como grabado.</li>
             <li>Grabado: una acuarela o dibujo podia traducirse a plancha y circular en versiones.</li>
             <li>La litografia permite multiplicar imagenes y ampliar la circulacion.</li>
             <li>Bacle, Macaire, Onslow, Vidal y Pellegrini arman una cultura visual temprana.</li>
@@ -512,15 +523,15 @@
         </div>
         <div class="work-strip three">
           <article class="mini-work">
-            <img src="assets/vidal-cabildo-recova.jpg" alt="Vista del Cabildo desde la Recova, Vidal" />
+            <img src="assets/vidal-cabildo-recova.jpg" alt="Vista del Cabildo desde la Recova, Vidal" loading="lazy" decoding="async" />
             <div class="caption"><b>Vidal:</b> Buenos Aires como ciudad observable.</div>
           </article>
           <article class="mini-work">
-            <img src="assets/pellegrini-catedral-buenos-aires.jpg" alt="Pellegrini, Catedral de Buenos Aires" />
+            <img src="assets/pellegrini-catedral-buenos-aires.jpg" alt="Pellegrini, Catedral de Buenos Aires" loading="lazy" decoding="async" />
             <div class="caption"><b>Pellegrini:</b> ciudad ordenada por mirada tecnica.</div>
           </article>
           <article class="mini-work">
-            <img src="assets/bacle-tippou-saib.jpg" alt="Tippou-Saib en El Recopilador" />
+            <img src="assets/bacle-tippou-saib.jpg" alt="Tippou-Saib en El Recopilador" loading="lazy" decoding="async" />
             <div class="caption"><b>Tippou-Saib:</b> copia, inversion y circulacion global.</div>
           </article>
         </div>
@@ -533,20 +544,24 @@
           <p class="kicker">Consigna 2</p>
           <h2>Retrato como herramienta social</h2>
           <ul>
-            <li>Retrato burgues: familia, distincion, memoria y sociabilidad de elite.</li>
+            <li>Retrato de elite o burgues: familia, distincion, memoria y sociabilidad.</li>
             <li>Aparato: autoridad publica, uniforme, atributos y jerarquia.</li>
             <li>Miniatura: intimidad y portabilidad.</li>
             <li>Litografia y daguerrotipo cambian circulacion, consumo y promesa de verdad.</li>
           </ul>
           <div class="speaker">Tesis: "No hay una sola historia del retrato: cada tecnica organiza otra relacion entre imagen, poder, afecto y mercado".</div>
         </div>
-        <div class="work-strip">
+        <div class="work-strip three">
           <article class="mini-work">
-            <img src="assets/descalzi-rosas.jpg" alt="Descalzi, Rosas" />
+            <img src="assets/descalzi-rosas.jpg" alt="Descalzi, Rosas" loading="lazy" decoding="async" />
             <div class="caption"><b>Descalzi:</b> retrato de aparato y autoridad.</div>
           </article>
           <article class="mini-work">
-            <img src="assets/san-martin-daguerrotipo.jpg" alt="Daguerrotipo de San Martin" />
+            <img src="assets/goulu-cirila-crespo-miniatura.jpg" alt="Jean-Philippe Goulu, miniatura de Cirila Crespo de Sivori" loading="lazy" decoding="async" />
+            <div class="caption"><b>Miniatura:</b> intimidad, portabilidad y memoria familiar.</div>
+          </article>
+          <article class="mini-work">
+            <img src="assets/san-martin-daguerrotipo.jpg" alt="Daguerrotipo de San Martin" loading="lazy" decoding="async" />
             <div class="caption"><b>Daguerrotipo:</b> verdad mecanica, pose y convencion.</div>
           </article>
         </div>
@@ -561,18 +576,23 @@
           <ul>
             <li>Garcia del Molino: retrato politico de Rosas.</li>
             <li>Morel: costumbrismo federal, gaucho, familia rural y sociabilidad.</li>
+            <li>Serie Ibarra: indios amigos, frontera pacificada y control politico.</li>
             <li>Litografia: rostro, divisa, punzo y lemas entran en la vida cotidiana.</li>
           </ul>
           <div class="speaker">Tesis: "El rosismo no solo gobierna con leyes y coercion; tambien gobierna produciendo signos visibles de pertenencia".</div>
         </div>
-        <div class="work-strip">
+        <div class="work-strip three">
           <article class="mini-work">
-            <img src="assets/garcia-del-molino-rosas.jpg" alt="Garcia del Molino, Rosas" />
+            <img src="assets/garcia-del-molino-rosas.jpg" alt="Garcia del Molino, Rosas" loading="lazy" decoding="async" />
             <div class="caption"><b>Rosas:</b> presencia visual del poder.</div>
           </article>
           <article class="mini-work">
-            <img src="assets/morel-familia-gaucho.jpg" alt="Morel, La familia del gaucho" />
+            <img src="assets/morel-familia-gaucho.jpg" alt="Morel, La familia del gaucho" loading="lazy" decoding="async" />
             <div class="caption"><b>Morel:</b> campo como orden federal.</div>
+          </article>
+          <article class="mini-work">
+            <img src="assets/morel-indios-pampas-serie-ibarra.jpg" alt="Carlos Morel, Indios pampas, Serie Ibarra" loading="lazy" decoding="async" />
+            <div class="caption"><b>Serie Ibarra:</b> frontera pacificada como imagen politica.</div>
           </article>
         </div>
       </div>
@@ -586,19 +606,23 @@
           <ul>
             <li>Pueyrredon: pampa productiva, criolla y socialmente organizada.</li>
             <li>Malosetti/Penhos: poblar, conflicto de frontera y pampa autonoma.</li>
-            <li>Della Valle y cautivas: frontera, malon y civilizacion/barbarie.</li>
-            <li>Blanes: conquista estatal presentada como orden.</li>
-            <li>Sivori: horizonte pampeano como paisaje moderno.</li>
+            <li>Rugendas / Della Valle: cautiva, malon y civilizacion/barbarie.</li>
+            <li>Blanes: conquista estatal presentada como orden militar.</li>
+            <li>Sivori: horizonte pampeano como paisaje moderno, ya no narrativo.</li>
           </ul>
           <div class="speaker">Tesis: "La pampa no es fondo vacio; es una escena donde se disputa que cuenta como nacion".</div>
         </div>
-        <div class="work-strip">
+        <div class="work-strip three">
           <article class="mini-work">
-            <img src="assets/pueyrredon-alto-campo.jpg" alt="Pueyrredon, Un alto en el campo" />
+            <img src="assets/pueyrredon-alto-campo.jpg" alt="Pueyrredon, Un alto en el campo" loading="lazy" decoding="async" />
             <div class="caption"><b>Pueyrredon:</b> ocio rural e identidad criolla.</div>
           </article>
           <article class="mini-work">
-            <img src="assets/sivori-pampa-chacra-portena.jpg" alt="Sivori, Pampa o Chacra La Portena" />
+            <img src="assets/della-valle-vuelta-del-malon.jpg" alt="Angel Della Valle, La vuelta del malon" loading="lazy" decoding="async" />
+            <div class="caption"><b>Della Valle:</b> amenaza ya derrotada como memoria ideologica.</div>
+          </article>
+          <article class="mini-work">
+            <img src="assets/sivori-pampa-chacra-portena.jpg" alt="Sivori, Pampa o Chacra La Portena" loading="lazy" decoding="async" />
             <div class="caption"><b>Sivori:</b> la llanura como protagonista plastica.</div>
           </article>
         </div>
@@ -626,6 +650,7 @@
           <a class="button" href="tema_arte_civilizacion_estudio.html">Abrir guia completa</a>
           <a class="button secondary" href="#inicio">Volver al inicio</a>
         </div>
+        <p class="credit-note">Imagenes: MNBA, Museo Casa Rosada, Museo del Prado y Wikimedia Commons / archivos publicos. Ver creditos detallados en la guia completa.</p>
       </div>
     </section>
   </main>
