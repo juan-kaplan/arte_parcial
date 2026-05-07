@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vista de presentacion - Arte, civilizacion y consignas</title>
+  <style>
+    :root {
+      --bg: #0f1113;
+      --ink: #f6efe3;
+      --muted: #cbbfaa;
+      --soft: #95a0a7;
+      --line: #38352f;
+      --surface: #171a1d;
+      --surface-2: #202429;
+      --gold: #d5ae61;
+      --blue: #7eb7c6;
+      --rose: #b98f8f;
+      --green: #a2bd8d;
+      --max: 76rem;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.45;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    a:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 4px;
+      border-radius: .35rem;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .topbar {
+      position: sticky;
+      z-index: 10;
+      top: 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(15, 17, 19, .94);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: .65rem 1rem;
+      display: grid;
+      gap: .7rem;
+    }
+
+    .brand {
+      color: var(--gold);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      gap: .45rem;
+      overflow-x: auto;
+      padding-bottom: .15rem;
+    }
+
+    nav a {
+      min-height: 2.5rem;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: .3rem .7rem;
+      background: rgba(255, 255, 255, .04);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .86rem;
+    }
+
+    nav a.primary {
+      border-color: rgba(126, 183, 198, .65);
+      color: var(--blue);
+    }
+
+    .slide {
+      min-height: 100vh;
+      border-bottom: 1px solid var(--line);
+      padding: 3.25rem 1rem;
+      display: grid;
+      align-items: center;
+      scroll-margin-top: 6.5rem;
+    }
+
+    .slide-inner {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    .kicker {
+      margin: 0 0 .45rem;
+      color: var(--gold);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .82rem;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      margin: 0;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+
+    h1 {
+      max-width: 12ch;
+      font-size: clamp(2.7rem, 13vw, 6.4rem);
+    }
+
+    h2 {
+      max-width: 16ch;
+      color: var(--ink);
+      font-size: clamp(2.1rem, 9vw, 4.6rem);
+    }
+
+    h3 {
+      margin: 0 0 .45rem;
+      color: var(--blue);
+      font-size: 1.15rem;
+      line-height: 1.2;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    ul {
+      margin: .75rem 0 0 1.25rem;
+      padding: 0;
+      color: var(--ink);
+      font-size: clamp(1rem, 2vw, 1.18rem);
+    }
+
+    li { margin: .38rem 0; }
+
+    .hero {
+      min-height: calc(100vh - 4rem);
+      background:
+        linear-gradient(90deg, rgba(15, 17, 19, .94) 0%, rgba(15, 17, 19, .72) 48%, rgba(15, 17, 19, .2) 100%),
+        url("assets/della-valle-vuelta-del-malon.jpg") center / cover;
+    }
+
+    .hero .slide-inner {
+      align-items: end;
+    }
+
+    .hero-text {
+      max-width: 50rem;
+      padding-bottom: 6vh;
+    }
+
+    .lead {
+      max-width: 50rem;
+      margin-top: 1rem;
+      color: #eadfcd;
+      font-size: clamp(1.1rem, 2.3vw, 1.45rem);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin-top: 1.1rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: .22rem .65rem;
+      background: rgba(255, 255, 255, .06);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .86rem;
+    }
+
+    .tag.gold { border-color: rgba(213, 174, 97, .65); color: #f0d59a; }
+    .tag.blue { border-color: rgba(126, 183, 198, .65); color: #aee4ef; }
+    .tag.rose { border-color: rgba(185, 143, 143, .7); color: #e7baba; }
+    .tag.green { border-color: rgba(162, 189, 141, .7); color: #cde3ba; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+
+    .image-panel {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: .5rem;
+      background: #090a0b;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, .28);
+    }
+
+    .image-panel img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .image-panel.portrait img {
+      aspect-ratio: 3 / 4;
+      object-fit: contain;
+      padding: .5rem;
+    }
+
+    .image-panel.wide img {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
+    .caption {
+      padding: .75rem .85rem;
+      border-top: 1px solid var(--line);
+      color: var(--soft);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .86rem;
+    }
+
+    .panel-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: .85rem;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: .5rem;
+      padding: 1rem;
+      background: var(--surface);
+    }
+
+    .panel.accent {
+      border-left: .25rem solid var(--gold);
+      background: linear-gradient(135deg, rgba(213, 174, 97, .13), rgba(126, 183, 198, .06)), var(--surface);
+    }
+
+    .speaker {
+      margin-top: .8rem;
+      border-left: .25rem solid var(--blue);
+      padding: .85rem 1rem;
+      background: rgba(126, 183, 198, .08);
+      color: #fff7e8;
+      font-size: clamp(1rem, 2vw, 1.18rem);
+    }
+
+    .work-strip {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: .85rem;
+    }
+
+    .mini-work {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: .5rem;
+      background: var(--surface);
+    }
+
+    .mini-work img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .mini-work .caption b {
+      color: var(--ink);
+    }
+
+    .slide-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: 1rem;
+    }
+
+    .button {
+      min-height: 2.75rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(126, 183, 198, .65);
+      border-radius: .45rem;
+      padding: .45rem .8rem;
+      background: rgba(126, 183, 198, .1);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 700;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, .04);
+      color: var(--muted);
+    }
+
+    @media (min-width: 768px) {
+      .topbar-inner {
+        grid-template-columns: auto minmax(0, 1fr);
+        align-items: center;
+      }
+
+      nav { justify-content: end; }
+
+      .slide {
+        padding: 4rem 1.5rem;
+      }
+
+      .two-col {
+        grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
+        align-items: center;
+      }
+
+      .panel-grid,
+      .work-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .slide {
+        padding: 5rem 2rem;
+      }
+
+      .work-strip.three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#inicio">Vista de presentacion</a>
+      <nav aria-label="Navegacion de bloques">
+        <a href="#tesis">Tesis</a>
+        <a href="#consigna-principal">Principal</a>
+        <a href="#obras-clave">Obras</a>
+        <a href="#c1">C1</a>
+        <a href="#c2">C2</a>
+        <a href="#c3">C3</a>
+        <a href="#c5">C5</a>
+        <a class="primary" href="tema_arte_civilizacion_estudio.html">Guia completa</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="slide hero">
+      <div class="slide-inner">
+        <div class="hero-text">
+          <p class="kicker">Historia del arte argentino</p>
+          <h1>Arte, civilizacion y arte nacional</h1>
+          <p class="lead">Una vista breve para guiar la exposicion: palabras clave, imagenes grandes y frases de apoyo para volver rapido a la respuesta.</p>
+          <div class="tag-row">
+            <span class="tag gold">instituciones</span>
+            <span class="tag blue">viajes a Europa</span>
+            <span class="tag rose">civilizacion/barbarie</span>
+            <span class="tag green">repaso de consignas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tesis" class="slide">
+      <div class="slide-inner">
+        <div>
+          <p class="kicker">Tesis general</p>
+          <h2>El arte prueba y produce civilizacion</h2>
+          <p class="lead">Desde la Generacion del 80 hacia el Centenario, el arte fue pensado como una prueba de nacion moderna y como una herramienta para formar publico, gusto e identidad.</p>
+        </div>
+        <div class="panel-grid">
+          <div class="panel accent">
+            <h3>Paradoja</h3>
+            <p>El arte nacional busca temas locales, pero aprende lenguajes y criterios de legitimacion en Europa.</p>
+          </div>
+          <div class="panel">
+            <h3>Cuidado critico</h3>
+            <p>Civilizacion no es neutral: jerarquiza Europa/America, ciudad/campo, elite/popular, civilizado/barbaro.</p>
+          </div>
+        </div>
+        <div class="speaker">Frase de arranque: "No alcanzaba con ferrocarriles y riqueza agroexportadora; tambien habia que mostrar que Argentina podia producir cultura alta, instituciones y una imagen nacional".</div>
+      </div>
+    </section>
+
+    <section id="consigna-principal" class="slide">
+      <div class="slide-inner two-col">
+        <div>
+          <p class="kicker">Consigna elegida</p>
+          <h2>Instituciones, Paris y arte nacional</h2>
+          <ul>
+            <li>Devoto: crecimiento, inmigracion, Estado, ciudad moderna y tensiones.</li>
+            <li>Malosetti: bellas artes como prueba y herramienta de civilizacion.</li>
+            <li>SEBA, Ateneo, salones, becas, critica y MNBA forman el campo artistico.</li>
+            <li>Schiaffino une artista, critico, gestor e historiador.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag gold">SEBA</span>
+            <span class="tag gold">Ateneo</span>
+            <span class="tag blue">Paris</span>
+            <span class="tag rose">1890</span>
+          </div>
+        </div>
+        <figure class="image-panel wide">
+          <img src="assets/pabellon-argentino-1889.jpg" alt="Pabellon Argentino en la Exposicion Universal de Paris de 1889" />
+          <figcaption class="caption">Pabellon Argentino, Paris, 1889. Imagen internacional de nacion moderna.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="obras-clave" class="slide">
+      <div class="slide-inner">
+        <div>
+          <p class="kicker">Obras de apoyo</p>
+          <h2>Tres imagenes para sostener la tesis</h2>
+        </div>
+        <div class="work-strip three">
+          <article class="mini-work">
+            <img src="assets/sivori-despertar-criada.jpg" alt="Eduardo Sivori, El despertar de la criada" />
+            <div class="caption"><b>Sivori:</b> Paris vuelve a Buenos Aires como lenguaje moderno y polemico.</div>
+          </article>
+          <article class="mini-work">
+            <img src="assets/schiaffino-reposo.jpg" alt="Eduardo Schiaffino, Reposo" />
+            <div class="caption"><b>Schiaffino:</b> legitimacion europea y programa institucional.</div>
+          </article>
+          <article class="mini-work">
+            <img src="assets/della-valle-vuelta-del-malon.jpg" alt="Angel Della Valle, La vuelta del malon" />
+            <div class="caption"><b>Della Valle:</b> tema local con lenguaje academico y matriz civilizacion/barbarie.</div>
+          </article>
+        </div>
+        <div class="speaker">Cierre de esta parte: "El arte nacional no nace puro: nace de traducir lenguajes europeos a problemas locales".</div>
+      </div>
+    </section>
+
+    <section id="crisis" class="slide">
+      <div class="slide-inner two-col">
+        <figure class="image-panel">
+          <img src="assets/carcova-sin-pan-sin-trabajo.jpg" alt="Ernesto de la Carcova, Sin pan y sin trabajo" />
+          <figcaption class="caption">De la Carcova, 1894. Reverso social del progreso modernizador.</figcaption>
+        </figure>
+        <div>
+          <p class="kicker">Crisis de 1890</p>
+          <h2>El optimismo se vuelve defensivo</h2>
+          <ul>
+            <li>La crisis economica y politica quiebra la fe lineal en el progreso.</li>
+            <li>Se cuestionan becas y pensiones artisticas en Europa.</li>
+            <li>Belin Sarmiento defiende las artes plasticas como progreso material y civilizatorio.</li>
+          </ul>
+          <div class="speaker">Frase breve: "Para Belin Sarmiento, abandonar la formacion artistica no era ser practico; era aceptar un destino limitado de pais agropecuario".</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="c1" class="slide">
+      <div class="slide-inner two-col">
+        <div>
+          <p class="kicker">Consigna 1</p>
+          <h2>Viajeros, litografia y costumbrismo</h2>
+          <ul>
+            <li>Viajeros y expediciones producen vistas urbanas, paisajes, retratos, tipos y costumbres.</li>
+            <li>La litografia permite multiplicar imagenes y ampliar la circulacion.</li>
+            <li>Bacle, Macaire, Onslow, Vidal y Pellegrini arman una cultura visual temprana.</li>
+          </ul>
+          <div class="speaker">Tesis: "La imagen nacional empieza como una construccion visual hecha por miradas viajeras, cientificas, urbanas e impresas".</div>
+        </div>
+        <div class="work-strip">
+          <article class="mini-work">
+            <img src="assets/vidal-cabildo-recova.jpg" alt="Vista del Cabildo desde la Recova, Vidal" />
+            <div class="caption"><b>Vidal:</b> Buenos Aires como ciudad observable.</div>
+          </article>
+          <article class="mini-work">
+            <img src="assets/bacle-peinetones-casa.jpg" alt="Peinetones en casa" />
+            <div class="caption"><b>Bacle:</b> costumbres, moda, humor y reproduccion.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="c2" class="slide">
+      <div class="slide-inner two-col">
+        <div>
+          <p class="kicker">Consigna 2</p>
+          <h2>Retrato como herramienta social</h2>
+          <ul>
+            <li>Retrato burgues: familia, distincion, memoria y sociabilidad de elite.</li>
+            <li>Aparato: autoridad publica, uniforme, atributos y jerarquia.</li>
+            <li>Miniatura: intimidad y portabilidad.</li>
+            <li>Litografia y daguerrotipo cambian circulacion, consumo y promesa de verdad.</li>
+          </ul>
+          <div class="speaker">Tesis: "No hay una sola historia del retrato: cada tecnica organiza otra relacion entre imagen, poder, afecto y mercado".</div>
+        </div>
+        <div class="work-strip">
+          <article class="mini-work">
+            <img src="assets/descalzi-rosas.jpg" alt="Descalzi, Rosas" />
+            <div class="caption"><b>Descalzi:</b> retrato de aparato y autoridad.</div>
+          </article>
+          <article class="mini-work">
+            <img src="assets/san-martin-daguerrotipo.jpg" alt="Daguerrotipo de San Martin" />
+            <div class="caption"><b>Daguerrotipo:</b> verdad mecanica, pose y convencion.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="c3" class="slide">
+      <div class="slide-inner two-col">
+        <div>
+          <p class="kicker">Consigna 3</p>
+          <h2>Rosismo e imagen federal</h2>
+          <ul>
+            <li>Garcia del Molino: retrato politico de Rosas.</li>
+            <li>Morel: costumbrismo federal, gaucho, familia rural y sociabilidad.</li>
+            <li>Litografia: rostro, divisa, punzo y lemas entran en la vida cotidiana.</li>
+          </ul>
+          <div class="speaker">Tesis: "El rosismo no solo gobierna con leyes y coercion; tambien gobierna produciendo signos visibles de pertenencia".</div>
+        </div>
+        <div class="work-strip">
+          <article class="mini-work">
+            <img src="assets/garcia-del-molino-rosas.jpg" alt="Garcia del Molino, Rosas" />
+            <div class="caption"><b>Rosas:</b> presencia visual del poder.</div>
+          </article>
+          <article class="mini-work">
+            <img src="assets/morel-familia-gaucho.jpg" alt="Morel, La familia del gaucho" />
+            <div class="caption"><b>Morel:</b> campo como orden federal.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="c5" class="slide">
+      <div class="slide-inner two-col">
+        <div>
+          <p class="kicker">Consigna 5</p>
+          <h2>La pampa como campo ideologico</h2>
+          <ul>
+            <li>Pueyrredon: pampa productiva, criolla y socialmente organizada.</li>
+            <li>Della Valle y cautivas: frontera, malon y civilizacion/barbarie.</li>
+            <li>Blanes: conquista estatal presentada como orden.</li>
+            <li>Sivori: horizonte pampeano como paisaje moderno.</li>
+          </ul>
+          <div class="speaker">Tesis: "La pampa no es fondo vacio; es una escena donde se disputa que cuenta como nacion".</div>
+        </div>
+        <div class="work-strip">
+          <article class="mini-work">
+            <img src="assets/pueyrredon-alto-campo.jpg" alt="Pueyrredon, Un alto en el campo" />
+            <div class="caption"><b>Pueyrredon:</b> ocio rural e identidad criolla.</div>
+          </article>
+          <article class="mini-work">
+            <img src="assets/sivori-pampa-chacra-portena.jpg" alt="Sivori, Pampa o Chacra La Portena" />
+            <div class="caption"><b>Sivori:</b> la llanura como protagonista plastica.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="cierre" class="slide">
+      <div class="slide-inner">
+        <div>
+          <p class="kicker">Cierre oral</p>
+          <h2>Volver siempre a la pregunta</h2>
+          <p class="lead">Cada obra tiene que hacer trabajo argumental: probar una idea, no decorar la respuesta.</p>
+        </div>
+        <div class="panel-grid">
+          <div class="panel accent">
+            <h3>Persona A</h3>
+            <p>Abre tesis, contexto, autores y problema de civilizacion.</p>
+          </div>
+          <div class="panel">
+            <h3>Persona B</h3>
+            <p>Entra con instituciones, obras, Europa, paradoja y cierre critico.</p>
+          </div>
+        </div>
+        <div class="slide-actions">
+          <a class="button" href="tema_arte_civilizacion_estudio.html">Abrir guia completa</a>
+          <a class="button secondary" href="#inicio">Volver al inicio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,30 +1,28 @@
 # Guia de estudio: Arte, civilizacion y arte nacional
 
-Sitio estatico para estudiar la consigna sobre la Generacion del 80, el concepto de arte y civilizacion, las instituciones artisticas argentinas y el surgimiento de un arte nacional.
+Sitio estatico para estudiar la consigna sobre la Generacion del 80, el concepto de arte y civilizacion, las instituciones artisticas argentinas y el surgimiento de un arte nacional. Tambien incluye secciones breves para las consignas alternativas y una vista visual de apoyo.
 
 ## Ver localmente
 
-Abrir `index.html` o `tema_arte_civilizacion_estudio.html` en el navegador.
+Abrir `index.html`, `tema_arte_civilizacion_estudio.html` o `presentacion.html` en el navegador.
 
 ## Publicar en GitHub Pages
 
-1. Crear un repositorio nuevo en GitHub.
-2. Enlazar este directorio con el remoto:
+El repo ya esta preparado para GitHub Pages desde `main` y carpeta `/root`. Despues de cada cambio:
 
 ```bash
-git remote add origin https://github.com/USUARIO/NOMBRE-DEL-REPO.git
-git push -u origin main
+git add .
+git commit -m "Descripcion breve"
+git push
 ```
 
-3. En GitHub, ir a `Settings > Pages`.
-4. En `Build and deployment`, elegir `Deploy from a branch`.
-5. Seleccionar branch `main` y carpeta `/root`.
-6. Guardar. GitHub Pages va a publicar el sitio en unos minutos.
+GitHub Pages publica el sitio en unos minutos.
 
 ## Estructura
 
 - `index.html`: entrada para GitHub Pages.
 - `tema_arte_civilizacion_estudio.html`: guia principal.
+- `presentacion.html`: vista secundaria para repasar con imagenes grandes, palabras clave y bullets.
 - `assets/`: imagenes usadas por la guia.
 - `instructions.md`: contexto para continuar el trabajo con Codex.
 

@@ -374,6 +374,11 @@
       padding: .5rem;
     }
 
+    .work-card.wide img {
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+
     .work-body {
       padding: 1rem;
     }
@@ -436,6 +441,21 @@
       background:
         linear-gradient(135deg, rgba(211, 173, 93, .13), rgba(127, 183, 199, .08)),
         var(--surface);
+    }
+
+    .prompt-section .work-gallery {
+      margin-bottom: 1rem;
+    }
+
+    .prompt-section .card ul {
+      margin-bottom: 0;
+    }
+
+    .keyword-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin: .75rem 0 1rem;
     }
 
     details {
@@ -552,7 +572,7 @@
   <div class="layout">
     <aside>
       <h1>Arte y civilizacion</h1>
-      <p>Guia compartida para estudiar y ensayar la consigna elegida; la plantilla de 5 minutos queda reservada para consignas futuras.</p>
+      <p>Guia compartida para estudiar la consigna elegida y repasar rapido las consignas alternativas.</p>
       <nav aria-label="Navegacion principal">
         <a href="#tesis-rapida">Tesis rapida</a>
         <a href="#mapa-oral">Mapa oral</a>
@@ -563,7 +583,11 @@
         <a href="#arte-nacional">Arte nacional</a>
         <a href="#obras">Obras para analizar</a>
         <a href="#guion">Guion entre dos</a>
-        <a href="#consignas-sorpresa">Consignas sorpresa</a>
+        <a href="#consigna-1">Consigna 1</a>
+        <a href="#consigna-2">Consigna 2</a>
+        <a href="#consigna-3">Consigna 3</a>
+        <a href="#consigna-5">Consigna 5</a>
+        <a href="presentacion.html">Vista presentacion</a>
         <a href="#preguntas">Preguntas posibles</a>
         <a href="#pendientes">Pendientes</a>
       </nav>
@@ -972,31 +996,348 @@
         </div>
       </section>
 
-      <section id="consignas-sorpresa">
-        <h2>Consignas sorpresa / esquema futuro</h2>
-        <p class="lede">Esta parte queda preparada como estructura para mas adelante. Los 5 minutos de preparacion privada aplican a las otras consignas que todavia no sabemos, no a la consigna elegida que estamos desarrollando en profundidad.</p>
+      <section id="consigna-1" class="prompt-section">
+        <h2>Consigna 1 - Artistas viajeros e imagen nacional</h2>
+        <p class="lede">Pregunta: como los artistas viajeros y las expediciones cientificas contribuyeron a las primeras imagenes de Buenos Aires; que generos usaron; y por que litografia y periodicos ilustrados difundieron el costumbrismo.</p>
+
+        <h3>Imagenes / artistas / autores para ubicar primero</h3>
+        <div class="work-gallery">
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/vidal-cabildo-recova.jpg" alt="Emeric Essex Vidal, Vista del Cabildo desde la Recova, 1817" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Vista del Cabildo desde la Recova</h3>
+              <div class="work-meta">Emeric Essex Vidal, 1817. Acuarela/litografia posterior.</div>
+              <p><span class="work-label">Para que sirve:</span> muestra Buenos Aires como ciudad observable: plaza, arquitectura, tipos sociales y vida cotidiana.</p>
+              <p><span class="work-label">Frase oral:</span> "El viajero convierte la ciudad en imagen legible para un publico local y extranjero".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Emeric_Essex_Vidal_-_Vista_del_Cabildo_desde_la_Recova_-_1817.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card wide">
+            <figure>
+              <img src="assets/bacle-recova-1835.jpg" alt="Cesar Hipolito Bacle, Recova de Buenos Aires, litografia, 1835" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Recova de Buenos Aires</h3>
+              <div class="work-meta">Cesar H. Bacle, 1835. Litografia.</div>
+              <p><span class="work-label">Para que sirve:</span> une vista urbana y tecnica reproductiva: la ciudad empieza a circular como imagen impresa.</p>
+              <p><span class="work-label">Frase oral:</span> "La litografia no solo representa Buenos Aires: multiplica Buenos Aires".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Recova_bs_as_litografia_bacle_1835.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/bacle-peinetones-casa.jpg" alt="Peinetones en casa, litografia de Bacle, siglo XIX" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Peinetones en casa</h3>
+              <div class="work-meta">Taller de Bacle, decada de 1830. Litografia.</div>
+              <p><span class="work-label">Para que sirve:</span> ejemplo de costumbrismo: moda, vida social, humor y observacion de tipos urbanos.</p>
+              <p><span class="work-label">Frase oral:</span> "El costumbrismo fija lo cotidiano como imagen reconocible de una sociedad".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Peinetones_en_casa.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+        </div>
+
         <div class="grid two">
           <div class="card flash">
-            <h3>Plantilla para cada consigna futura</h3>
-            <p><b>Tesis en una oracion:</b> cual es la respuesta central.</p>
-            <p><b>Tres conceptos:</b> las palabras que no pueden faltar.</p>
-            <p><b>Dos autores/textos:</b> que lectura sostiene la respuesta.</p>
-            <p><b>Una obra o imagen:</b> que mirar y como conectarla con la consigna.</p>
-            <p><b>Cierre critico:</b> una tension o problema para no cerrar de forma plana.</p>
+            <h3>Tesis rapida</h3>
+            <p>Los viajeros y expediciones produjeron las primeras imagenes sistematicas de Buenos Aires porque miraron la ciudad como paisaje, documento y escena de costumbres. La litografia y la prensa ilustrada transformaron esas imagenes en cultura visual circulante.</p>
           </div>
-          <div class="card flash">
-            <h3>Como usar los 5 minutos</h3>
-            <ol>
-              <li>Leer el titulo de la consigna y decidir la tesis.</li>
-              <li>Elegir tres conceptos obligatorios.</li>
-              <li>Elegir una obra que permita hablar, no solo decorar.</li>
-              <li>Repartir quien abre y quien cierra.</li>
-              <li>Preparar una frase de cierre critico.</li>
-            </ol>
+          <div class="card">
+            <h3>Conceptos clave</h3>
+            <div class="keyword-row">
+              <span class="tag">vistas urbanas</span>
+              <span class="tag">tipos y costumbres</span>
+              <span class="tag">expediciones</span>
+              <span class="tag">litografia</span>
+              <span class="tag">periodicos ilustrados</span>
+              <span class="tag">costumbrismo</span>
+            </div>
+            <p class="small muted">Autores: Munilla Lacasa; Gluzman, Munilla y Szir sobre Bacle; Gluzman y Munilla sobre publicaciones europeas en la prensa portena.</p>
           </div>
         </div>
-        <div class="callout">
-          <p><b>Regla para futuras secciones:</b> las consignas sorpresa deben ser mucho mas cortas que esta. Primero tesis y estructura; despues, si una queda dificil, se amplia.</p>
+
+        <h3>Respuesta oral en 2 minutos</h3>
+        <div class="speaker">Para responder, conviene partir de que Buenos Aires no tenia todavia una iconografia nacional consolidada. Los artistas viajeros y las expediciones cientificas ayudaron a producirla porque registraron la ciudad, la pampa cercana, los oficios, las modas y los tipos sociales. Sus imagenes mezclan mirada documental, curiosidad cientifica y pintoresquismo: no son fotografias neutrales, sino selecciones de lo que parecia representativo o exotico.</div>
+        <p>Muchos de esos artistas trabajaron generos como la vista urbana, el paisaje, el retrato, las escenas de tipos y costumbres, la documentacion topografica y la ilustracion cientifica. Vidal, Pellegrini, Bacle, Macaire u Onslow sirven para ubicar esa zona donde arte, documento y mercado visual se cruzan.</p>
+        <p>La litografia fue decisiva porque permitio pasar del original unico a la imagen reproducible. El taller de Bacle y publicaciones como <i>El Museo Americano</i> y <i>El Recopilador</i> difundieron retratos, vistas, albumes de trajes y costumbres, laminas sueltas e imagenes tomadas de repertorios europeos adaptadas al publico local.</p>
+        <p>Asi, el costumbrismo no fue solo una descripcion amable de lo cotidiano. Fue una forma de ordenar visualmente la sociedad: mostrar como era Buenos Aires, quienes la habitaban, que practicas la definian y que imagen podia circular de ella.</p>
+
+        <h3>Obras para analizar</h3>
+        <div class="grid two">
+          <div class="card"><p><b>Vidal, vistas de Buenos Aires:</b> usar para hablar de la mirada viajera que convierte la ciudad en escena reconocible.</p></div>
+          <div class="card"><p><b>Bacle, <i>Trages y costumbres</i>:</b> usar para explicar costumbrismo, tipos sociales y reproduccion litografica.</p></div>
+          <div class="card"><p><b><i>El Museo Americano</i> / <i>El Recopilador</i>:</b> usar para mostrar prensa ilustrada y circulacion de imagenes globales seleccionadas localmente.</p></div>
+          <div class="card"><p><b>Macaire / Onslow:</b> recordar que el taller no era solo Bacle: habia colaboradores, tecnicas y trabajo colectivo.</p></div>
+        </div>
+
+        <h3>Cierre critico</h3>
+        <div class="warning callout">
+          <p>Estas primeras imagenes ayudan a inventar una Buenos Aires visible, pero lo hacen desde miradas parciales: viajeros, elites, talleres urbanos y circuitos impresos. Por eso conviene hablar de construccion de imagen nacional, no de reflejo transparente de la realidad.</p>
+        </div>
+      </section>
+
+      <section id="consigna-2" class="prompt-section">
+        <h2>Consigna 2 - Retrato, estatus y sociabilidad</h2>
+        <p class="lede">Pregunta: analizar el retrato en la primera mitad del siglo XIX y comparar retrato burgues, de aparato, miniatura, litografia y daguerrotipo segun produccion, circulacion y consumo.</p>
+
+        <h3>Imagenes / artistas / autores para ubicar primero</h3>
+        <div class="work-gallery">
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/pellegrini-guerrico-retrato.jpg" alt="Carlos Enrique Pellegrini, Retrato de Manuel J. de Guerrico" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Retrato de Manuel J. de Guerrico</h3>
+              <div class="work-meta">Carlos Enrique Pellegrini, siglo XIX. MNBA.</div>
+              <p><span class="work-label">Para que sirve:</span> retrato de elite: posicion social, respetabilidad, capital cultural y memoria familiar.</p>
+              <p><span class="work-label">Frase oral:</span> "El retrato muestra una persona, pero tambien muestra una posicion social".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Retrato_de_Manuel_J._de_Guerrico_-_Charles_Henri_Pellegrini.jpg">Wikimedia Commons / MNBA</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/descalzi-rosas.jpg" alt="Cayetano Descalzi, Juan Manuel de Rosas" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Juan Manuel de Rosas</h3>
+              <div class="work-meta">Cayetano Descalzi, ca. 1840. Museo Historico Nacional.</div>
+              <p><span class="work-label">Para que sirve:</span> retrato de aparato: autoridad, rango, signos politicos y puesta en escena del poder.</p>
+              <p><span class="work-label">Frase oral:</span> "Aca el retrato no busca intimidad; busca presencia publica".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Juan_Manuel_de_Rosas_by_Descalzi.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/san-martin-daguerrotipo.jpg" alt="Daguerrotipo de Jose de San Martin, Paris, 1848" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Daguerrotipo de San Martin</h3>
+              <div class="work-meta">Autor desconocido, Paris, 1848. Museo Historico Nacional.</div>
+              <p><span class="work-label">Para que sirve:</span> fotografia temprana como objeto unico: apariencia, memoria y autoridad de lo mecanico.</p>
+              <p><span class="work-label">Frase oral:</span> "El daguerrotipo promete verdad visual, pero tambien exige pose y convencion".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Jose_de_San_Martin.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid two">
+          <div class="card flash">
+            <h3>Tesis rapida</h3>
+            <p>El retrato fue una herramienta social porque producia presencia, estatus y pertenencia. Segun la tecnica, podia circular como objeto familiar, signo de poder, imagen reproducible o prueba fotografica de identidad.</p>
+          </div>
+          <div class="card">
+            <h3>Conceptos clave</h3>
+            <div class="keyword-row">
+              <span class="tag">estatus</span>
+              <span class="tag">sociabilidad</span>
+              <span class="tag">aparato</span>
+              <span class="tag">miniatura</span>
+              <span class="tag">litografia</span>
+              <span class="tag">daguerrotipo</span>
+            </div>
+            <p class="small muted">Autores: Munilla para el arte del periodo; Burke para fotografia/retrato como documento; Myers para sociabilidad de elite, tertulias, redes familiares y politicas.</p>
+          </div>
+        </div>
+
+        <h3>Respuesta oral en 2 minutos</h3>
+        <div class="speaker">La idea central es que el retrato en la primera mitad del siglo XIX no era solamente parecido fisico. Era una practica social: servia para afirmar estatus, conservar memoria, circular afectos y construir presencia publica.</div>
+        <p>El retrato burgues o de elite funcionaba en el ambito familiar y social: mostraba respetabilidad, gusto, educacion y pertenencia. Se consumia como objeto de casa, de gabinete o de red familiar. En cambio, el retrato de aparato intensificaba los signos de poder: uniforme, banda, postura, cortinados, atributos politicos o militares. No busca solo intimidad, sino autoridad.</p>
+        <p>La miniatura era otra logica: pequena, portatil, asociada al afecto y a la memoria privada. Circulaba cerca del cuerpo o dentro de redes intimas. La litografia, en cambio, permitia reproducir retratos y llevarlos a un publico mas amplio: hombres publicos, lideres, artistas o personajes politicos podian circular en papel.</p>
+        <p>Con el daguerrotipo aparece una tecnologia nueva. Segun Burke, la fotografia parece un documento transparente, pero tambien hay que leer pose, convenciones y usos sociales. El daguerrotipo era unico, caro y moderno: prometia fidelidad mecanica, pero seguia organizando estatus y memoria.</p>
+        <p>Myers ayuda a ubicar el contexto: la elite portena construia sociabilidad en casas, tertulias, teatros, asociaciones y redes politicas. En ese mundo, tener y circular retratos era una forma de decir quien era uno y a que mundo pertenecia.</p>
+
+        <h3>Obras para analizar</h3>
+        <div class="grid two">
+          <div class="card"><p><b>Pellegrini, retratos de elite:</b> usar para hablar de distincion social y consumo privado.</p></div>
+          <div class="card"><p><b>Descalzi o Garcia del Molino, Rosas:</b> usar para explicar retrato de aparato y autoridad politica.</p></div>
+          <div class="card"><p><b>Jean Philippe Goulu / miniaturas:</b> recordar la escala intima y portable del retrato afectivo.</p></div>
+          <div class="card"><p><b>Daguerrotipo de San Martin:</b> usar para comparar fotografia temprana, singularidad y promesa documental.</p></div>
+        </div>
+
+        <h3>Cierre critico</h3>
+        <div class="warning callout">
+          <p>El retrato parece centrarse en individuos, pero en realidad muestra relaciones sociales. Cada tecnica ordena una forma distinta de produccion, circulacion y consumo: casa, cuerpo, imprenta, Estado, mercado y memoria.</p>
+        </div>
+      </section>
+
+      <section id="consigna-3" class="prompt-section">
+        <h2>Consigna 3 - Rosismo, imagen y propaganda federal</h2>
+        <p class="lede">Pregunta: como se manifesto la identidad federal en imagenes durante el rosismo; vincular retratistica de Garcia del Molino, albumes rurales de Morel y uso politico de la imagen.</p>
+
+        <h3>Imagenes / artistas / autores para ubicar primero</h3>
+        <div class="work-gallery">
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/garcia-del-molino-rosas.jpg" alt="Fernando Garcia del Molino, Retrato del Restaurador de las Leyes Don Juan Manuel de Rosas" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Retrato del Restaurador</h3>
+              <div class="work-meta">Fernando Garcia del Molino, siglo XIX.</div>
+              <p><span class="work-label">Para que sirve:</span> retrato politico: rostro, pose, punzo y autoridad.</p>
+              <p><span class="work-label">Frase oral:</span> "El retrato de Rosas hace visible el poder federal".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Fernando_Garc%C3%ADa_del_Molino.Retrato_del_Restaurador_de_las_Leyes_Don_Juan_Manuel_de_Rosas.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/morel-familia-gaucho.jpg" alt="Carlos Morel, La familia del gaucho, 1841" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>La familia del gaucho</h3>
+              <div class="work-meta">Carlos Morel, 1841. Litografia. MNBA.</div>
+              <p><span class="work-label">Para que sirve:</span> costumbrismo federal: familia rural, orden, paz y consenso.</p>
+              <p><span class="work-label">Frase oral:</span> "El campo aparece como base moral del orden rosista".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:La_familia_del_gaucho_-_Carlos_Morel.jpg">Wikimedia Commons / MNBA</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/morel-la-partida.jpg" alt="Carlos Morel, La partida" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>La partida</h3>
+              <div class="work-meta">Carlos Morel, siglo XIX. Litografia.</div>
+              <p><span class="work-label">Para que sirve:</span> sociabilidad rural, movimiento, tropa y vida popular como imaginario politico.</p>
+              <p><span class="work-label">Frase oral:</span> "Lo costumbrista tambien puede construir pertenencia federal".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:La_partida_-_Carlos_Morel.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid two">
+          <div class="card flash">
+            <h3>Tesis rapida</h3>
+            <p>Durante el rosismo, la imagen funciono como publicidad politica: el retrato construyo autoridad, el punzo hizo visible la adhesion, el costumbrismo federal represento una comunidad rural ordenada y la litografia multiplico esos signos en la vida cotidiana.</p>
+          </div>
+          <div class="card">
+            <h3>Conceptos clave</h3>
+            <div class="keyword-row">
+              <span class="tag">punzo</span>
+              <span class="tag">divisa</span>
+              <span class="tag">retrato politico</span>
+              <span class="tag">costumbrismo federal</span>
+              <span class="tag">litografia</span>
+              <span class="tag">consenso/coercion</span>
+            </div>
+            <p class="small muted">Autores: Roberto Amigo para Morel; Munilla, Szir y Gluzman para litografia, cultura visual y multiplicacion de imagenes.</p>
+          </div>
+        </div>
+
+        <h3>Respuesta oral en 2 minutos</h3>
+        <div class="speaker">Para responder, partiria de una idea: durante el rosismo la imagen no fue solo arte ni documento, sino una herramienta para fabricar identidad politica federal.</div>
+        <p>Garcia del Molino permite pensar el retrato como imagen de poder. En los retratos de Rosas, el parecido importa, pero importan mas los signos: pose, autoridad, vestimenta, rojo punzo y presencia del Restaurador. Ver el rostro de Rosas era ver una forma de orden politico.</p>
+        <p>Con Carlos Morel aparece otra capa. Roberto Amigo habla de costumbrismo federal: sus gauchos, pulperias, soldados y familias rurales no son escenas inocentes. En <i>La familia del gaucho</i>, el mundo rural aparece pacificado, jerarquizado y vinculado a la comunidad federal. El gaucho no aparece como amenaza, sino como paisano, soldado o padre dentro del orden rosista.</p>
+        <p>La litografia agrega la dimension de circulacion. A partir de Bacle y otros talleres, retratos, divisas, lemas y simbolos federales podian reproducirse en papel y objetos. La politica entraba en la vida diaria: ropa, impresos, fiestas, retratos, colores y cuerpos.</p>
+        <p>Por eso Garcia del Molino, Morel y la litografia muestran tres niveles de la propaganda: retratar al lider, representar su base social y multiplicar los signos de pertenencia.</p>
+
+        <h3>Obras para analizar</h3>
+        <div class="grid two">
+          <div class="card"><p><b>Garcia del Molino, Rosas:</b> retrato como presencia de poder, no solo como parecido.</p></div>
+          <div class="card"><p><b>Morel, <i>La familia del gaucho</i>:</b> imagen de paz rural, familia, jerarquia y consenso federal.</p></div>
+          <div class="card"><p><b>Morel, <i>Payada en la pulperia</i> / <i>La partida</i>:</b> sociabilidad popular atravesada por identidad politica.</p></div>
+          <div class="card"><p><b>Bacle, retratos y divisas:</b> la reproduccion impresa convierte simbolos politicos en presencia cotidiana.</p></div>
+        </div>
+
+        <h3>Cierre critico</h3>
+        <div class="warning callout">
+          <p>El rosismo entendio que gobernar tambien era producir imagenes. Pero esas imagenes no son neutrales: indican que color, que cuerpo, que rostro y que gesto pertenecen a la comunidad politica.</p>
+        </div>
+      </section>
+
+      <section id="consigna-5" class="prompt-section">
+        <h2>Consigna 5 - Paisaje pampeano, civilizacion y barbarie</h2>
+        <p class="lede">Pregunta: como se dio el paisaje pampeano en el siglo XIX y como encarna la tension civilizacion/barbarie, de Prilidiano Pueyrredon a Eduardo Sivori.</p>
+
+        <h3>Imagenes / artistas / autores para ubicar primero</h3>
+        <div class="work-gallery">
+          <article class="work-card wide">
+            <figure>
+              <img src="assets/pueyrredon-rodeo.jpg" alt="Prilidiano Pueyrredon, El rodeo" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>El rodeo</h3>
+              <div class="work-meta">Prilidiano Pueyrredon, ca. 1861. MNBA.</div>
+              <p><span class="work-label">Para que sirve:</span> pampa productiva: trabajo rural, estancia, ganado y orden social.</p>
+              <p><span class="work-label">Frase oral:</span> "La pampa puede aparecer como riqueza organizada, no solo como desierto".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:El_rodeo_-_Prilidiano_Pueyrred%C3%B3n.jpg">Wikimedia Commons / MNBA</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card wide">
+            <figure>
+              <img src="assets/pueyrredon-alto-campo.jpg" alt="Prilidiano Pueyrredon, Un alto en el campo, 1861" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Un alto en el campo</h3>
+              <div class="work-meta">Prilidiano Pueyrredon, 1861. MNBA.</div>
+              <p><span class="work-label">Para que sirve:</span> paisaje con sociabilidad rural: ombu, carreta, figuras, descanso y mundo criollo.</p>
+              <p><span class="work-label">Frase oral:</span> "La pampa aparece como identidad criolla, pero ordenada por una mirada civilizadora".</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/3187/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Un_alto_en_el_campo_-_Prilidiano_Pueyrred%C3%B3n.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card wide">
+            <figure>
+              <img src="assets/sivori-pampa-chacra-portena.jpg" alt="Eduardo Sivori, Pampa o Chacra La Portena, Moreno, 1899" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Pampa o Chacra La Portena, Moreno</h3>
+              <div class="work-meta">Eduardo Sivori, 1899. Acuarela. MNBA.</div>
+              <p><span class="work-label">Para que sirve:</span> horizonte pampeano moderno: planicie, cielo, vacio y observacion naturalista.</p>
+              <p><span class="work-label">Frase oral:</span> "Sivori vuelve la pampa un problema formal moderno".</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/5326/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Pampa_o_Chacra_La_Porte%C3%B1a,_Moreno_-_Eduardo_S%C3%ADvori.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid two">
+          <div class="card flash">
+            <h3>Tesis rapida</h3>
+            <p>El paisaje pampeano no fue neutro: fue un campo ideologico. Podia verse como territorio productivo y civilizado, como desierto amenazante, como frontera violenta o como horizonte moderno. Esa oscilacion encarna la tension civilizacion/barbarie.</p>
+          </div>
+          <div class="card">
+            <h3>Conceptos clave</h3>
+            <div class="keyword-row">
+              <span class="tag">pampa</span>
+              <span class="tag">desierto</span>
+              <span class="tag">frontera</span>
+              <span class="tag">cautiva</span>
+              <span class="tag">malon</span>
+              <span class="tag">Estado</span>
+              <span class="tag">horizonte</span>
+            </div>
+            <p class="small muted">Autores: Munilla; Malosetti Costa sobre cautivas; Malosetti Costa y Penhos sobre iconografia del desierto argentino.</p>
+          </div>
+        </div>
+
+        <h3>Respuesta oral en 2 minutos</h3>
+        <div class="speaker">La idea central es que el paisaje pampeano del siglo XIX no representa simplemente naturaleza. Representa un conflicto: que hacer con la pampa y como incorporarla a la nacion.</div>
+        <p>En Pueyrredon, la pampa puede aparecer vinculada a la estancia, el ganado, el ombu, la carreta, el descanso y el trabajo rural. Obras como <i>El rodeo</i> o <i>Un alto en el campo</i> muestran un campo socialmente organizado. Ahi la pampa no es puro vacio: es territorio productivo, jerarquico y habitable.</p>
+        <p>Pero en la cultura del siglo XIX tambien aparece la pampa como desierto y frontera. Esa palabra "desierto" no significa que no hubiera habitantes, sino que desde la mirada estatal y urbana se la piensa como espacio a conquistar, ordenar o civilizar. Ahi entran las imagenes de malones, cautivas e indigenas como figuras de barbarie.</p>
+        <p>Malosetti muestra que la cautiva blanca condensa una fantasia politica y erotica: el cuerpo femenino aparece como frontera amenazada por la barbarie. <i>La vuelta del malon</i> de Della Valle es clave porque vuelve nacional ese conflicto, pero lo hace desde una mirada ideologica que presenta al indigena como amenaza.</p>
+        <p>Blanes, con la <i>Ocupacion militar del Rio Negro</i>, muestra el otro lado: la violencia estatal representada como orden y civilizacion. Y con Sivori, la pampa se vuelve tambien problema moderno de paisaje: horizonte bajo, cielo enorme, inmensidad y observacion directa. De Pueyrredon a Sivori cambia el lenguaje, pero la pampa sigue siendo una pregunta sobre identidad nacional.</p>
+
+        <h3>Obras para analizar</h3>
+        <div class="grid two">
+          <div class="card"><p><b>Pueyrredon, <i>El rodeo</i>:</b> pampa como trabajo, propiedad y orden rural.</p></div>
+          <div class="card"><p><b>Pueyrredon, <i>Un alto en el campo</i>:</b> identidad criolla, ocio rural y paisaje ordenado.</p></div>
+          <div class="card"><p><b>Della Valle, <i>La vuelta del malon</i>:</b> pampa como amenaza y civilizacion/barbarie.</p></div>
+          <div class="card"><p><b>Blanes, <i>Ocupacion militar del Rio Negro</i>:</b> conquista estatal narrada como gesta civilizadora.</p></div>
+          <div class="card"><p><b>Sivori, <i>Pampa o Chacra La Portena</i>:</b> horizonte pampeano como paisaje moderno y problema formal.</p></div>
+        </div>
+
+        <h3>Cierre critico</h3>
+        <div class="warning callout">
+          <p>La pampa no es un fondo vacio: es una escena de disputa. El arte la convierte en imagen nacional, pero esa imagen muchas veces justifica jerarquias, conquistas y exclusiones bajo la palabra civilizacion.</p>
         </div>
       </section>
 
@@ -1037,9 +1378,9 @@
         <div class="checklist">
           <label><input type="checkbox" checked /> Crear <code>assets/</code> y agregar imagenes reales.</label>
           <label><input type="checkbox" checked /> Reemplazar placeholders por etiquetas <code>&lt;img&gt;</code>.</label>
-          <label><input type="checkbox" checked /> Dejar preparada la plantilla de 5 minutos para consignas futuras.</label>
+          <label><input type="checkbox" checked /> Incorporar las cuatro consignas alternativas como repaso breve.</label>
+          <label><input type="checkbox" checked /> Crear y revisar la vista secundaria <code>presentacion.html</code>.</label>
           <label><input type="checkbox" /> Ensayar y ajustar el guion a la duracion exacta que pidan.</label>
-          <label><input type="checkbox" /> Incorporar las otras cuatro consignas cuando esten disponibles.</label>
         </div>
       </section>
     </main>

@@ -16,12 +16,16 @@ Importante: los **5 minutos de preparación privada** corresponden a las otras c
 
 ## Prioridad actual
 
-Por ahora la prioridad es **cerrar bien la consigna elegida**. No inventar ni desarrollar todavía las otras cuatro consignas que faltan, salvo que el usuario las traiga explícitamente.
+La prioridad principal sigue siendo **cerrar bien la consigna elegida**, pero las cuatro consignas alternativas ya fueron incorporadas como secciones breves de repaso. No ampliarlas al nivel de la consigna principal salvo que el usuario lo pida.
 
 La página actual debe servir en dos modos diferenciados:
 
 - **Consigna elegida preparada:** entender la lógica de la consigna principal, los autores, las instituciones, las obras y el reparto oral.
-- **Plantilla futura de 5 minutos:** esquema vacío o muy breve para las consignas sorpresa que se agreguen después.
+- **Repaso de consignas alternativas:** entrar rapido a la consigna que toque, mirar primero imagenes/artistas/autores y despues usar una respuesta oral breve.
+
+Tambien existe una vista secundaria:
+
+- `presentacion.html`: version mas visual y sintetica para mostrar o usar como apoyo oral. Debe mantenerse basada en la guia completa, no reemplazarla.
 
 ## Criterio de trabajo con agentes
 
@@ -38,6 +42,7 @@ Si no se pueden usar múltiples agentes por limitaciones del entorno o de la tar
 ## Archivos principales
 
 - `tema_arte_civilizacion_estudio.html`: archivo principal de estudio.
+- `presentacion.html`: vista secundaria visual, con bloques, imagenes grandes, palabras clave y link de vuelta a la guia.
 - `instructions.md`: estas instrucciones para continuar el trabajo.
 - `assets/`: imágenes locales usadas por el HTML.
 - `resumenes/`: resúmenes operativos de los textos y presentación de apoyo.
@@ -174,13 +179,15 @@ Las imágenes están en `assets/` con nombres simples:
 - Evitar frases vagas como “esto es importante” sin explicar por qué.
 - Mantener una mirada crítica, pero no perder la respuesta principal.
 
-## Estructura futura para otras consignas
+## Criterio para consignas alternativas
 
-Cuando el usuario traiga las otras cuatro consignas, agregarlas como secciones breves, no con el mismo desarrollo que la consigna elegida al principio:
+Las consignas 1, 2, 3 y 5 ya estan agregadas como secciones breves. Mantener esta estructura fija:
 
 ```html
 <section id="tema-x">
-  <h2>Tema X — Título de la consigna</h2>
+  <h2>Tema X - Título de la consigna</h2>
+  <h3>Imagenes / artistas / autores para ubicar primero</h3>
+  <!-- fichas visuales -->
   <div class="callout">
     <p><b>Tesis rápida:</b> ...</p>
   </div>
@@ -196,6 +203,21 @@ Cuando el usuario traiga las otras cuatro consignas, agregarlas como secciones b
   <p>...</p>
 </section>
 ```
+
+Criterio de contenido:
+
+- Arrancar siempre por imagenes, artistas y autores.
+- Responder la consigna y nada mas: no hacer desarrollo enciclopedico.
+- Usar los PDFs de `textos/` como bibliografia base y los textos extraibles o paginas renderizadas como apoyo de verificacion.
+- Para PDFs escaneados, renderizar paginas relevantes y revisar visualmente si hay dudas.
+- Mantener tono oral y util para dos personas.
+
+Consignas incorporadas:
+
+- `#consigna-1`: artistas viajeros, expediciones cientificas, litografia, periodicos ilustrados y costumbrismo.
+- `#consigna-2`: retrato burgues, de aparato, miniatura, litografia y daguerrotipo como herramientas de estatus y sociabilidad.
+- `#consigna-3`: rosismo, retratistica, costumbrismo federal, punzo, litografia y propaganda politica.
+- `#consigna-5`: paisaje pampeano, pampa/desierto, cautiva, malon, conquista, Pueyrredon, Della Valle, Blanes y Sivori.
 
 ## Reparto oral para el tema elegido
 
@@ -221,5 +243,6 @@ Cuando el usuario traiga las otras cuatro consignas, agregarlas como secciones b
 
 - Ensayar el guion y medir duración real.
 - Ajustar qué obras van a usar en la presentación oral definitiva.
-- Incorporar las otras cuatro consignas cuando estén disponibles.
+- Revisar si alguna consigna alternativa necesita mas precision segun lo que pida la catedra.
+- Mantener `presentacion.html` sincronizada cuando cambien tesis, obras o palabras clave de la guia principal.
 - Si se agregan más imágenes, usar fuentes oficiales o estables y dejar el crédito en la ficha.
