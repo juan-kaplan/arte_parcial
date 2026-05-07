@@ -41,6 +41,13 @@
 
     a:hover { text-decoration: underline; }
 
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--accent-2);
+      outline-offset: 3px;
+      border-radius: .35rem;
+    }
+
     img {
       display: block;
       max-width: 100%;
@@ -94,6 +101,7 @@
 
     nav {
       display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: .35rem;
     }
 
@@ -459,7 +467,7 @@
       }
 
       nav {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
       }
 
       main {
