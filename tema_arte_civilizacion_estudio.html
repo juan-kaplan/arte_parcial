@@ -147,6 +147,12 @@
       color: var(--accent-2);
     }
 
+    .nav-links.nav-links-compact a {
+      min-height: 2.35rem;
+      font-size: .84rem;
+      line-height: 1.25;
+    }
+
     .jump-index {
       position: fixed;
       z-index: 20;
@@ -653,6 +659,16 @@
           </div>
         </div>
         <div class="nav-group">
+          <div class="nav-group-title">Atajos de analisis</div>
+          <div class="nav-links nav-links-compact">
+            <a href="#c1-imagenes">C1 imagenes</a>
+            <a href="#c1-tecnica">C1 tecnica</a>
+            <a href="#c1-obras">C1 obras</a>
+            <a href="#c5-matriz">C5 matriz</a>
+            <a href="#c5-obras">C5 obras</a>
+          </div>
+        </div>
+        <div class="nav-group">
           <div class="nav-group-title">Practica</div>
           <div class="nav-links">
             <a class="nav-link-featured" href="presentacion.html">Presentacion</a>
@@ -827,6 +843,17 @@
         <div class="callout">
           <p><b>Paradoja para memorizar:</b> Buenos Aires podia imaginarse como futuro centro artistico solo si primero aceptaba que Paris era el centro presente. La autonomia no rompe con Europa; intenta apropiarse de sus reglas para usarlas en clave local.</p>
         </div>
+        <div class="grid two">
+          <div class="card">
+            <h3>Chicago 1893 como limite</h3>
+            <p><i>La vuelta del malon</i> viaja a una exposicion donde las bellas artes eran una prueba internacional de civilizacion, pero la produccion argentina queda lejos de esa centralidad. Sirve para mostrar que no alcanzaba con tener obras: habia que lograr ubicacion, gestion y reconocimiento.</p>
+          </div>
+          <div class="card">
+            <h3>Saint Louis 1904 y gestion</h3>
+            <p>En Saint Louis, Schiaffino aparece como gestor: pelea por una presencia argentina mas visible y por ubicar el arte nacional dentro de circuitos legitimados. El problema no es solo pintar, sino hacer existir institucionalmente ese arte ante otros paises.</p>
+          </div>
+        </div>
+        <p class="source">Referencia de clase: notebook <i>Arte y Cultura Visual en Argentina</i>, exposiciones internacionales y gestion de Schiaffino.</p>
         <h3>Crisis de 1890</h3>
         <p>Despues de la crisis economica y politica, el optimismo se vuelve mas defensivo. El arte sigue siendo necesario, pero ya no solo como celebracion: aparece como forma de estabilizar simbolicamente un progreso material que se revela fragil.</p>
         <div class="grid two">
@@ -1070,7 +1097,7 @@
         <h2>Consigna 1 - Artistas viajeros e imagen nacional</h2>
         <p class="lede">Pregunta: como los artistas viajeros y las expediciones cientificas contribuyeron a las primeras imagenes de Buenos Aires; que generos usaron; y por que litografia y periodicos ilustrados difundieron el costumbrismo.</p>
 
-        <h3>Imagenes / artistas / autores para ubicar primero</h3>
+        <h3 id="c1-imagenes">Imagenes / artistas / autores para ubicar primero</h3>
         <div class="work-gallery">
           <article class="work-card portrait">
             <figure>
@@ -1098,6 +1125,19 @@
             </div>
           </article>
 
+          <article class="work-card wide">
+            <figure>
+              <img src="assets/pellegrini-catedral-buenos-aires.jpg" alt="Carlos Enrique Pellegrini, Catedral de Buenos Aires" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Catedral de Buenos Aires</h3>
+              <div class="work-meta">Carlos Enrique Pellegrini, siglo XIX. Vista urbana.</div>
+              <p><span class="work-label">Para que sirve:</span> Pellegrini combina mirada tecnica y artistica: ordena la ciudad desde plaza, arquitectura y punto de vista.</p>
+              <p><span class="work-label">Frase oral:</span> "Pellegrini vuelve Buenos Aires una ciudad legible, casi medida por el dibujo".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Pellegrini_Buenos_Aires_Catedral.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
           <article class="work-card">
             <figure>
               <img src="assets/bacle-peinetones-casa.jpg" alt="Peinetones en casa, litografia de Bacle, siglo XIX" loading="lazy" />
@@ -1110,12 +1150,25 @@
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Peinetones_en_casa.jpg">Wikimedia Commons</a>.</p>
             </div>
           </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/bacle-tippou-saib.jpg" alt="Tippou-Saib, litografia publicada en El Recopilador numero 20, 1836" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Tippou-Saib</h3>
+              <div class="work-meta"><i>El Recopilador</i> N. 20, 1836. Taller de Bacle/Macaire.</div>
+              <p><span class="work-label">Para que sirve:</span> muestra la circulacion global de imagenes: una figura tomada de repertorios europeos se copia, invierte y adapta para lectores portenos.</p>
+              <p><span class="work-label">Frase oral:</span> "El lector porteno viajaba por imagenes sin salir de Buenos Aires".</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://rephip.unr.edu.ar/items/21738c11-8301-4aab-9674-e4f27e90802e">Gluzman, Munilla Lacasa y Szir</a>.</p>
+            </div>
+          </article>
         </div>
 
         <div class="grid two">
           <div class="card flash">
             <h3>Tesis rapida</h3>
-            <p>Los viajeros y expediciones produjeron las primeras imagenes sistematicas de Buenos Aires porque miraron la ciudad como paisaje, documento y escena de costumbres. La litografia y la prensa ilustrada transformaron esas imagenes en cultura visual circulante.</p>
+            <p>Los viajeros y expediciones produjeron las primeras imagenes sistematicas de Buenos Aires porque miraron la ciudad como paisaje, documento y escena de costumbres. El grabado primero, y luego la litografia y la prensa ilustrada, transformaron esas imagenes en cultura visual circulante.</p>
           </div>
           <div class="card">
             <h3>Conceptos clave</h3>
@@ -1123,8 +1176,10 @@
               <span class="tag">vistas urbanas</span>
               <span class="tag">tipos y costumbres</span>
               <span class="tag">expediciones</span>
+              <span class="tag">grabado</span>
               <span class="tag">litografia</span>
               <span class="tag">periodicos ilustrados</span>
+              <span class="tag">copia/adaptacion</span>
               <span class="tag">costumbrismo</span>
             </div>
             <p class="small muted">Autores: Munilla Lacasa; Gluzman, Munilla y Szir sobre Bacle; Gluzman y Munilla sobre publicaciones europeas en la prensa portena.</p>
@@ -1134,10 +1189,28 @@
         <h3>Respuesta oral en 2 minutos</h3>
         <div class="speaker">Para responder, conviene partir de que Buenos Aires no tenia todavia una iconografia nacional consolidada. Los artistas viajeros y las expediciones cientificas ayudaron a producirla porque registraron la ciudad, la pampa cercana, los oficios, las modas y los tipos sociales. Sus imagenes mezclan mirada documental, curiosidad cientifica y pintoresquismo: no son fotografias neutrales, sino selecciones de lo que parecia representativo o exotico.</div>
         <p>Muchos de esos artistas trabajaron generos como la vista urbana, el paisaje, el retrato, las escenas de tipos y costumbres, la documentacion topografica y la ilustracion cientifica. Vidal, Pellegrini, Bacle, Macaire u Onslow sirven para ubicar esa zona donde arte, documento y mercado visual se cruzan.</p>
-        <p>La litografia fue decisiva porque permitio pasar del original unico a la imagen reproducible. El taller de Bacle y publicaciones como <i>El Museo Americano</i> y <i>El Recopilador</i> difundieron retratos, vistas, albumes de trajes y costumbres, laminas sueltas e imagenes tomadas de repertorios europeos adaptadas al publico local.</p>
+        <p>Antes de la litografia, el grabado ya permitia traducir una acuarela o dibujo a una plancha metalica y sacar muchas impresiones. Pero esa traduccion no era neutra: dependia de la mano del grabador, por eso una misma vista podia circular con variaciones.</p>
+        <p>La litografia fue decisiva porque volvio mas economica y flexible la reproduccion. El taller de Bacle y publicaciones como <i>El Museo Americano</i> y <i>El Recopilador</i> difundieron retratos, vistas, albumes de trajes y costumbres, laminas sueltas e imagenes tomadas de repertorios europeos adaptadas al publico local.</p>
         <p>Asi, el costumbrismo no fue solo una descripcion amable de lo cotidiano. Fue una forma de ordenar visualmente la sociedad: mostrar como era Buenos Aires, quienes la habitaban, que practicas la definian y que imagen podia circular de ella.</p>
 
-        <h3>Obras para analizar</h3>
+        <h3 id="c1-tecnica">Grabado, litografia y versiones</h3>
+        <div class="grid two">
+          <div class="card">
+            <h3>Grabado en metal</h3>
+            <p>La imagen se pasaba a una plancha metalica con surcos; la tinta entraba en esas lineas y la prensa sacaba multiples copias. Como el grabador interpretaba el dibujo original, el resultado podia cambiar entre versiones.</p>
+            <div class="speaker">Frase breve: "La reproduccion no era copia automatica; era traduccion visual".</div>
+          </div>
+          <div class="card">
+            <h3>Litografia</h3>
+            <p>La imagen se dibujaba sobre piedra caliza con materiales grasos y se imprimia por presion. Era mas rapida y barata para combinar imagen, texto, mapas, retratos, vistas y papeles comerciales.</p>
+            <div class="speaker">Frase breve: "Con la litografia, la imagen se vuelve cotidiana, barata y periodica".</div>
+          </div>
+        </div>
+        <div class="callout">
+          <p><b>Dato del notebook:</b> el caso de Brambila y las primeras vistas de Buenos Aires sirve para explicar que algunas imagenes nacen como pintura o acuarela, pero llegan al publico como grabado. Si hay dos versiones, no es un error menor: muestra que la imagen nacional se construye en una cadena de traducciones tecnicas.</p>
+        </div>
+
+        <h3 id="c1-obras">Obras para analizar</h3>
         <div class="work-gallery">
           <article class="work-card portrait">
             <figure>
@@ -1149,6 +1222,19 @@
               <p><span class="work-label">Como usarla:</span> la mirada viajera convierte la ciudad en escena reconocible: plaza, edificios, movimiento y tipos sociales.</p>
               <p><span class="work-label">Frase oral:</span> "Buenos Aires empieza a verse como imagen nacional antes de tener una iconografia nacional estable".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Emeric_Essex_Vidal_-_Vista_del_Cabildo_desde_la_Recova_-_1817.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card wide">
+            <figure>
+              <img src="assets/pellegrini-catedral-buenos-aires.jpg" alt="Carlos Enrique Pellegrini, Catedral de Buenos Aires" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Pellegrini, Catedral</h3>
+              <div class="work-meta">Carlos Enrique Pellegrini, siglo XIX.</div>
+              <p><span class="work-label">Como usarla:</span> vista urbana como documento: arquitectura, espacio publico y ciudad moderna vista por un dibujante tecnico.</p>
+              <p><span class="work-label">Frase oral:</span> "Pellegrini hace de Buenos Aires un objeto visual ordenado y reconocible".</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Pellegrini_Buenos_Aires_Catedral.jpg">Wikimedia Commons</a>.</p>
             </div>
           </article>
 
@@ -1175,6 +1261,19 @@
               <p><span class="work-label">Como usarla:</span> muestra que la imagen no circulaba solo como obra unica: tambien lo hacia en periodicos, laminas y repertorios impresos.</p>
               <p><span class="work-label">Frase oral:</span> "El periodico ilustrado convierte la imagen en habito de lectura y consumo".</p>
               <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:El_museo_americano_-_libro_de_todo_el_mundo_(IA_gri_33125014037101).pdf">Wikimedia Commons / Internet Archive</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/bacle-tippou-saib.jpg" alt="Tippou-Saib, El Recopilador numero 20, 1836" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Tippou-Saib</h3>
+              <div class="work-meta"><i>El Recopilador</i> N. 20, 1836.</div>
+              <p><span class="work-label">Como usarla:</span> no es costumbrismo porteno, sino clave para explicar periodicos ilustrados: Buenos Aires consume imagenes globales relitografiadas localmente.</p>
+              <p><span class="work-label">Frase oral:</span> "La cultura visual portena se arma copiando, invirtiendo, mejorando y adaptando imagenes europeas".</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://rephip.unr.edu.ar/items/21738c11-8301-4aab-9674-e4f27e90802e">Gluzman, Munilla Lacasa y Szir</a>.</p>
             </div>
           </article>
 
@@ -1543,6 +1642,22 @@
           </div>
         </div>
 
+        <h3 id="c5-matriz">Matriz rapida: tres pampas posibles</h3>
+        <div class="grid three">
+          <div class="card">
+            <h3>Pampa a poblar</h3>
+            <p>La llanura aparece como extension casi marina o desertica. La imagen privilegia la epopeya de ocupar, medir y hacer habitable el territorio.</p>
+          </div>
+          <div class="card">
+            <h3>Pampa de conflicto</h3>
+            <p>La frontera se narra con cautivas, malones, fortines e indigenas. Ahi la pampa se vuelve el escenario dramatico de civilizacion/barbarie.</p>
+          </div>
+          <div class="card">
+            <h3>Pampa autonoma</h3>
+            <p>Despues de la Campana del Desierto, el paisaje puede mirarse como pampa "pacificada": horizonte, cielo, topografia y extension como problema plastico.</p>
+          </div>
+        </div>
+
         <h3>Respuesta oral en 2 minutos</h3>
         <div class="speaker">La idea central es que el paisaje pampeano del siglo XIX no representa simplemente naturaleza. Representa un conflicto: que hacer con la pampa y como incorporarla a la nacion.</div>
         <p>En Pueyrredon, la pampa puede aparecer vinculada a la estancia, el ganado, el ombu, la carreta, el descanso y el trabajo rural. Obras como <i>El rodeo</i> o <i>Un alto en el campo</i> muestran un campo socialmente organizado. Ahi la pampa no es puro vacio: es territorio productivo, jerarquico y habitable.</p>
@@ -1550,7 +1665,7 @@
         <p>Malosetti muestra que la cautiva blanca condensa una fantasia politica y erotica: el cuerpo femenino aparece como frontera amenazada por la barbarie. <i>La vuelta del malon</i> de Della Valle es clave porque vuelve nacional ese conflicto, pero lo hace desde una mirada ideologica que presenta al indigena como amenaza.</p>
         <p>Blanes, con la <i>Ocupacion militar del Rio Negro</i>, muestra el otro lado: la violencia estatal representada como orden y civilizacion. Y con Sivori, la pampa se vuelve tambien problema moderno de paisaje: horizonte bajo, cielo enorme, inmensidad y observacion directa. De Pueyrredon a Sivori cambia el lenguaje, pero la pampa sigue siendo una pregunta sobre identidad nacional.</p>
 
-        <h3>Obras para analizar</h3>
+        <h3 id="c5-obras">Obras para analizar</h3>
         <div class="work-gallery">
           <article class="work-card wide">
             <figure>

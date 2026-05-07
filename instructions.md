@@ -47,6 +47,7 @@ Si no se pueden usar múltiples agentes por limitaciones del entorno o de la tar
 - `assets/`: imágenes locales usadas por el HTML.
 - `resumenes/`: resúmenes operativos de los textos y presentación de apoyo.
 - `textos/`: PDFs base para bibliografía; están escaneados y no siempre extraen texto directamente.
+- `resumenes/Arte y Cultura Visual en Argentina.pdf`: notebook de clases de OneDrive. Es largo, pero extrae texto bastante bien; usarlo para encontrar apuntes operativos por consigna antes de volver a los textos base.
 
 ## Bibliografía base
 
@@ -108,6 +109,7 @@ Idea clave:
 - La paradoja: para construir un arte nacional argentino había que formarse en Europa.
 - No se trata de simple copia: esos lenguajes se adaptan a temas locales.
 - Schiaffino es figura clave porque fue pintor, crítico, gestor cultural, historiador y organizador institucional.
+- Las exposiciones internacionales sirven para mostrar la dimensión institucional de la legitimación: Chicago 1893 marca un límite de visibilidad para el arte argentino, y Saint Louis 1904 permite destacar la gestión de Schiaffino.
 
 ### Crisis de 1890
 
@@ -171,7 +173,7 @@ Las imágenes están en `assets/` con nombres simples:
 
 Tambien hay assets para las consignas alternativas:
 
-- Consigna 1: `vidal-cabildo-recova.jpg`, `bacle-recova-1835.jpg`, `bacle-peinetones-casa.jpg`, `bacle-trages-sra-portena.jpg`, `el-museo-americano-cover.jpg`.
+- Consigna 1: `vidal-cabildo-recova.jpg`, `bacle-recova-1835.jpg`, `pellegrini-catedral-buenos-aires.jpg`, `bacle-peinetones-casa.jpg`, `bacle-tippou-saib.jpg`, `bacle-trages-sra-portena.jpg`, `el-museo-americano-cover.jpg`.
 - Consigna 2: `pellegrini-guerrico-retrato.jpg`, `descalzi-rosas.jpg`, `goulu-cirila-crespo-miniatura.jpg`, `san-martin-daguerrotipo.jpg`.
 - Consigna 3: `garcia-del-molino-rosas.jpg`, `morel-familia-gaucho.jpg`, `morel-la-partida.jpg`, `morel-payada-pulperia.jpg`, `morel-gaucho-traje-pueblo.jpg`, `rosas-luto-ezcurra-divisa.png`.
 - Consigna 5: `pueyrredon-rodeo.jpg`, `pueyrredon-alto-campo.jpg`, `sivori-pampa-chacra-portena.jpg`, mas las obras de Della Valle y Blanes ya listadas.
@@ -225,6 +227,13 @@ Consignas incorporadas:
 - `#consigna-2`: retrato burgues, de aparato, miniatura, litografia y daguerrotipo como herramientas de estatus y sociabilidad.
 - `#consigna-3`: rosismo, retratistica, costumbrismo federal, punzo, litografia y propaganda politica.
 - `#consigna-5`: paisaje pampeano, pampa/desierto, cautiva, malon, conquista, Pueyrredon, Della Valle, Blanes y Sivori.
+
+Notas agregadas desde el notebook de clases:
+
+- Consigna 1: diferenciar **grabado en metal / huecograbado** y **litografia**. El grabado traduce una acuarela o dibujo a una plancha metalica; como depende de la interpretacion del grabador, una misma imagen puede circular en versiones. La litografia sobre piedra abarata y acelera la circulacion, y por eso es clave para Bacle, Macaire, periodicos ilustrados y costumbrismo.
+- Consigna 1: `Tippou-Saib` sirve para explicar imagenes globales seleccionadas localmente: una imagen tomada de repertorios europeos, copiada/invertida/adaptada y publicada en Buenos Aires.
+- Consigna 1: Pellegrini debe aparecer como ingeniero/dibujante tecnico devenido artista; sus vistas urbanas, como la Catedral, ordenan Buenos Aires como documento visual.
+- Consigna 5: usar la matriz rapida de tres pampas: pampa a poblar, pampa de conflicto y pampa autonoma/pacificada. Esta ayuda a pasar de Pueyrredon a Della Valle/Blanes y luego a Sivori sin perder la tension civilizacion/barbarie.
 
 ## Reparto oral para el tema elegido
 
