@@ -1,0 +1,12 @@
+# Local/generated verification artifacts
+output/
+.cache/
+
+# Local bibliography and private study PDFs.
+# Keep these locally; do not publish them in a public GitHub Pages repo.
+textos/
+resumenes/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

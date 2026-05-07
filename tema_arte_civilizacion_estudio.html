@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arte, civilizacion y arte nacional - Guia de estudio</title>
+  <style>
+    :root {
+      --bg: #101112;
+      --surface: #17191b;
+      --surface-2: #222528;
+      --surface-3: #2b2924;
+      --text: #f4efe5;
+      --muted: #c8beb0;
+      --soft: #9da7ae;
+      --accent: #d3ad5d;
+      --accent-2: #7fb7c7;
+      --accent-3: #b98f8f;
+      --ok: #9fbd8a;
+      --border: #3b3832;
+      --shadow: rgba(0, 0, 0, .28);
+      --max: 72rem;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.58;
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    p { margin: 0 0 .85rem; }
+
+    ul, ol {
+      margin: .55rem 0 1rem 1.35rem;
+      padding: 0;
+    }
+
+    li { margin: .35rem 0; }
+
+    code {
+      padding: .05rem .3rem;
+      border-radius: .25rem;
+      background: rgba(255, 255, 255, .08);
+      color: #f7e2aa;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .9em;
+    }
+
+    .layout {
+      min-height: 100vh;
+    }
+
+    aside {
+      border-bottom: 1px solid var(--border);
+      background: #131516;
+      padding: 1rem;
+    }
+
+    aside h1 {
+      margin: 0 0 .35rem;
+      color: var(--accent);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 1rem;
+      letter-spacing: .08em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    aside p {
+      max-width: 42rem;
+      margin: 0 0 .75rem;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    nav {
+      display: grid;
+      gap: .35rem;
+    }
+
+    nav a {
+      min-height: 2.75rem;
+      display: flex;
+      align-items: center;
+      padding: .45rem .65rem;
+      border: 1px solid var(--border);
+      border-radius: .5rem;
+      background: rgba(255, 255, 255, .03);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .92rem;
+    }
+
+    nav a:hover {
+      background: var(--surface-2);
+      text-decoration: none;
+    }
+
+    main {
+      width: 100%;
+      max-width: var(--max);
+      padding: 1.25rem 1rem 4rem;
+    }
+
+    .hero {
+      padding: 1.35rem 0 1.75rem;
+      border-bottom: 1px solid var(--border);
+      background:
+        linear-gradient(180deg, rgba(211, 173, 93, .08), rgba(127, 183, 199, .03)),
+        var(--bg);
+    }
+
+    .eyebrow {
+      margin-bottom: .65rem;
+      color: var(--accent);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      max-width: 15ch;
+      margin: 0 0 1rem;
+      color: var(--text);
+      font-size: clamp(2.15rem, 10vw, 4.6rem);
+      letter-spacing: 0;
+      line-height: .98;
+    }
+
+    .hero .subtitle {
+      max-width: 55rem;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .tagline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin-top: 1.15rem;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .25rem .6rem;
+      background: rgba(255, 255, 255, .04);
+      color: var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .84rem;
+    }
+
+    section {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 1rem;
+    }
+
+    section > h2 {
+      margin: 0 0 1rem;
+      color: var(--accent);
+      font-size: clamp(1.55rem, 5vw, 2rem);
+      letter-spacing: 0;
+      line-height: 1.15;
+    }
+
+    h3, h4 {
+      margin: 1.1rem 0 .45rem;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    h3 { font-size: 1.2rem; }
+    h4 { color: var(--accent-2); font-size: 1rem; }
+
+    .lede {
+      max-width: 62rem;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .card,
+    .work-card,
+    .slide,
+    details,
+    .callout,
+    .quote {
+      border: 1px solid var(--border);
+      border-radius: .5rem;
+      box-shadow: 0 .75rem 2.5rem var(--shadow);
+    }
+
+    .card {
+      background: var(--surface);
+      padding: 1rem;
+    }
+
+    .card h3,
+    .card h4 {
+      margin-top: 0;
+    }
+
+    .callout {
+      margin: 1rem 0;
+      padding: 1rem;
+      border-left: .25rem solid var(--accent);
+      background: rgba(211, 173, 93, .08);
+    }
+
+    .warning {
+      border-left-color: var(--accent-3);
+      background: rgba(185, 143, 143, .09);
+    }
+
+    .success {
+      border-left-color: var(--ok);
+      background: rgba(159, 189, 138, .09);
+    }
+
+    .quote {
+      margin: 1rem 0;
+      padding: 1rem;
+      border-left: .25rem solid var(--accent-2);
+      background: rgba(127, 183, 199, .09);
+      color: #fff8e9;
+      font-size: 1.06rem;
+    }
+
+    .muted { color: var(--muted); }
+    .small { font-size: .92rem; }
+
+    .oral-map {
+      counter-reset: map-step;
+    }
+
+    .oral-step {
+      position: relative;
+      padding-left: 3.1rem;
+    }
+
+    .oral-step::before {
+      counter-increment: map-step;
+      content: counter(map-step);
+      position: absolute;
+      left: 1rem;
+      top: 1rem;
+      width: 1.55rem;
+      height: 1.55rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #141414;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .85rem;
+      font-weight: 800;
+    }
+
+    .mini-title {
+      display: block;
+      margin-bottom: .25rem;
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .timeline {
+      margin-top: 1rem;
+      border-left: 2px solid var(--border);
+      padding-left: 1rem;
+    }
+
+    .timeline .item {
+      position: relative;
+      margin: .9rem 0;
+      color: var(--muted);
+    }
+
+    .timeline .item::before {
+      content: "";
+      position: absolute;
+      left: -1.35rem;
+      top: .55rem;
+      width: .55rem;
+      height: .55rem;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .split-speakers {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.75rem;
+      margin-right: .45rem;
+      border-radius: 999px;
+      padding: .15rem .55rem;
+      background: var(--accent);
+      color: #141414;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .8rem;
+      font-weight: 800;
+    }
+
+    .work-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .work-card {
+      overflow: hidden;
+      background: var(--surface);
+    }
+
+    .work-card figure {
+      margin: 0;
+      background: #0d0e0f;
+    }
+
+    .work-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #0d0e0f;
+    }
+
+    .work-card.portrait img {
+      aspect-ratio: 3 / 4;
+      object-fit: contain;
+      padding: .5rem;
+    }
+
+    .work-body {
+      padding: 1rem;
+    }
+
+    .work-body h3 {
+      margin-top: 0;
+      color: var(--text);
+    }
+
+    .work-meta {
+      margin-bottom: .75rem;
+      color: var(--soft);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .86rem;
+    }
+
+    .work-label {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .source {
+      margin-top: .8rem;
+      color: var(--soft);
+      font-size: .84rem;
+    }
+
+    .slide {
+      margin: 1rem 0;
+      padding: 1rem;
+      background: linear-gradient(180deg, var(--surface-2), var(--surface));
+    }
+
+    .slide-title {
+      margin-bottom: .55rem;
+      color: var(--accent);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-weight: 800;
+    }
+
+    .speaker {
+      margin-top: .75rem;
+      border: 1px dashed #5a5143;
+      border-radius: .5rem;
+      padding: .85rem;
+      background: rgba(255, 255, 255, .04);
+    }
+
+    .speaker::before {
+      content: "Que decir oralmente";
+      display: block;
+      margin-bottom: .35rem;
+      color: var(--accent-2);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .86rem;
+      font-weight: 800;
+    }
+
+    .flash {
+      background:
+        linear-gradient(135deg, rgba(211, 173, 93, .13), rgba(127, 183, 199, .08)),
+        var(--surface);
+    }
+
+    details {
+      margin: .75rem 0;
+      padding: .9rem 1rem;
+      background: rgba(255, 255, 255, .035);
+    }
+
+    summary {
+      min-height: 2.75rem;
+      cursor: pointer;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .checklist label {
+      display: block;
+      margin: .55rem 0;
+    }
+
+    input[type="checkbox"] {
+      margin-right: .5rem;
+      transform: translateY(.08rem);
+    }
+
+    @media (min-width: 768px) {
+      aside {
+        padding: 1.25rem 1.5rem;
+      }
+
+      nav {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      main {
+        padding: 1.75rem 1.5rem 5rem;
+      }
+
+      .grid.two,
+      .split-speakers {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .grid.three,
+      .work-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .layout {
+        display: grid;
+        grid-template-columns: 18rem minmax(0, 1fr);
+      }
+
+      aside {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: auto;
+        border-right: 1px solid var(--border);
+        border-bottom: 0;
+      }
+
+      nav {
+        grid-template-columns: 1fr;
+      }
+
+      main {
+        padding: 2rem min(5vw, 4rem) 5rem;
+      }
+
+      .grid.three {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .work-gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #000;
+      }
+
+      aside { display: none; }
+
+      .layout { display: block; }
+
+      main {
+        max-width: none;
+        padding: 0;
+      }
+
+      section,
+      .hero,
+      .card,
+      .work-card,
+      .slide,
+      details {
+        break-inside: avoid;
+        box-shadow: none;
+        background: #fff;
+        color: #000;
+      }
+
+      a { color: #000; text-decoration: underline; }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <h1>Arte y civilizacion</h1>
+      <p>Guia compartida para estudiar y ensayar la consigna elegida; la plantilla de 5 minutos queda reservada para consignas futuras.</p>
+      <nav aria-label="Navegacion principal">
+        <a href="#tesis-rapida">Tesis rapida</a>
+        <a href="#mapa-oral">Mapa oral</a>
+        <a href="#contexto-devoto">Contexto Devoto</a>
+        <a href="#malosetti">Malosetti</a>
+        <a href="#instituciones">Instituciones</a>
+        <a href="#europa-schiaffino">Europa y Schiaffino</a>
+        <a href="#arte-nacional">Arte nacional</a>
+        <a href="#obras">Obras para analizar</a>
+        <a href="#guion">Guion entre dos</a>
+        <a href="#consignas-sorpresa">Consignas sorpresa</a>
+        <a href="#preguntas">Preguntas posibles</a>
+        <a href="#pendientes">Pendientes</a>
+      </nav>
+    </aside>
+
+    <main>
+      <header class="hero">
+        <div class="eyebrow">Consigna elegida</div>
+        <h2>La Generacion del 80 y el debate sobre el arte nacional</h2>
+        <p class="subtitle">Como el concepto de arte y civilizacion se vinculo con la creacion de instituciones artisticas, los viajes de formacion a Europa y la busqueda de un arte nacional hacia el Centenario.</p>
+        <div class="tagline" aria-label="Conceptos principales">
+          <span class="tag">Malosetti Costa</span>
+          <span class="tag">Devoto</span>
+          <span class="tag">Generacion del 80</span>
+          <span class="tag">Centenario</span>
+          <span class="tag">Instituciones</span>
+          <span class="tag">Viajes a Europa</span>
+        </div>
+      </header>
+
+      <section id="tesis-rapida">
+        <h2>Tesis rapida</h2>
+        <div class="quote">
+          Desde la Generacion del 80 hacia el Centenario, el arte fue pensado como prueba de civilizacion y tambien como herramienta para producirla. El arte nacional nacio de una paradoja: representar temas locales con lenguajes y criterios de legitimacion europeos.
+        </div>
+        <p class="lede">Esta es la idea que tiene que ordenar todo. No conviene convertir la respuesta en una lista de artistas: cada dato tiene que volver a la consigna.</p>
+        <div class="grid three">
+          <div class="card">
+            <h3>Prueba</h3>
+            <p>Una nacion moderna no podia exhibir solo riqueza, ferrocarriles e inmigracion. Tambien necesitaba museos, artistas, salones y obras reconocibles como alta cultura.</p>
+          </div>
+          <div class="card">
+            <h3>Herramienta</h3>
+            <p>El arte debia educar el gusto, formar publico, disciplinar sensibilidades y completar el progreso material con simbolos e ideas.</p>
+          </div>
+          <div class="card">
+            <h3>Problema</h3>
+            <p>La civilizacion no era una categoria neutral: ordenaba jerarquias entre Europa y America, ciudad y campo, elite y sectores populares, civilizado y barbaro.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="mapa-oral">
+        <h2>Mapa oral de la respuesta</h2>
+        <p class="lede">Si se traban, vuelvan a esta secuencia. Es la columna vertebral para decirlo en voz alta sin perderse.</p>
+        <div class="grid two oral-map">
+          <div class="card oral-step">
+            <span class="mini-title">Contexto</span>
+            <p>Devoto permite ubicar la Argentina del Centenario: crecimiento economico, inmigracion, Estado, ciudad moderna y tambien tensiones sociales y politicas.</p>
+          </div>
+          <div class="card oral-step">
+            <span class="mini-title">Arte y civilizacion</span>
+            <p>Malosetti muestra que las bellas artes aparecen como indicador de madurez nacional y como medio para formar sujetos civilizados.</p>
+          </div>
+          <div class="card oral-step">
+            <span class="mini-title">Instituciones</span>
+            <p>SEBA, Ateneo, salones, becas, critica y MNBA crean el campo artistico: forman artistas, forman publico y legitiman obras.</p>
+          </div>
+          <div class="card oral-step">
+            <span class="mini-title">Europa</span>
+            <p>Paris funciona como centro. Viajar es aprender el idioma visual reconocido internacionalmente, aunque el objetivo sea producir arte argentino.</p>
+          </div>
+          <div class="card oral-step">
+            <span class="mini-title">Arte nacional</span>
+            <p>El resultado combina lenguaje europeo y tema local: pampa, frontera, gaucho, indigena, cautiva, historia patria, trabajo urbano.</p>
+          </div>
+          <div class="card oral-step">
+            <span class="mini-title">Cierre critico</span>
+            <p>Ese arte nacional es contradictorio: incluye lo local como simbolo, pero muchas veces lo mira desde una elite urbana y europeizante.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contexto-devoto">
+        <h2>Contexto Devoto</h2>
+        <p class="lede">Devoto sirve para abrir el marco historico: hacia 1910 Argentina podia celebrarse como pais moderno, pero ese optimismo estaba lleno de tensiones.</p>
+        <div class="grid two">
+          <div class="card">
+            <h3>El pais que parecia posible</h3>
+            <p>Crecimiento agroexportador, ferrocarriles, inmigracion, urbanizacion, educacion publica y consolidacion estatal daban una imagen de progreso acelerado. Para la elite, el Centenario era una vidriera de esa Argentina moderna.</p>
+            <p class="muted small"><b>Uso oral:</b> abrir diciendo que el arte entra dentro de un proyecto mas amplio de modernizacion nacional.</p>
+          </div>
+          <div class="card">
+            <h3>El progreso no alcanzaba</h3>
+            <p>La riqueza material convivia con desigualdad, conflictividad social, crisis politica e integracion problematica de inmigrantes. Por eso la pregunta cultural era decisiva: como producir una identidad nacional comun.</p>
+            <p class="muted small"><b>Uso oral:</b> complejizar la celebracion del Centenario: civilizar tambien era ordenar, integrar y jerarquizar.</p>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="item"><b>1870s-1880s:</b> consolidacion estatal, expansion economica y confianza liberal/positivista en el progreso.</div>
+          <div class="item"><b>1876-1878:</b> Sociedad Estimulo de Bellas Artes y revista <i>El Arte en el Plata</i>: primeras formulaciones fuertes del programa arte/civilizacion.</div>
+          <div class="item"><b>1884-1891:</b> Schiaffino escribe desde Europa y sostiene que Buenos Aires debe completar su riqueza material con arte, ciencia e imaginacion.</div>
+          <div class="item"><b>1890:</b> crisis economica y Revolucion del Parque: se atenua el optimismo de la modernizacion puramente material.</div>
+          <div class="item"><b>1910:</b> Centenario: celebracion internacional de logros, pero tambien momento de ansiedad por identidad, conflicto social y legitimidad politica.</div>
+        </div>
+      </section>
+
+      <section id="malosetti">
+        <h2>Malosetti</h2>
+        <p class="lede">Malosetti no dice simplemente que "el arte civiliza"; analiza historicamente como esa formula fue construida, que intereses sostuvo y que exclusiones produjo.</p>
+        <div class="grid three">
+          <div class="card">
+            <h3>Doble funcion</h3>
+            <p>Las bellas artes eran vistas como resultado del progreso y como medio para producirlo. Una sociedad civilizada debia tener arte, y el arte debia ayudar a civilizar a la sociedad.</p>
+          </div>
+          <div class="card">
+            <h3>Taine</h3>
+            <p>El positivismo de Taine relacionaba arte con raza, medio y momento. Eso permitia pensar que cada pueblo podia producir un arte propio, pero tambien instalaba jerarquias racializadas.</p>
+          </div>
+          <div class="card">
+            <h3>Raza latina</h3>
+            <p>Schiaffino y otros imaginaron que la herencia latina e hispanica daba una predisposicion estetica. Esa idea legitimaba la esperanza de un futuro artistico argentino.</p>
+          </div>
+        </div>
+        <div class="warning callout">
+          <p><b>Punto critico:</b> "civilizacion" funcionaba como palabra de prestigio, pero tambien como categoria de exclusion. Definia quienes representaban el futuro y quienes quedaban asociados a atraso, barbarie o amenaza.</p>
+        </div>
+        <h3>Frase para decir</h3>
+        <p>Malosetti sirve para mostrar que el arte no era un adorno del proyecto del 80, sino una parte simbolica de la construccion nacional. Pero esa construccion estaba atravesada por elitismo, positivismo y por la oposicion civilizacion/barbarie.</p>
+      </section>
+
+      <section id="instituciones">
+        <h2>Instituciones</h2>
+        <p class="lede">El arte nacional no nace solo de cuadros individuales. Nace tambien de instituciones que enseñan, exhiben, juzgan, financian y organizan la circulacion de las obras.</p>
+        <div class="grid two">
+          <div class="card">
+            <h3>Sociedad Estimulo de Bellas Artes</h3>
+            <p>Organiza enseñanza, exposiciones, debates y redes de artistas. Busca educar el gusto y diferenciar el "arte verdadero" de los productos considerados menores o comerciales.</p>
+          </div>
+          <div class="card">
+            <h3>Ateneo</h3>
+            <p>Reune artistas, escritores e intelectuales. Sus exposiciones ayudan a consolidar un espacio publico para discutir el arte argentino y su relacion con la cultura nacional.</p>
+          </div>
+          <div class="card">
+            <h3>Salones, critica y prensa</h3>
+            <p>La critica produce criterios de valor. La prensa amplifica polemicas, defiende becas, discute el gusto y conecta el arte con el progreso de la nacion.</p>
+          </div>
+          <div class="card">
+            <h3>Becas y Museo Nacional</h3>
+            <p>Las pensiones a Europa forman artistas en circuitos legitimados. El MNBA consolida patrimonio, memoria visual y una idea estatal de cultura nacional.</p>
+          </div>
+        </div>
+        <div class="success callout">
+          <p><b>Frase util:</b> institucionalizar el arte era institucionalizar una imagen de la nacion: formar artistas, formar publico y mostrar al pais como moderno ante el mundo.</p>
+        </div>
+      </section>
+
+      <section id="europa-schiaffino">
+        <h2>Europa y Schiaffino</h2>
+        <p class="lede">La relacion con Europa es el centro de la paradoja. Para construir un arte nacional argentino, primero habia que aprender en el lugar que se reconocia como centro internacional: Paris.</p>
+        <div class="grid two">
+          <div class="card">
+            <h3>Paris como medida</h3>
+            <ul>
+              <li>Academias, salones y museos funcionaban como espacios de aprendizaje.</li>
+              <li>La aceptacion en Paris daba prestigio al artista argentino.</li>
+              <li>El lenguaje visual europeo era presentado como universal.</li>
+              <li>El regreso al pais permitia trasladar ese capital al campo local.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Schiaffino, mas que pintor</h3>
+            <p>Fue critico, corresponsal, gestor cultural, historiador del arte y organizador institucional. Su papel permite unir obra, discurso, politica artistica y museo.</p>
+            <p class="muted small"><b>Idea clave:</b> criticaba que Buenos Aires exportara materia prima pero no produjera objetos con "sello de idea".</p>
+          </div>
+        </div>
+        <div class="callout">
+          <p><b>Paradoja para memorizar:</b> Buenos Aires podia imaginarse como futuro centro artistico solo si primero aceptaba que Paris era el centro presente. La autonomia no rompe con Europa; intenta apropiarse de sus reglas para usarlas en clave local.</p>
+        </div>
+        <h3>Crisis de 1890</h3>
+        <p>Despues de la crisis economica y politica, el optimismo se vuelve mas defensivo. El arte sigue siendo necesario, pero ya no solo como celebracion: aparece como forma de estabilizar simbolicamente un progreso material que se revela fragil.</p>
+      </section>
+
+      <section id="arte-nacional">
+        <h2>Arte nacional</h2>
+        <p class="lede">El arte nacional surge de una combinacion inestable: tecnicas y modelos europeos aplicados a temas considerados argentinos.</p>
+        <div class="grid two">
+          <div class="card">
+            <h3>Lenguajes europeos</h3>
+            <p>Composicion academica, pintura historica, naturalismo, desnudo de salon, criterios de exposicion, premios, jurados y legitimacion internacional.</p>
+          </div>
+          <div class="card">
+            <h3>Temas locales</h3>
+            <p>Pampa, frontera, gaucho, indigena, cautiva, historia patria, religiosidad colonial, inmigracion, trabajo urbano y conflictos sociales.</p>
+          </div>
+        </div>
+        <div class="warning callout">
+          <p><b>Tension central:</b> lo local puede aparecer como identidad nacional, pero tambien como barbarie, atraso o amenaza. Por eso una obra "nacional" no siempre incluye democraticamente a todos: muchas veces ordena quien pertenece y quien queda afuera.</p>
+        </div>
+      </section>
+
+      <section id="obras">
+        <h2>Obras para analizar</h2>
+        <p class="lede">Cada imagen tiene una funcion. No hay que describirla entera: hay que usarla para responder la consigna.</p>
+
+        <div class="work-gallery">
+          <article class="work-card">
+            <figure>
+              <img src="assets/della-valle-vuelta-del-malon.jpg" alt="Angel Della Valle, La vuelta del malon, 1892" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>La vuelta del malon</h3>
+              <div class="work-meta">Angel Della Valle, 1892. Oleo. MNBA.</div>
+              <p><span class="work-label">Que muestra:</span> pampa, malon, cautiva, frontera e indigena como amenaza.</p>
+              <p><span class="work-label">Como usarla:</span> es el ejemplo mas fuerte de arte nacional: tema local con ambicion de pintura historica academica.</p>
+              <p><span class="work-label">Frase oral:</span> "La obra vuelve nacional un tema local, pero lo hace desde la matriz civilizacion/barbarie".</p>
+              <p><span class="work-label">Cuidado critico:</span> no tomar la imagen como documento neutral de la frontera; es una construccion ideologica.</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/6297/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:%C3%81ngel_DELLA_Valle_-_La_vuelta_del_mal%C3%B3n_-_Google_Art_Project_(cropped).jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card portrait">
+            <figure>
+              <img src="assets/sivori-despertar-criada.jpg" alt="Eduardo Sivori, Le lever de la bonne o El despertar de la criada, 1887" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>El despertar de la criada</h3>
+              <div class="work-meta">Eduardo Sivori, 1887. Oleo. MNBA.</div>
+              <p><span class="work-label">Que muestra:</span> un desnudo naturalista de una trabajadora, lejos del desnudo idealizado.</p>
+              <p><span class="work-label">Como usarla:</span> condensa la formacion francesa y el regreso conflictivo de ese lenguaje a Buenos Aires.</p>
+              <p><span class="work-label">Frase oral:</span> "Sivori aprende en Paris y produce una obra que en Buenos Aires se vuelve batalla por el arte moderno".</p>
+              <p><span class="work-label">Cuidado critico:</span> no es simple copia europea; al volver, el lenguaje se reubica en un medio local con otras tensiones.</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/coleccion/obra/1894/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Le_lever_de_la_bonne_-_Eduardo_S%C3%ADvori.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/schiaffino-reposo.jpg" alt="Eduardo Schiaffino, Reposo, 1889" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Reposo</h3>
+              <div class="work-meta">Eduardo Schiaffino, 1889. Oleo. MNBA.</div>
+              <p><span class="work-label">Que muestra:</span> desnudo de salon pintado en Paris.</p>
+              <p><span class="work-label">Como usarla:</span> muestra la legitimacion internacional: obra argentina aceptada y premiada en la Exposicion Universal de Paris.</p>
+              <p><span class="work-label">Frase oral:</span> "Schiaffino no solo teoriza la necesidad de medirse con Europa: tambien lo hace con su propia obra".</p>
+              <p><span class="work-label">Cuidado critico:</span> sirve mas para hablar de legitimacion europea que de tema local.</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://bellasartes.gob.ar/coleccion/obra/1909/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Reposo_-_Eduardo_Schiaffino.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/seba-1893.jpg" alt="Fotografia de integrantes de la Sociedad Estimulo de Bellas Artes, 1893" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Sociedad Estimulo de Bellas Artes</h3>
+              <div class="work-meta">Fotografia, 1893. Archivo General de la Nacion.</div>
+              <p><span class="work-label">Que muestra:</span> Schiaffino, Sivori, Della Valle, De la Carcova y otros actores del campo artistico.</p>
+              <p><span class="work-label">Como usarla:</span> permite decir que el arte nacional se construye con redes, enseñanza, exposiciones y gestion.</p>
+              <p><span class="work-label">Frase oral:</span> "No hay arte nacional sin instituciones que formen artistas y publico".</p>
+              <p><span class="work-label">Cuidado critico:</span> muestra tambien el caracter elitista y masculino de esas redes iniciales.</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Sociedad_Est%C3%ADmulo_de_Bellas_Artes.jpg">Wikimedia Commons / AGN</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/pabellon-argentino-1889.jpg" alt="Pabellon Argentino en la Exposicion Universal de Paris de 1889" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Pabellon Argentino en Paris</h3>
+              <div class="work-meta">Exposicion Universal de Paris, 1889.</div>
+              <p><span class="work-label">Que muestra:</span> la Argentina exhibiendose en el centro europeo como pais moderno y prospero.</p>
+              <p><span class="work-label">Como usarla:</span> conecta arte, Estado e imagen internacional de nacion civilizada.</p>
+              <p><span class="work-label">Frase oral:</span> "La civilizacion tambien se actuaba hacia afuera: habia que mostrarse ante Europa".</p>
+              <p><span class="work-label">Cuidado critico:</span> no representa a toda la sociedad, sino una imagen oficial de progreso.</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Pabellon_argentino_en_exposicion_universal.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/carcova-sin-pan-sin-trabajo.jpg" alt="Ernesto de la Carcova, Sin pan y sin trabajo, 1894" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Sin pan y sin trabajo</h3>
+              <div class="work-meta">Ernesto de la Carcova, 1894. Oleo. MNBA.</div>
+              <p><span class="work-label">Que muestra:</span> desocupacion, conflicto social, fabrica cerrada y angustia domestica.</p>
+              <p><span class="work-label">Como usarla:</span> muestra el reverso del optimismo modernizador despues de la crisis de 1890.</p>
+              <p><span class="work-label">Frase oral:</span> "La modernidad no produce solo progreso; tambien produce exclusion y conflicto".</p>
+              <p><span class="work-label">Cuidado critico:</span> no abandonar la consigna: usarla para explicar por que el discurso civilizatorio se vuelve mas urgente y defensivo.</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.bellasartes.gob.ar/en/collection/work/1777/">MNBA</a> y <a href="https://commons.wikimedia.org/wiki/File:Ernesto_de_la_C%C3%81Rcova_-_Sin_pan_y_sin_trabajo_-_Google_Art_Project.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/schwartz-rendicion-parque.jpg" alt="Alberto Schwartz, Rendicion del Parque, 1891" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Rendicion del Parque</h3>
+              <div class="work-meta">Alberto Schwartz, 1891. Museo Casa Rosada.</div>
+              <p><span class="work-label">Que muestra:</span> una escena de la Revolucion del Parque, asociada a la crisis economica y politica de 1890.</p>
+              <p><span class="work-label">Como usarla:</span> sirve para mostrar que el optimismo del orden conservador se quiebra tambien en lo institucional.</p>
+              <p><span class="work-label">Frase oral:</span> "La crisis del 90 muestra que el progreso material no garantizaba estabilidad politica".</p>
+              <p><span class="work-label">Cuidado critico:</span> usarla como contexto, no como centro de la respuesta artistica.</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.argentina.gob.ar/secretariageneral/museo-casa-rosada/rendicion-del-parque">Museo Casa Rosada / Argentina.gob.ar</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/goya-3-mayo.jpg" alt="Francisco de Goya, El tres de mayo de 1808 en Madrid, 1814" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>El 3 de mayo de 1808</h3>
+              <div class="work-meta">Francisco de Goya, 1814. Museo del Prado.</div>
+              <p><span class="work-label">Que muestra:</span> violencia politica en Europa: fusilamientos de civiles durante la ocupacion napoleonica.</p>
+              <p><span class="work-label">Como usarla:</span> sirve como herencia hispana invocada por la idea de raza latina y como contrapunto critico.</p>
+              <p><span class="work-label">Frase oral:</span> "Si Europa tambien produce violencia extrema, civilizacion no puede significar ausencia de barbarie".</p>
+              <p><span class="work-label">Cuidado critico:</span> aclarar que es una intervencion comparativa nuestra, no el eje principal de Malosetti.</p>
+              <p class="source">Fuente imagen/ficha: <a href="https://www.museodelprado.es/en/the-collection/art-work/the-3rd-of-may-1808-in-madrid-or-the-executions/5e177409-2993-4240-97fb-847a02c6496c">Museo del Prado</a> y <a href="https://commons.wikimedia.org/wiki/File:El_tres_de_mayo_de_1808_en_Madrid.jpg">Wikimedia Commons</a>.</p>
+            </div>
+          </article>
+
+          <article class="work-card">
+            <figure>
+              <img src="assets/blanes-conquista-desierto.jpg" alt="Juan Manuel Blanes, Ocupacion militar del Rio Negro en la expedicion al mando del General Julio A. Roca" loading="lazy" />
+            </figure>
+            <div class="work-body">
+              <h3>Ocupacion militar del Rio Negro</h3>
+              <div class="work-meta">Juan Manuel Blanes, ca. 1880s-1890s. Museo Historico Nacional.</div>
+              <p><span class="work-label">Que muestra:</span> la campaña estatal en la frontera representada como escena de orden y autoridad.</p>
+              <p><span class="work-label">Como usarla:</span> permite discutir como la violencia estatal puede presentarse como gesta civilizadora.</p>
+              <p><span class="work-label">Frase oral:</span> "La palabra civilizacion tambien legitima politicamente ciertas violencias".</p>
+              <p><span class="work-label">Cuidado critico:</span> mencionar la datacion con cautela; importa mas su funcion en el argumento que el detalle cronologico.</p>
+              <p class="source">Fuente imagen: <a href="https://commons.wikimedia.org/wiki/File:Ocupaci%C3%B3n_militar_del_R%C3%ADo_Negro_en_la_expedici%C3%B3n_al_mando_del_General_Julio_A._Roca.jpg">Wikimedia Commons</a>. Referencia de ficha: <a href="https://archive.nyu.edu/handle/2451/59820">NYU Faculty Digital Archive</a>.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="guion">
+        <h2>Guion entre dos</h2>
+        <p class="lede">Duracion sugerida: 6 a 8 minutos. No leer palabra por palabra: usarlo como partitura para ensayar.</p>
+
+        <div class="split-speakers">
+          <div class="card">
+            <h3><span class="pill">Persona A</span> Apertura + marco</h3>
+            <ul>
+              <li>Presenta la consigna y la tesis.</li>
+              <li>Explica el contexto de Devoto.</li>
+              <li>Introduce Malosetti: arte como prueba y herramienta de civilizacion.</li>
+              <li>Marca que la idea de civilizacion no es neutral.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3><span class="pill">Persona B</span> Instituciones + obras</h3>
+            <ul>
+              <li>Explica SEBA, Ateneo, salones, becas, critica y MNBA.</li>
+              <li>Desarrolla la paradoja Europa/arte nacional.</li>
+              <li>Analiza Sívori, Schiaffino y Della Valle.</li>
+              <li>Cierra con tensiones: identidad nacional, elite y civilizacion/barbarie.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-title">1. Apertura</div>
+          <p><b>Idea:</b> la Argentina del 80 queria mostrarse moderna y civilizada.</p>
+          <div class="speaker">Nuestra tesis es que el arte fue pensado como parte del proyecto civilizatorio. No alcanzaba con riqueza e infraestructura: tambien habia que producir cultura, instituciones y una imagen nacional.</div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-title">2. Contexto</div>
+          <p><b>Imagen posible:</b> Pabellon Argentino o Buenos Aires moderna.</p>
+          <div class="speaker">Devoto permite ver el clima del Centenario: crecimiento economico, inmigracion, ferrocarriles, urbanizacion y Estado. Pero ese progreso convivia con crisis, desigualdad y conflicto social.</div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-title">3. Malosetti</div>
+          <p><b>Imagen posible:</b> SEBA o La vuelta del malon.</p>
+          <div class="speaker">Malosetti muestra que las bellas artes eran prueba de civilizacion y tambien medio para producirla. A la vez, critica esa idea porque organiza jerarquias: Europa sobre America, ciudad sobre campo, civilizado sobre barbaro.</div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-title">4. Instituciones</div>
+          <p><b>Imagen posible:</b> fotografia de la Sociedad Estimulo de Bellas Artes.</p>
+          <div class="speaker">La SEBA, el Ateneo, los salones, la critica, las becas y el MNBA hacen posible el campo artistico. No son decoracion institucional: forman artistas, publico y criterios de legitimacion.</div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-title">5. Europa y paradoja</div>
+          <p><b>Imagen posible:</b> Sivori, Schiaffino o Pabellon Argentino.</p>
+          <div class="speaker">Paris era el centro. Los artistas viajaban para aprender tecnicas y obtener reconocimiento. La paradoja es que la busqueda de un arte nacional argentino pasaba por aprender lenguajes europeos.</div>
+        </div>
+
+        <div class="slide">
+          <div class="slide-title">6. Arte nacional y cierre</div>
+          <p><b>Imagen posible:</b> La vuelta del malon.</p>
+          <div class="speaker">El arte nacional combina lenguaje europeo con temas locales. Pero esa identidad se construye desde una mirada urbana y elitista: lo indigena, la pampa o la frontera aparecen como signos de lo propio y, al mismo tiempo, como barbarie.</div>
+        </div>
+      </section>
+
+      <section id="consignas-sorpresa">
+        <h2>Consignas sorpresa / esquema futuro</h2>
+        <p class="lede">Esta parte queda preparada como estructura para mas adelante. Los 5 minutos de preparacion privada aplican a las otras consignas que todavia no sabemos, no a la consigna elegida que estamos desarrollando en profundidad.</p>
+        <div class="grid two">
+          <div class="card flash">
+            <h3>Plantilla para cada consigna futura</h3>
+            <p><b>Tesis en una oracion:</b> cual es la respuesta central.</p>
+            <p><b>Tres conceptos:</b> las palabras que no pueden faltar.</p>
+            <p><b>Dos autores/textos:</b> que lectura sostiene la respuesta.</p>
+            <p><b>Una obra o imagen:</b> que mirar y como conectarla con la consigna.</p>
+            <p><b>Cierre critico:</b> una tension o problema para no cerrar de forma plana.</p>
+          </div>
+          <div class="card flash">
+            <h3>Como usar los 5 minutos</h3>
+            <ol>
+              <li>Leer el titulo de la consigna y decidir la tesis.</li>
+              <li>Elegir tres conceptos obligatorios.</li>
+              <li>Elegir una obra que permita hablar, no solo decorar.</li>
+              <li>Repartir quien abre y quien cierra.</li>
+              <li>Preparar una frase de cierre critico.</li>
+            </ol>
+          </div>
+        </div>
+        <div class="callout">
+          <p><b>Regla para futuras secciones:</b> las consignas sorpresa deben ser mucho mas cortas que esta. Primero tesis y estructura; despues, si una queda dificil, se amplia.</p>
+        </div>
+      </section>
+
+      <section id="preguntas">
+        <h2>Preguntas posibles</h2>
+        <details open>
+          <summary>Por que el arte era una cuestion nacional y no solo estetica?</summary>
+          <p>Porque funcionaba como prueba de civilizacion. Tener artistas formados, museos, salones y obras reconocibles era una forma de demostrar que Argentina era una nacion moderna, no solo una economia agroexportadora.</p>
+        </details>
+        <details>
+          <summary>Que aporta Taine al argumento?</summary>
+          <p>La idea de que el arte depende de raza, medio y momento permite imaginar un arte propio de cada pueblo. Pero en el contexto argentino esa teoria tambien arrastra jerarquias racializadas y una mirada positivista.</p>
+        </details>
+        <details>
+          <summary>Que papel cumplen los viajes a Europa?</summary>
+          <p>Son viajes de aprendizaje y legitimacion. Los artistas van a Paris para aprender tecnicas y criterios reconocidos; despues traen ese capital simbolico al campo artistico local.</p>
+        </details>
+        <details>
+          <summary>Por que Schiaffino es clave?</summary>
+          <p>Porque une varias funciones: pintor, critico, gestor, historiador y organizador institucional. Sirve para mostrar que el arte nacional fue tambien una politica cultural.</p>
+        </details>
+        <details>
+          <summary>Como se relacionan Devoto y Malosetti?</summary>
+          <p>Devoto da el contexto de modernizacion y tensiones hacia el Centenario. Malosetti muestra como, dentro de ese contexto, el arte se vuelve una herramienta simbolica para completar el progreso material.</p>
+        </details>
+        <details>
+          <summary>Por que es problematica la idea de civilizacion?</summary>
+          <p>Porque no describe simplemente una mejora universal: ordena jerarquias. Puede ubicar a Europa, la ciudad y la elite del lado del futuro, y al campo, lo indigena o lo popular del lado de la barbarie.</p>
+        </details>
+      </section>
+
+      <section id="pendientes">
+        <h2>Pendientes</h2>
+        <div class="checklist">
+          <label><input type="checkbox" checked /> Crear <code>assets/</code> y agregar imagenes reales.</label>
+          <label><input type="checkbox" checked /> Reemplazar placeholders por etiquetas <code>&lt;img&gt;</code>.</label>
+          <label><input type="checkbox" checked /> Dejar preparada la plantilla de 5 minutos para consignas futuras.</label>
+          <label><input type="checkbox" /> Ensayar y ajustar el guion a la duracion exacta que pidan.</label>
+          <label><input type="checkbox" /> Incorporar las otras cuatro consignas cuando esten disponibles.</label>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
