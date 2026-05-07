@@ -42,7 +42,7 @@ Si no se pueden usar múltiples agentes por limitaciones del entorno o de la tar
 ## Archivos principales
 
 - `tema_arte_civilizacion_estudio.html`: archivo principal de estudio.
-- `presentacion.html`: vista secundaria visual, con bloques, imagenes grandes, palabras clave y link de vuelta a la guia. Debe tener una ruta oral clara para la consigna principal, diapositivas separadas para contexto, instituciones, Schiaffino, obras, crisis, repaso de consignas alternativas y cierre critico.
+- `presentacion.html`: vista secundaria visual, con bloques, imagenes grandes, palabras clave y link de vuelta a la guia. Debe tener una ruta oral clara para la consigna principal, diapositivas separadas para contexto, instituciones, Schiaffino, obras, crisis, metodo de analisis, consignas alternativas y cierre critico. Como puede mostrarse a profesoras, no debe contener textos visibles del tipo "Decir", "Frase guia", "Frase oral" o instrucciones internas.
 - `instructions.md`: estas instrucciones para continuar el trabajo.
 - `assets/`: imágenes locales usadas por el HTML.
 - `resumenes/`: resúmenes operativos de los textos y presentación de apoyo.
@@ -187,6 +187,8 @@ Tambien hay assets para las consignas alternativas:
 - Cada concepto debe conectarse con una imagen, una institución o un problema histórico.
 - Evitar frases vagas como “esto es importante” sin explicar por qué.
 - Mantener una mirada crítica, pero no perder la respuesta principal.
+- Las citas de autor deben estar identificadas como **parafraseo** salvo que se haya verificado literalidad en el PDF/texto. Evitar inventar comillas textuales.
+- Usar bloques `quote` para citas/parafraseos de autores y bloques `course-notes` para notas de curso o notebook. En la consigna principal pueden aparecer varios; en las secundarias, usar pocos y bien ubicados para no volverlas enciclopedicas.
 
 ## Criterio para consignas alternativas
 
@@ -195,6 +197,12 @@ Las consignas 1, 2, 3 y 5 ya estan agregadas como secciones breves. Mantener est
 ```html
 <section id="tema-x">
   <h2>Tema X - Título de la consigna</h2>
+  <div class="section-jumps">
+    <a href="#...">Imagenes</a>
+    <a href="#...">Tesis</a>
+    <a href="#...">Notas</a>
+    <a href="#...">Respuesta oral</a>
+  </div>
   <h3>Imagenes / obras para ubicar primero</h3>
   <!-- una unica galeria visual por consigna, sin repetir imagenes mas abajo -->
   <div class="grid two">
@@ -206,6 +214,9 @@ Las consignas 1, 2, 3 y 5 ya estan agregadas como secciones breves. Mantener est
       <h3>Conceptos clave</h3>
       <div class="keyword-row">...</div>
     </div>
+  </div>
+  <div class="quote">
+    <p><b>Cita / autor - Autor, parafraseo:</b> ...</p>
   </div>
   <div class="course-notes">
     <h3>Notas de curso para enriquecer</h3>
@@ -222,7 +233,9 @@ Las consignas 1, 2, 3 y 5 ya estan agregadas como secciones breves. Mantener est
 Criterio de contenido:
 
 - Arrancar siempre por imagenes, artistas y autores.
+- Incluir mini mapas `section-jumps` al inicio de cada consigna secundaria para saltar a imagenes, tesis, notas, respuesta oral y cierre.
 - Mantener una sola seccion visual por consigna secundaria: no duplicar "imagenes para ubicar" y "obras para analizar".
+- Agregar maximo uno o dos bloques `quote` por consigna secundaria; deben ayudar a responder la pregunta, no decorar.
 - Las notas del notebook de curso van en un bloque propio `course-notes`, antes de la respuesta oral.
 - Responder la consigna y nada mas: no hacer desarrollo enciclopedico.
 - Usar los PDFs de `textos/` como bibliografia base y los textos extraibles o paginas renderizadas como apoyo de verificacion.

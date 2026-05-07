@@ -320,6 +320,10 @@
       font-size: 1.06rem;
     }
 
+    .quote p {
+      margin: 0;
+    }
+
     .muted { color: var(--muted); }
     .small { font-size: .92rem; }
 
@@ -405,6 +409,32 @@
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       font-size: .86rem;
       font-weight: 800;
+    }
+
+    .section-jumps {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin: .85rem 0 1rem;
+    }
+
+    .section-jumps a {
+      min-height: 2.35rem;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(211, 173, 93, .5);
+      border-radius: 999px;
+      padding: .25rem .65rem;
+      background: rgba(211, 173, 93, .07);
+      color: var(--accent);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: .84rem;
+      font-weight: 800;
+    }
+
+    .section-jumps a:hover {
+      background: rgba(211, 173, 93, .13);
+      text-decoration: none;
     }
 
     .pill {
@@ -699,23 +729,39 @@
       <p>Guia compartida para estudiar la consigna elegida y repasar rapido las consignas alternativas.</p>
       <nav class="site-nav" aria-label="Indice principal">
         <div class="nav-group">
-          <div class="nav-group-title">Consigna elegida</div>
+          <div class="nav-group-title">Respuesta elegida</div>
           <div class="nav-links">
             <a href="#tesis-rapida">Tesis</a>
-            <a href="#respuesta-corta">Respuesta corta</a>
-            <a href="#mapa-oral">Mapa oral</a>
-            <a href="#contexto-devoto">Devoto</a>
-            <a href="#malosetti">Malosetti</a>
-            <a href="#instituciones">Instituciones</a>
-            <a href="#europa-schiaffino">Europa</a>
-            <a href="#arte-nacional">Arte nacional</a>
-            <a href="#obras">Obras clave</a>
+            <a href="#respuesta-corta">Rescate 5 lineas</a>
+            <a href="#mapa-oral">Orden oral</a>
             <a href="#guion">Guion entre dos</a>
           </div>
         </div>
         <div class="nav-group">
-          <div class="nav-group-title">Repaso rapido</div>
+          <div class="nav-group-title">Argumentos</div>
           <div class="nav-links">
+            <a href="#contexto-devoto">Contexto 1880</a>
+            <a href="#malosetti">Marco critico</a>
+            <a href="#instituciones">Instituciones</a>
+            <a href="#europa-legitimacion">Europa</a>
+            <a href="#crisis-1890">Crisis 1890</a>
+            <a href="#arte-nacional">Sintesis nacional</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">Obras clave</div>
+          <div class="nav-links nav-links-compact">
+            <a href="#obra-sivori">Sivori</a>
+            <a href="#obra-schiaffino">Schiaffino</a>
+            <a href="#obra-della-valle">Della Valle</a>
+            <a href="#obra-seba">SEBA</a>
+            <a href="#obra-pabellon">Pabellon</a>
+          </div>
+        </div>
+        <div class="nav-group">
+          <div class="nav-group-title">Consignas alternativas</div>
+          <div class="nav-links">
+            <a href="#consignas-alternativas">Modo uso</a>
             <a href="#consigna-1">C1 Viajeros</a>
             <a href="#consigna-2">C2 Retrato</a>
             <a href="#consigna-3">C3 Rosismo</a>
@@ -739,7 +785,6 @@
           <div class="nav-links">
             <a class="nav-link-featured" href="presentacion.html">Presentacion</a>
             <a href="#preguntas">Preguntas</a>
-            <a href="#pendientes">Pendientes</a>
           </div>
         </div>
       </nav>
@@ -749,7 +794,7 @@
       <header class="hero">
         <div class="eyebrow">Consigna elegida</div>
         <h2>La Generacion del 80 y el debate sobre el arte nacional</h2>
-        <p class="subtitle">Como el concepto de arte y civilizacion se vinculo con la creacion de instituciones artisticas, los viajes de formacion a Europa y la busqueda de un arte nacional hacia el Centenario.</p>
+        <p class="subtitle">Pregunta central: como se vinculan arte y civilizacion con instituciones artisticas, viajes de formacion a Europa y surgimiento de un arte nacional entre la Generacion del 80 y el Centenario.</p>
         <div class="tagline" aria-label="Conceptos principales">
           <span class="tag">Malosetti Costa</span>
           <span class="tag">Devoto</span>
@@ -761,9 +806,16 @@
       </header>
 
       <section id="tesis-rapida">
-        <h2>Tesis rapida</h2>
+        <h2>Tesis de la consigna elegida</h2>
         <div class="quote">
           Desde la Generacion del 80 hacia el Centenario, el arte fue pensado como prueba de civilizacion y tambien como herramienta para producirla. Por eso se crean instituciones, se financian viajes a Europa y se buscan espacios de legitimacion internacional. El arte nacional nacio de una paradoja: representar temas locales con lenguajes y criterios de legitimacion europeos.
+        </div>
+        <div class="quote">
+          <p><b>Cita / autor - Malosetti Costa, parafraseo:</b> las bellas artes fueron pensadas en Buenos Aires como prueba del grado de civilizacion alcanzado por una nacion y, al mismo tiempo, como instrumento para producir esa civilizacion.</p>
+        </div>
+        <div class="course-notes">
+          <h3>Nota de curso</h3>
+          <p>La clave es no decir solo "el arte civiliza", sino mostrar la doble funcion: el arte demuestra progreso y tambien educa gusto, sensibilidad y conducta. Por eso instituciones, critica, becas y museos no son accesorios: son mecanismos para fabricar una cultura nacional considerada civilizada.</p>
         </div>
         <p class="lede">Esta es la idea que tiene que ordenar todo. No conviene convertir la respuesta en una lista de artistas: cada dato tiene que volver a la consigna.</p>
         <div class="grid three">
@@ -783,7 +835,7 @@
       </section>
 
       <section id="respuesta-corta">
-        <h2>Respuesta en 5 lineas / 3 obras</h2>
+        <h2>Respuesta de rescate: 5 lineas / 3 obras</h2>
         <p class="lede">Modo memoria: si necesitan ordenar la exposicion en treinta segundos, esta es la secuencia minima.</p>
         <div class="grid two">
           <div class="card flash">
@@ -797,12 +849,13 @@
             </ol>
           </div>
           <div class="card">
-            <h3>Obras que salvan la respuesta</h3>
+            <h3>Tres obras para sostener la exposicion</h3>
             <p>Con tres imagenes pueden cubrir la paradoja completa: aprendizaje europeo, legitimacion institucional y tema local.</p>
             <div class="work-picks">
               <a href="#obra-sivori">Sivori</a>
               <a href="#obra-schiaffino">Schiaffino</a>
               <a href="#obra-della-valle">Della Valle</a>
+              <a href="#obra-seba">SEBA</a>
               <a href="#obra-pabellon">Pabellon</a>
             </div>
           </div>
@@ -843,6 +896,13 @@
       <section id="contexto-devoto">
         <h2>Contexto Devoto</h2>
         <p class="lede">Devoto sirve para abrir el marco historico: hacia 1910 Argentina podia celebrarse como pais moderno, pero ese optimismo estaba lleno de tensiones.</p>
+        <div class="quote">
+          <p><b>Cita / autor - Devoto, parafraseo:</b> el Centenario muestra una Argentina que podia imaginarse como pais de progreso acelerado, aunque ese optimismo conviviera con conflictos sociales, desigualdad, inmigracion dificil de integrar y tensiones politicas.</p>
+        </div>
+        <div class="course-notes">
+          <h3>Nota de curso</h3>
+          <p>Devoto sirve para que la consigna no quede solo artistica: el arte aparece cuando el progreso material no alcanza. Ferrocarriles, exportaciones e inmigracion mostraban modernizacion, pero la elite necesitaba simbolos culturales capaces de ordenar una identidad nacional.</p>
+        </div>
         <div class="grid two">
           <div class="card">
             <h3>El pais que parecia posible</h3>
@@ -887,7 +947,7 @@
         <div class="warning callout">
           <p><b>Punto critico:</b> "civilizacion" funcionaba como palabra de prestigio, pero tambien como categoria de exclusion. Definia quienes representaban el futuro y quienes quedaban asociados a atraso, barbarie o amenaza. Civilizar tambien significaba regular gustos, habitos y sensibilidades.</p>
         </div>
-        <h3>Frase para decir</h3>
+        <h3>Clave de lectura</h3>
         <p>Malosetti sirve para mostrar que el arte no era un adorno del proyecto del 80, sino una parte simbolica de la construccion nacional. Pero esa construccion estaba atravesada por elitismo, positivismo y por la oposicion civilizacion/barbarie.</p>
       </section>
 
@@ -917,8 +977,8 @@
         </div>
       </section>
 
-      <section id="europa-schiaffino">
-        <h2>Europa y Schiaffino</h2>
+      <section id="europa-legitimacion">
+        <h2>Viajes a Europa y legitimacion</h2>
         <p class="lede">La relacion con Europa es el centro de la paradoja. Para construir un arte nacional argentino, primero habia que aprender en el lugar que se reconocia como centro internacional: Paris.</p>
         <div class="grid two">
           <div class="card">
@@ -936,8 +996,15 @@
             <p class="muted small"><b>Idea clave:</b> criticaba que Buenos Aires exportara materia prima pero no produjera objetos con "sello de idea".</p>
           </div>
         </div>
+        <div class="quote">
+          <p><b>Cita / autor - Schiaffino segun Malosetti, parafraseo:</b> Buenos Aires podia tener riqueza material, pero seguia incompleta si no producia objetos marcados por la idea, la ciencia, la imaginacion y el arte.</p>
+        </div>
         <div class="callout">
           <p><b>Paradoja para memorizar:</b> Buenos Aires podia imaginarse como futuro centro artistico solo si primero aceptaba que Paris era el centro presente. La autonomia no rompe con Europa; intenta apropiarse de sus reglas para usarlas en clave local.</p>
+        </div>
+        <div class="course-notes">
+          <h3>Nota de curso</h3>
+          <p>Para imaginar una autonomia artistica argentina habia que pasar por Paris. Europa funcionaba como escuela y tribunal de legitimacion; el objetivo no era copiar sin mas, sino volver con un lenguaje reconocido para aplicarlo a temas locales.</p>
         </div>
         <div class="grid two">
           <div class="card">
@@ -950,7 +1017,10 @@
           </div>
         </div>
         <p class="source">Referencia de clase: notebook <i>Arte y Cultura Visual en Argentina</i>, exposiciones internacionales y gestion de Schiaffino.</p>
-        <h3>Crisis de 1890</h3>
+      </section>
+
+      <section id="crisis-1890">
+        <h2>Crisis de 1890 y defensa de las artes</h2>
         <p>Despues de la crisis economica y politica, el optimismo se vuelve mas defensivo. El arte sigue siendo necesario, pero ya no solo como celebracion: aparece como forma de estabilizar simbolicamente un progreso material que se revela fragil.</p>
         <div class="grid two">
           <div class="card">
@@ -964,11 +1034,18 @@
             <p class="muted small"><b>Frase para decir:</b> Belin Sarmiento invierte la critica: no formar artistas no es ahorro moderno, sino quedar presos de un destino barbaro de simples productores agropecuarios.</p>
           </div>
         </div>
+        <div class="quote">
+          <p><b>Cita / autor - Augusto Belin Sarmiento segun Malosetti, parafraseo:</b> las artes plasticas no debian verse como lujo improductivo; el dibujo y la formacion artistica tambien eran base del progreso material, del diseno y de la industria.</p>
+        </div>
+        <div class="course-notes">
+          <h3>Nota de curso</h3>
+          <p>Despues de 1890, defender becas artisticas se vuelve mas dificil porque aparece el argumento utilitario. La respuesta de Belin Sarmiento invierte esa critica: abandonar el arte no era ser practico, sino aceptar un destino limitado de pais agropecuario y dependiente.</p>
+        </div>
         <p class="source">Referencia textual: Malosetti Costa, "Arte y civilizacion", pp. 49-51.</p>
       </section>
 
       <section id="arte-nacional">
-        <h2>Arte nacional</h2>
+        <h2>Sintesis: como se arma el arte nacional</h2>
         <p class="lede">El arte nacional surge de una combinacion inestable: tecnicas y modelos europeos aplicados a temas considerados argentinos.</p>
         <div class="grid two">
           <div class="card">
@@ -1046,7 +1123,7 @@
             </div>
           </article>
 
-          <article class="work-card" id="obra-pabellon">
+          <article class="work-card" id="obra-seba">
             <figure>
               <img src="assets/seba-1893.jpg" alt="Fotografia de integrantes de la Sociedad Estimulo de Bellas Artes, 1893" loading="lazy" />
             </figure>
@@ -1061,7 +1138,7 @@
             </div>
           </article>
 
-          <article class="work-card">
+          <article class="work-card" id="obra-pabellon">
             <figure>
               <img src="assets/pabellon-argentino-1889.jpg" alt="Pabellon Argentino en la Exposicion Universal de Paris de 1889" loading="lazy" />
             </figure>
@@ -1200,9 +1277,32 @@
         </div>
       </section>
 
+      <section id="consignas-alternativas">
+        <h2>Repaso de consignas alternativas</h2>
+        <p class="lede">Estas secciones son para preparacion rapida si no toman la consigna elegida. Se incluyen C1, C2, C3 y C5; la numeracion salta porque no hay una consigna 4 en este set.</p>
+        <div class="grid two">
+          <div class="card flash">
+            <h3>Modo de uso</h3>
+            <p>Entrar por la consigna, mirar las obras primero, recuperar tesis y conceptos, y despues leer la respuesta oral. No buscan reemplazar el desarrollo completo de la consigna principal.</p>
+          </div>
+          <div class="card">
+            <h3>Ruta comun</h3>
+            <p>Imagenes, tesis, conceptos, citas/notas, respuesta breve y cierre critico. Esa repeticion ayuda a estudiar rapido sin perder orientacion.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="consigna-1" class="prompt-section">
         <h2>Consigna 1 - Artistas viajeros e imagen nacional</h2>
         <p class="lede">Pregunta: como los artistas viajeros y las expediciones cientificas contribuyeron a las primeras imagenes de Buenos Aires; que generos usaron; y por que litografia y periodicos ilustrados difundieron el costumbrismo.</p>
+        <div class="section-jumps" aria-label="Atajos de Consigna 1">
+          <a href="#c1-imagenes">Imagenes</a>
+          <a href="#c1-tesis">Tesis</a>
+          <a href="#c1-notas">Notas</a>
+          <a href="#c1-tecnica">Tecnica</a>
+          <a href="#c1-oral">Respuesta oral</a>
+          <a href="#c1-cierre">Cierre</a>
+        </div>
 
         <h3 id="c1-imagenes">Imagenes / obras para ubicar primero</h3>
         <div class="work-gallery">
@@ -1298,7 +1398,7 @@
           </article>
         </div>
 
-        <div class="grid two">
+        <div id="c1-tesis" class="grid two">
           <div class="card flash">
             <h3>Tesis rapida</h3>
             <p>Los viajeros y expediciones produjeron las primeras imagenes sistematicas de Buenos Aires porque miraron la ciudad como paisaje, documento y escena de costumbres. El grabado primero, y luego la litografia y la prensa ilustrada, transformaron esas imagenes en cultura visual circulante.</p>
@@ -1320,6 +1420,10 @@
           </div>
         </div>
 
+        <div class="quote">
+          <p><b>Cita / autor - Munilla / Gluzman, Munilla y Szir, parafraseo:</b> las imagenes de viajeros, expediciones y talleres litograficos no reflejan simplemente Buenos Aires; seleccionan, traducen y hacen circular una forma visible de la ciudad y sus costumbres.</p>
+        </div>
+
         <div id="c1-notas" class="course-notes">
           <h3>Notas de curso para enriquecer</h3>
           <ul>
@@ -1331,7 +1435,7 @@
           </ul>
         </div>
 
-        <h3>Respuesta oral en 2 minutos</h3>
+        <h3 id="c1-oral">Respuesta oral en 2 minutos</h3>
         <div class="speaker">Para responder, conviene partir de que Buenos Aires no tenia todavia una iconografia nacional consolidada. Los artistas viajeros y las expediciones cientificas ayudaron a producirla porque registraron la ciudad, la pampa cercana, los oficios, las modas y los tipos sociales. Sus imagenes mezclan mirada documental, curiosidad cientifica y pintoresquismo: no son fotografias neutrales, sino selecciones de lo que parecia representativo o exotico.</div>
         <p>Muchos de esos artistas trabajaron generos como la vista urbana, el paisaje, el retrato, las escenas de tipos y costumbres, la documentacion topografica y la ilustracion cientifica. Conviene separar dos zonas: miradas viajeras o tecnicas, como Brambila, Vidal y Pellegrini; y talleres de reproduccion, como Bacle, Macaire u Onslow.</p>
         <p>Antes de la litografia, el grabado ya permitia traducir una acuarela o dibujo a una plancha metalica y sacar muchas impresiones. Pero esa traduccion no era neutra: dependia de la mano del grabador, por eso una misma vista podia circular con variaciones.</p>
@@ -1355,7 +1459,7 @@
           <p><b>Dato del notebook:</b> el caso de Malaspina/Brambila y las primeras vistas de Buenos Aires sirve para explicar que algunas imagenes nacen como expedicion, dibujo o acuarela, pero llegan al publico europeo como grabado. Si hay dos versiones, no es un error menor: muestra que la imagen nacional se construye en una cadena de traducciones tecnicas.</p>
         </div>
 
-        <h3>Cierre critico</h3>
+        <h3 id="c1-cierre">Cierre critico</h3>
         <div class="warning callout">
           <p>Estas primeras imagenes ayudan a inventar una Buenos Aires visible, pero lo hacen desde miradas parciales: viajeros, elites, talleres urbanos y circuitos impresos. Por eso conviene hablar de construccion de imagen nacional, no de reflejo transparente de la realidad.</p>
         </div>
@@ -1364,6 +1468,14 @@
       <section id="consigna-2" class="prompt-section">
         <h2>Consigna 2 - Retrato, estatus y sociabilidad</h2>
         <p class="lede">Pregunta: analizar el retrato en la primera mitad del siglo XIX y comparar retrato burgues, de aparato, miniatura, litografia y daguerrotipo segun produccion, circulacion y consumo.</p>
+        <div class="section-jumps" aria-label="Atajos de Consigna 2">
+          <a href="#c2-imagenes">Imagenes</a>
+          <a href="#c2-tesis">Tesis</a>
+          <a href="#c2-notas">Notas</a>
+          <a href="#c2-formatos">Formatos</a>
+          <a href="#c2-oral">Respuesta oral</a>
+          <a href="#c2-cierre">Cierre</a>
+        </div>
 
         <h3 id="c2-imagenes">Imagenes / obras para ubicar primero</h3>
         <div class="work-gallery">
@@ -1420,7 +1532,7 @@
           </article>
         </div>
 
-        <div class="grid two">
+        <div id="c2-tesis" class="grid two">
           <div class="card flash">
             <h3>Tesis rapida</h3>
             <p>El retrato fue una herramienta social porque producia presencia, estatus y pertenencia. Segun la tecnica, podia circular como objeto familiar, signo de poder, imagen reproducible o prueba fotografica de identidad.</p>
@@ -1439,6 +1551,10 @@
           </div>
         </div>
 
+        <div class="quote">
+          <p><b>Cita / autor - Burke, parafraseo:</b> la imagen no debe leerse como evidencia transparente: retratos y fotografias parecen mostrar la realidad, pero tambien construyen pose, autoridad, belleza, estatus y convencion.</p>
+        </div>
+
         <div id="c2-notas" class="course-notes">
           <h3>Notas de curso para enriquecer</h3>
           <ul>
@@ -1450,7 +1566,7 @@
           </ul>
         </div>
 
-        <h3>Comparacion rapida de formatos</h3>
+        <h3 id="c2-formatos">Comparacion rapida de formatos</h3>
         <div class="grid two">
           <div class="card">
             <h3>Retrato de elite</h3>
@@ -1470,14 +1586,14 @@
           </div>
         </div>
 
-        <h3>Respuesta oral en 2 minutos</h3>
+        <h3 id="c2-oral">Respuesta oral en 2 minutos</h3>
         <div class="speaker">La idea central es que el retrato en la primera mitad del siglo XIX no era solamente parecido fisico. Era una practica social: servia para afirmar estatus, conservar memoria, circular afectos y construir presencia publica.</div>
         <p>El retrato de elite o burgues funcionaba en el ambito familiar y social: mostraba respetabilidad, gusto, educacion y pertenencia. Se producia por encargo, circulaba en casas y redes familiares, y se consumia como signo de memoria y distincion. En cambio, el retrato de aparato intensificaba los signos de poder: uniforme, banda, postura, cortinados, atributos politicos o militares. No busca solo intimidad, sino autoridad.</p>
         <p>La miniatura era otra logica: pequena, portatil, asociada al afecto y a la memoria privada. Circulaba cerca del cuerpo o dentro de redes intimas. La litografia, en cambio, permitia reproducir retratos y llevarlos a un publico mas amplio: hombres publicos, lideres, artistas o personajes politicos podian circular en papel.</p>
         <p>Con el daguerrotipo aparece una tecnologia nueva. Segun Burke, la fotografia parece un documento transparente, pero tambien hay que leer pose, convenciones y usos sociales. El daguerrotipo era unico, caro y moderno: prometia fidelidad mecanica, pero seguia organizando estatus y memoria.</p>
         <p>Myers ayuda a ubicar el contexto: la elite portena construia sociabilidad en casas, tertulias, teatros, asociaciones y redes politicas. En ese mundo, tener y circular retratos era una forma de decir quien era uno y a que mundo pertenecia.</p>
 
-        <h3>Cierre critico</h3>
+        <h3 id="c2-cierre">Cierre critico</h3>
         <div class="warning callout">
           <p>El retrato parece centrarse en individuos, pero en realidad muestra relaciones sociales. Cada tecnica ordena una forma distinta de produccion, circulacion y consumo: casa, cuerpo, imprenta, Estado, mercado y memoria.</p>
         </div>
@@ -1486,6 +1602,13 @@
       <section id="consigna-3" class="prompt-section">
         <h2>Consigna 3 - Rosismo, imagen y propaganda federal</h2>
         <p class="lede">Pregunta: como se manifesto la identidad federal en imagenes durante el rosismo; vincular retratistica de Garcia del Molino, albumes rurales de Morel y uso politico de la imagen.</p>
+        <div class="section-jumps" aria-label="Atajos de Consigna 3">
+          <a href="#c3-imagenes">Imagenes</a>
+          <a href="#c3-tesis">Tesis</a>
+          <a href="#c3-notas">Notas</a>
+          <a href="#c3-oral">Respuesta oral</a>
+          <a href="#c3-cierre">Cierre</a>
+        </div>
 
         <h3 id="c3-imagenes">Imagenes / obras para ubicar primero</h3>
         <div class="work-gallery">
@@ -1581,7 +1704,7 @@
           </article>
         </div>
 
-        <div class="grid two">
+        <div id="c3-tesis" class="grid two">
           <div class="card flash">
             <h3>Tesis rapida</h3>
             <p>Durante el rosismo, la imagen funciono como publicidad politica: el retrato construyo autoridad, el punzo hizo visible la adhesion, el costumbrismo federal represento una comunidad rural ordenada y la litografia multiplico esos signos en la vida cotidiana.</p>
@@ -1602,6 +1725,10 @@
           </div>
         </div>
 
+        <div class="quote">
+          <p><b>Cita / autor - Roberto Amigo, parafraseo:</b> en Morel, el costumbrismo federal no es una escena inocente de tipos rurales; organiza visualmente un mundo campesino, gaucho e indigena bajo la politica de pacificacion rosista.</p>
+        </div>
+
         <div id="c3-notas" class="course-notes">
           <h3>Notas de curso para enriquecer</h3>
           <ul>
@@ -1613,14 +1740,14 @@
           </ul>
         </div>
 
-        <h3>Respuesta oral en 2 minutos</h3>
+        <h3 id="c3-oral">Respuesta oral en 2 minutos</h3>
         <div class="speaker">Para responder, partiria de una idea: durante el rosismo la imagen no fue solo arte ni documento, sino una herramienta para fabricar identidad politica federal.</div>
         <p>Garcia del Molino permite pensar el retrato como imagen de poder. En los retratos de Rosas, el parecido importa, pero importan mas los signos: pose, autoridad, vestimenta, rojo punzo y presencia del Restaurador. Ver el rostro de Rosas era ver una forma de orden politico.</p>
         <p>Con Carlos Morel aparece otra capa. Roberto Amigo habla de costumbrismo federal: sus gauchos, pulperias, soldados, indios amigos y familias rurales no son escenas inocentes. En <i>La familia del gaucho</i>, el mundo rural aparece pacificado, jerarquizado y vinculado a la comunidad federal. El gaucho no aparece como amenaza, sino como paisano, soldado o padre dentro del orden rosista.</p>
         <p>La litografia agrega la dimension de circulacion. A partir de Bacle y otros talleres, retratos, divisas, lemas y simbolos federales podian reproducirse en papel y objetos. La politica entraba en la vida diaria: ropa, impresos, fiestas, retratos, colores y cuerpos.</p>
         <p>Por eso Garcia del Molino, Morel y la litografia muestran tres niveles de la propaganda: retratar al lider, representar su base social y multiplicar los signos de pertenencia.</p>
 
-        <h3>Cierre critico</h3>
+        <h3 id="c3-cierre">Cierre critico</h3>
         <div class="warning callout">
           <p>El rosismo entendio que gobernar tambien era producir imagenes. Pero esas imagenes no son neutrales: indican que color, que cuerpo, que rostro y que gesto pertenecen a la comunidad politica.</p>
         </div>
@@ -1629,6 +1756,14 @@
       <section id="consigna-5" class="prompt-section">
         <h2>Consigna 5 - Paisaje pampeano, civilizacion y barbarie</h2>
         <p class="lede">Pregunta: como se dio el paisaje pampeano en el siglo XIX y como encarna la tension civilizacion/barbarie, de Prilidiano Pueyrredon a Eduardo Sivori.</p>
+        <div class="section-jumps" aria-label="Atajos de Consigna 5">
+          <a href="#c5-imagenes">Imagenes</a>
+          <a href="#c5-tesis">Tesis</a>
+          <a href="#c5-matriz">Matriz</a>
+          <a href="#c5-notas">Notas</a>
+          <a href="#c5-oral">Respuesta oral</a>
+          <a href="#c5-cierre">Cierre</a>
+        </div>
 
         <h3 id="c5-imagenes">Imagenes / obras para ubicar primero</h3>
         <div class="work-gallery">
@@ -1699,7 +1834,7 @@
           </article>
         </div>
 
-        <div class="grid two">
+        <div id="c5-tesis" class="grid two">
           <div class="card flash">
             <h3>Tesis rapida</h3>
             <p>El paisaje pampeano no fue neutro: fue un campo ideologico. Podia verse como territorio productivo y civilizado, como desierto amenazante, como frontera violenta o como horizonte moderno. Esa oscilacion encarna la tension civilizacion/barbarie.</p>
@@ -1718,6 +1853,10 @@
             </div>
             <p class="small muted">Autores: Munilla; Malosetti Costa sobre cautivas; Malosetti Costa y Penhos sobre iconografia del desierto argentino.</p>
           </div>
+        </div>
+
+        <div class="quote">
+          <p><b>Cita / autor - Malosetti Costa y Penhos, parafraseo:</b> la pampa y el desierto fueron construcciones visuales e ideologicas: no nombraban un vacio real, sino un territorio que la mirada estatal y urbana buscaba conquistar, ordenar y civilizar.</p>
         </div>
 
         <h3 id="c5-matriz">Matriz rapida: tres pampas posibles</h3>
@@ -1747,21 +1886,21 @@
           </ul>
         </div>
 
-        <h3>Respuesta oral en 2 minutos</h3>
+        <h3 id="c5-oral">Respuesta oral en 2 minutos</h3>
         <div class="speaker">La idea central es que el paisaje pampeano del siglo XIX no representa simplemente naturaleza. Representa un conflicto: que hacer con la pampa y como incorporarla a la nacion.</div>
         <p>En Pueyrredon, la pampa puede aparecer vinculada a la estancia, el ganado, el ombu, la carreta, el descanso y el trabajo rural. Obras como <i>El rodeo</i> o <i>Un alto en el campo</i> muestran un campo socialmente organizado. Ahi la pampa no es puro vacio: es territorio productivo, jerarquico y habitable.</p>
         <p>Pero en la cultura del siglo XIX tambien aparece la pampa como desierto y frontera. Esa palabra "desierto" no significa que no hubiera habitantes, sino que desde la mirada estatal y urbana se la piensa como espacio a conquistar, ordenar o civilizar. Ahi entran las imagenes de malones, cautivas e indigenas como figuras de barbarie.</p>
         <p>Malosetti muestra que la cautiva blanca condensa una fantasia politica y erotica: el cuerpo femenino aparece como frontera amenazada por la barbarie. Desde Rugendas hasta Della Valle, esa figura no solo narra un episodio: convierte el territorio en drama ideologico. <i>La vuelta del malon</i> es clave porque vuelve nacional ese conflicto, pero lo hace retrospectivamente, cuando la amenaza indigena ya estaba derrotada como fuerza militar central.</p>
         <p>Blanes, con la <i>Ocupacion militar del Rio Negro</i>, muestra el otro lado: la violencia estatal representada como orden y civilizacion. Y con Sivori, la pampa se vuelve tambien problema moderno de paisaje: horizonte bajo, cielo enorme, topografia y observacion directa. De Pueyrredon a Sivori cambia el lenguaje, pero la pampa sigue siendo una pregunta sobre identidad nacional.</p>
 
-        <h3>Cierre critico</h3>
+        <h3 id="c5-cierre">Cierre critico</h3>
         <div class="warning callout">
           <p>La pampa no es un fondo vacio: es una escena de disputa. El arte la convierte en imagen nacional, pero esa imagen muchas veces justifica jerarquias, conquistas y exclusiones bajo la palabra civilizacion.</p>
         </div>
       </section>
 
       <section id="preguntas">
-        <h2>Preguntas posibles</h2>
+        <h2>Preguntas posibles de la consigna elegida</h2>
         <details open>
           <summary>Por que el arte era una cuestion nacional y no solo estetica?</summary>
           <p>Porque funcionaba como prueba de civilizacion. Tener artistas formados, museos, salones y obras reconocibles era una forma de demostrar que Argentina era una nacion moderna, no solo una economia agroexportadora.</p>
@@ -1794,21 +1933,12 @@
           <summary>Como evitar que Della Valle quede como "documento" del malon?</summary>
           <p>Aclarar que <i>La vuelta del malon</i> se pinta en 1892, despues de la Campana del Desierto. La obra no muestra una amenaza actual en sentido directo: organiza una memoria dramatica de la frontera que ayuda a justificar la violencia estatal previa.</p>
         </details>
+
+        <h3>Preguntas posibles de consignas alternativas</h3>
         <details>
           <summary>Que aporta Serie Ibarra a la consigna sobre Rosas?</summary>
           <p>Permite mostrar que la propaganda federal no solo se apoya en el retrato de Rosas. Morel tambien construye una imagen positiva y ordenada del mundo rural, incluyendo indios pacificados o negociados dentro de la frontera rosista.</p>
         </details>
-      </section>
-
-      <section id="pendientes">
-        <h2>Pendientes</h2>
-        <div class="checklist">
-          <label><input type="checkbox" checked /> Crear <code>assets/</code> y agregar imagenes reales.</label>
-          <label><input type="checkbox" checked /> Reemplazar placeholders por etiquetas <code>&lt;img&gt;</code>.</label>
-          <label><input type="checkbox" checked /> Incorporar las cuatro consignas alternativas como repaso breve.</label>
-          <label><input type="checkbox" checked /> Crear y revisar la vista secundaria <code>presentacion.html</code>.</label>
-          <label><input type="checkbox" /> Ensayar y ajustar el guion a la duracion exacta que pidan.</label>
-        </div>
       </section>
     </main>
   </div>
