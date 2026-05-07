@@ -27,6 +27,62 @@ Tambien existe una vista secundaria:
 
 - `presentacion.html`: version mas visual y sintetica para mostrar o usar como apoyo oral. Debe mantenerse basada en la guia completa, no reemplazarla.
 
+## Estado actual validado
+
+Estado al 7 de mayo de 2026:
+
+- La guia principal esta en `tema_arte_civilizacion_estudio.html`.
+- La entrada publica del sitio es `index.html`.
+- La vista visual de apoyo esta en `presentacion.html`.
+- GitHub Pages esta configurado desde la rama `main`, carpeta `/root`.
+- URL publica del sitio: `https://juan-kaplan.github.io/arte_parcial/`.
+- URL publica de la presentacion: `https://juan-kaplan.github.io/arte_parcial/presentacion.html`.
+- La ultima pasada fuerte de contenido/UX antes de actualizar este archivo quedo en el commit `21a26bd` (`Improve presentation polish and study guide UX`). Si hay commits posteriores, revisar `git log --oneline`.
+
+Lo que ya se hizo:
+
+- Se preparo la consigna elegida sobre Generacion del 80, arte/civilizacion, instituciones, viajes a Europa y arte nacional.
+- Se agregaron imagenes locales y fichas de obra para Sívori, Schiaffino, Della Valle, SEBA, Pabellon Argentino, De la Carcova, Schwartz, Goya y Blanes.
+- Se incorporo la crisis de 1890 y el cuestionamiento a becas/pensiones artisticas, con Belin Sarmiento como defensa de las artes.
+- Se agregaron las consignas alternativas 1, 2, 3 y 5 como bloques de repaso breve.
+- Se agregaron imagenes para las consignas secundarias y se unifico cada una en una sola galeria visual para evitar repeticiones.
+- Se agrego la Serie Ibarra de Carlos Morel, especialmente `Indios pampas`, para la consigna 3.
+- Se agregaron notas del notebook `resumenes/Arte y Cultura Visual en Argentina.pdf` donde aportaban a las consignas.
+- Se reorganizo el indice de la guia por uso: respuesta elegida, argumentos, obras clave, consignas alternativas y practica.
+- Se agregaron mini mapas internos `section-jumps` al inicio de cada consigna secundaria.
+- Se creo y mejoro `presentacion.html` como vista limpia para mostrar: imagenes grandes, palabras clave, bullets, metodo de analisis y consignas alternativas.
+- Se quitaron de `presentacion.html` textos visibles internos como "Decir", "Frase guia", "Frase oral", "Persona A/B" o instrucciones de ensayo.
+
+## Como retomar en otro chat o workspace
+
+Si otro chat empieza desde cero, este es el orden recomendado:
+
+1. Leer este `instructions.md`.
+2. Revisar `git status --short` para saber si hay cambios locales.
+3. Abrir `tema_arte_civilizacion_estudio.html` para entender la guia larga.
+4. Abrir `presentacion.html` para entender la vista que se puede mostrar.
+5. Si se trabaja contenido, buscar primero en `resumenes/` y especialmente en `resumenes/Arte y Cultura Visual en Argentina.pdf`; despues cotejar con `textos/` si hace falta.
+6. Si se trabaja imagenes, usar `assets/`, fuentes estables y creditos visibles en las fichas.
+7. Antes de cerrar, verificar anchors, rutas de imagenes, responsive basico y que `presentacion.html` no tenga notas internas visibles.
+8. Si hay que publicar, hacer commit y push a `main`; GitHub Pages actualiza solo.
+
+Comandos utiles:
+
+```bash
+git status --short
+rg -n "Decir:|Frase guia|Frase oral|Frase breve|Persona A|Persona B|speaker" presentacion.html
+rg -n "TODO|Pendiente|pendiente|placeholder|Falta|falta" .
+python3 -m http.server 4173 --bind 127.0.0.1
+gh run list --limit 1
+```
+
+Al hacer QA visual, usar Playwright si esta disponible. Mirar al menos:
+
+- `tema_arte_civilizacion_estudio.html` en desktop.
+- Una consigna secundaria en mobile.
+- `presentacion.html` en desktop.
+- `presentacion.html` en mobile.
+
 ## Criterio de trabajo con agentes
 
 Cuando haya varias tareas separables, intentar usar múltiples agentes o líneas de trabajo en paralelo si el entorno lo permite. La idea es mantener el contexto principal más limpio, dividir mejor la investigación, la implementación y la revisión, y después integrar solo los resultados útiles.
@@ -43,11 +99,39 @@ Si no se pueden usar múltiples agentes por limitaciones del entorno o de la tar
 
 - `tema_arte_civilizacion_estudio.html`: archivo principal de estudio.
 - `presentacion.html`: vista secundaria visual, con bloques, imagenes grandes, palabras clave y link de vuelta a la guia. Debe tener una ruta oral clara para la consigna principal, diapositivas separadas para contexto, instituciones, Schiaffino, obras, crisis, metodo de analisis, consignas alternativas y cierre critico. Como puede mostrarse a profesoras, no debe contener textos visibles del tipo "Decir", "Frase guia", "Frase oral" o instrucciones internas.
+- `index.html`: entrada para GitHub Pages. Mantener simple y apuntando a la guia principal.
 - `instructions.md`: estas instrucciones para continuar el trabajo.
+- `README.md`: instrucciones cortas para abrir localmente y publicar en GitHub Pages.
+- `.gitignore`: mantiene fuera de Git `textos/`, `resumenes/`, `output/` y archivos locales.
+- `.nojekyll`: permite que GitHub Pages sirva el sitio estatico sin procesamiento Jekyll.
 - `assets/`: imágenes locales usadas por el HTML.
 - `resumenes/`: resúmenes operativos de los textos y presentación de apoyo.
 - `textos/`: PDFs base para bibliografía; están escaneados y no siempre extraen texto directamente.
 - `resumenes/Arte y Cultura Visual en Argentina.pdf`: notebook de clases de OneDrive. Es largo, pero extrae texto bastante bien; usarlo para encontrar apuntes operativos por consigna antes de volver a los textos base.
+
+## Versionado y deploy
+
+El repo esta preparado para publicarse como sitio estatico en GitHub Pages:
+
+- Rama: `main`.
+- Carpeta publicada: `/root`.
+- No hay build system ni dependencias de frontend.
+- `textos/` y `resumenes/` estan ignorados por Git porque contienen bibliografia y apuntes privados.
+- `assets/` si debe versionarse porque contiene las imagenes que usa la pagina publica.
+
+Flujo despues de cambios importantes:
+
+```bash
+git add .
+git commit -m "Descripcion breve del cambio"
+git push
+gh run list --limit 1
+```
+
+Verificar luego:
+
+- `https://juan-kaplan.github.io/arte_parcial/`
+- `https://juan-kaplan.github.io/arte_parcial/presentacion.html`
 
 ## Bibliografía base
 
@@ -189,6 +273,26 @@ Tambien hay assets para las consignas alternativas:
 - Mantener una mirada crítica, pero no perder la respuesta principal.
 - Las citas de autor deben estar identificadas como **parafraseo** salvo que se haya verificado literalidad en el PDF/texto. Evitar inventar comillas textuales.
 - Usar bloques `quote` para citas/parafraseos de autores y bloques `course-notes` para notas de curso o notebook. En la consigna principal pueden aparecer varios; en las secundarias, usar pocos y bien ubicados para no volverlas enciclopedicas.
+
+## Criterio UX actual
+
+La guia principal debe sentirse como una herramienta de estudio, no como una landing page.
+
+- El indice lateral debe ayudar a entrar rapido por tarea, no solo replicar el orden del documento.
+- Mantener grupos claros en el indice: respuesta elegida, argumentos, obras clave, consignas alternativas y practica.
+- Las secciones largas necesitan subtitulos visibles y tarjetas que permitan escanear.
+- Las consignas secundarias deben tener una estructura repetible para que en pocos minutos se encuentre lo importante.
+- No duplicar galerias ni repetir imagenes dentro de una misma consigna secundaria.
+- Mantener los anchors estables porque el indice y los mini mapas internos dependen de ellos.
+- En mobile, cuidar que chips, tarjetas, nav y captions no generen overflow horizontal.
+
+La presentacion debe sentirse como algo mostrable:
+
+- No incluir instrucciones internas visibles.
+- No usar etiquetas como "Decir esto", "Frase guia", "Frase oral", "Modo parcial" o "Persona A/B".
+- Si una idea sirve como ayuda oral, escribirla como afirmacion presentable.
+- Usar pocas palabras, imagenes grandes y bullets utiles para guiar la memoria.
+- Debe derivar de la guia completa, no abrir una interpretacion nueva.
 
 ## Criterio para consignas alternativas
 
