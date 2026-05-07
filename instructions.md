@@ -23,6 +23,18 @@ La página actual debe servir en dos modos diferenciados:
 - **Consigna elegida preparada:** entender la lógica de la consigna principal, los autores, las instituciones, las obras y el reparto oral.
 - **Plantilla futura de 5 minutos:** esquema vacío o muy breve para las consignas sorpresa que se agreguen después.
 
+## Criterio de trabajo con agentes
+
+Cuando haya varias tareas separables, intentar usar múltiples agentes o líneas de trabajo en paralelo si el entorno lo permite. La idea es mantener el contexto principal más limpio, dividir mejor la investigación, la implementación y la revisión, y después integrar solo los resultados útiles.
+
+Ejemplos:
+
+- Un agente revisa contenido histórico y otro revisa diseño/responsive.
+- Un agente busca fuentes o imágenes y otro prepara estructura del HTML.
+- Un agente verifica deploy/Pages y otro hace QA visual.
+
+Si no se pueden usar múltiples agentes por limitaciones del entorno o de la tarea, mantener igualmente esa lógica de separación: explorar, implementar y verificar en bloques claros.
+
 ## Archivos principales
 
 - `tema_arte_civilizacion_estudio.html`: archivo principal de estudio.
